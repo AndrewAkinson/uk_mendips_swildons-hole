@@ -1,0 +1,208 @@
+name: Comment on the PR
+
+# After a pull request's build (build.yml), post what changed on the PR:
+# the survey statistics, a link to the built sheets, and pictures of
+# each sheet that changed, made by tools/pdfdiff.
+#
+# This is a separate workflow because the build runs the PR's own code
+# with no write access (a PR from a fork can't even comment). This one
+# runs main's copy of this file, never the PR's code, and treats what the
+# build uploaded as untrusted: it checks the PR number against the
+# commit that was built, and only publishes PNG files.
+#
+# GitHub won't show a comment's images from a build's artifact, so the
+# pictures are pushed to the pr-previews branch, which holds only the
+# latest pictures for each open PR and is rewritten every time.
+on:
+  workflow_run:
+    workflows: [Build survey]
+    types: [completed]
+
+permissions:
+  contents: write
+  pull-requests: write
+  actions: read
+  pages: read
+
+# One at a time, since each run rewrites the pr-previews branch.
+concurrency:
+  group: pr-previews
+  cancel-in-progress: false
+
+jobs:
+  comment:
+    if: >-
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download the diff
+        uses: actions/download-artifact@v4
+        with:
+          name: pr-diff
+          path: ${{ runner.temp }}/pr-diff
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+
+      # Which PR the build was for. A build from a fork doesn't say, so
+      # take the number from the build but check that the PR's head is
+      # the commit that was built. If the PR has moved on since, a newer
+      # build will comment instead.
+      - name: Check the PR
+        id: pr
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const dir = `${process.env.RUNNER_TEMP}/pr-diff`;
+            const info = JSON.parse(fs.readFileSync(`${dir}/pr.json`, 'utf8'));
+            const number = Number(info.number);
+            const built = context.payload.workflow_run.head_sha;
+            if (!Number.isInteger(number) || number <= 0) throw new Error('bad PR number');
+            const { data: pr } = await github.rest.pulls.get({
+              owner: context.repo.owner, repo: context.repo.repo, pull_number: number });
+            if (pr.head.sha !== built || info.head_sha !== built) {
+              core.notice(`PR #${number} is now at ${pr.head.sha.slice(0, 7)}, not ${built.slice(0, 7)}: skipping`);
+              return;
+            }
+            core.setOutput('number', String(number));
+            core.setOutput('sha', built);
+
+      - name: Publish the pictures
+        if: steps.pr.outputs.number
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUMBER: ${{ steps.pr.outputs.number }}
+          SHA: ${{ steps.pr.outputs.sha }}
+        run: |
+          set -euo pipefail
+          src="$RUNNER_TEMP/pr-diff"
+          work="$RUNNER_TEMP/pr-previews"
+          url="https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          if ! git clone -q --depth 1 --branch pr-previews "$url" "$work"; then
+            git init -q "$work"
+            git -C "$work" remote add origin "$url"
+          fi
+          cd "$work"
+          git checkout -q --orphan next
+          # keep only the open PRs' pictures, and replace this one's
+          open=" $(gh api --paginate "repos/$GITHUB_REPOSITORY/pulls?state=open&per_page=100" --jq '.[].number' | tr '\n' ' ') "
+          for d in pr-*/; do
+            [ -d "$d" ] || continue
+            n="${d#pr-}"; n="${n%/}"
+            if [ "$n" = "$NUMBER" ] || [[ "$open" != *" $n "* ]]; then git rm -rq --ignore-unmatch "$d"; rm -rf "$d"; fi
+          done
+          dest="pr-$NUMBER/${SHA:0:7}"
+          mkdir -p "$dest"
+          for f in "$src"/*.png; do
+            [ -e "$f" ] || continue
+            name="$(basename "$f")"
+            [[ "$name" =~ ^[A-Za-z0-9._-]+\.png$ ]] || { echo "skipping $name"; continue; }
+            [ "$(head -c 8 "$f" | od -An -tx1 | tr -d ' \n')" = 89504e470d0a1a0a ] || { echo "skipping $name: not a PNG"; continue; }
+            [ "$(stat -c %s "$f")" -le 8000000 ] || { echo "skipping $name: too big"; continue; }
+            cp "$f" "$dest/"
+          done
+          cat > README.md <<'EOF'
+          Pictures of what each open pull request changes on the survey
+          sheets, for the PR comments. Made by .github/workflows/pr-comment.yml
+          and rewritten every time it runs: don't commit here.
+          EOF
+          git add -A
+          git -c user.name='github-actions[bot]' \
+              -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+              commit -qm "Pictures for PR #$NUMBER at ${SHA:0:7}"
+          git push -qf origin next:pr-previews
+
+      - name: Comment
+        if: steps.pr.outputs.number
+        uses: actions/github-script@v7
+        env:
+          NUMBER: ${{ steps.pr.outputs.number }}
+          SHA: ${{ steps.pr.outputs.sha }}
+        with:
+          script: |
+            const fs = require('fs');
+            const dir = `${process.env.RUNNER_TEMP}/pr-diff`;
+            const number = Number(process.env.NUMBER);
+            const sha = process.env.SHA;
+            const { owner, repo } = context.repo;
+            const run = context.payload.workflow_run.html_url;
+            const raw = `https://raw.githubusercontent.com/${owner}/${repo}/pr-previews/pr-${number}/${sha.slice(0, 7)}`;
+
+            // The build's output is untrusted: only names of files that
+            // were published go into image links, and nothing from it
+            // goes into the comment unescaped except stats.md, which is
+            // plain text.
+            const published = new Set(fs.readdirSync(dir).filter(f => /^[A-Za-z0-9._-]+\.png$/.test(f)));
+            const img = (f, alt, width) => published.has(f)
+              ? `<a href="${raw}/${f}"><img src="${raw}/${f}" alt="${alt}"${width ? ` width="${width}"` : ''}></a>`
+              : '';
+            const safe = s => String(s).replace(/[^A-Za-z0-9._ -]/g, '');
+
+            let stats = '';
+            try { stats = fs.readFileSync(`${dir}/stats.md`, 'utf8').replace(/</g, '&lt;'); } catch (e) {}
+            let manifest = null;
+            try { manifest = JSON.parse(fs.readFileSync(`${dir}/manifest.json`, 'utf8')); } catch (e) {}
+
+            const { data: { artifacts } } = await github.rest.actions.listWorkflowRunArtifacts({
+              owner, repo, run_id: context.payload.workflow_run.id });
+            const survey = artifacts.find(a => a.name.startsWith('survey-'));
+            const download = survey ? `${run}/artifacts/${survey.id}` : run;
+            let site = '';
+            try {
+              site = (await github.rest.repos.getPages({ owner, repo })).data.html_url;
+            } catch (e) {}
+
+            const sheets = Array.isArray(manifest?.sheets) ? manifest.sheets : [];
+            const changed = sheets.filter(s => s.status === 'changed');
+            const added = sheets.filter(s => s.status === 'new');
+            const unchanged = sheets.filter(s => s.status === 'unchanged');
+            const parts = [];
+            changed.forEach((s, i) => {
+              const areas = Array.isArray(s.areas) ? s.areas : [];
+              const more = Number(s.more) > 0 ? `, and ${Number(s.more)} smaller` : '';
+              parts.push(
+                `<details${i === 0 ? ' open' : ''}><summary><b>${safe(s.pdf)}</b>: ` +
+                `${areas.length} area${areas.length === 1 ? '' : 's'} changed${more}` +
+                `${s.resized ? ' (the sheet changed size, so the header may show as moved)' : ''}</summary>`,
+                '', img(s.overview, `What changed on ${safe(s.pdf)}`), '',
+                '| | What changed | Now |', '|---|---|---|',
+                ...areas.map((a, j) => `| ${j + 1} | ${img(a.diff, `Area ${j + 1}, changes`, 400)} | ${img(a.after, `Area ${j + 1}, now`, 400)} |`),
+                '', '</details>', '');
+            });
+            added.forEach(s => parts.push(
+              `<details><summary><b>${safe(s.pdf)}</b>: new sheet</summary>`, '',
+              img(s.overview, safe(s.pdf)), '', '</details>', ''));
+
+            const against = site ? `the [published survey](${site})` : 'the published survey';
+            const body = [
+              '### 🗺️ Survey rebuilt from this PR',
+              '',
+              stats,
+              `**[⬇︎ Download the built sheets](${download})** — unzip and open \`index.html\`.`,
+              '',
+              '#### What changed on the sheets',
+              '',
+              !manifest ? `The sheets couldn't be compared with ${against}: see the build log.`
+              : changed.length || added.length
+                ? `Compared with ${against}: <b>red</b> is removed, <b>blue</b> is added, ` +
+                  'grey is unchanged. The numbered boxes are shown close up. Click a picture for full size.'
+                : `No sheet looks different from ${against}.`,
+              '',
+              ...parts,
+              unchanged.length ? `<sub>Unchanged: ${unchanged.map(s => `\`${safe(s.pdf)}\``).join(' · ')}</sub>` : '',
+              '',
+              `<sub>[Full build log](${run}) · commit \`${sha.slice(0, 7)}\`</sub>`,
+            ].join('\n');
+
+            // Update our own previous comment rather than adding a new one
+            // on every push to the branch.
+            const marker = '### 🗺️ Survey rebuilt from this PR';
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner, repo, issue_number: number });
+            const mine = comments.find(c => c.user.type === 'Bot' && c.body.startsWith(marker));
+            if (mine) {
+              await github.rest.issues.updateComment({ owner, repo, comment_id: mine.id, body });
+            } else {
+              await github.rest.issues.createComment({ owner, repo, issue_number: number, body });
+            }
