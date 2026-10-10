@@ -39,7 +39,7 @@ WCS = ('https://environment.data.gov.uk/spatialdata/lidar-composite-digital-terr
        '?service=WCS&version=2.0.1&request=GetCoverage'
        '&coverageId=13787b9a-26a4-4775-8523-806d13af58fc__Lidar_Composite_Elevation_DTM_1m'
        '&subset=E({e0},{e1})&subset=N({n0},{n1})&format=image/tiff')
-UA = 'caves-mendip-swildons 3D view (https://github.com/paperclipmonkey/caves-mendip-swildons)'
+UA = 'uk_mendips_swildons-hole 3D view (https://github.com/CaveSurveying/uk_mendips_swildons-hole)'
 MARGIN = 250      # metres of ground around the cave
 STEP = 2          # metres between terrain samples in the model
 

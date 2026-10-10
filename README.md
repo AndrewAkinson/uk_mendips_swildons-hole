@@ -1,8 +1,8 @@
 # Swildons Hole
 
-[![Plan of Swildons Hole from the entrance to Sump 1. Click to open the survey.](docs/swildons-plan.png)](https://paperclipmonkey.github.io/caves-mendip-swildons/)
+[![Plan of Swildons Hole from the entrance to Sump 1. Click to open the survey.](docs/swildons-plan.png)](https://cavesurveying.github.io/uk_mendips_swildons-hole/)
 
-## **[Open the survey →](https://paperclipmonkey.github.io/caves-mendip-swildons/)**
+## **[Open the survey →](https://cavesurveying.github.io/uk_mendips_swildons-hole/)**
 
 The survey of **Swildons Hole**, Priddy, Mendip, Somerset: the resurvey
 led by Paul 'Footleg' Fretwell (2012–2019) joined to W. I. Stanton's
@@ -15,18 +15,18 @@ The cave's entry in the Mendip Cave Registry & Archive:
 
 | On the survey site | |
 |---|---|
-| [Plan](https://paperclipmonkey.github.io/caves-mendip-swildons/Swildons-plan.pdf) | Entrance to Sump 1, coloured by altitude, with cross-sections along the streamway. 1:500. |
-| [Extended elevation](https://paperclipmonkey.github.io/caves-mendip-swildons/Swildons-extended-elevation.pdf) | The whole drawn cave unrolled along its passages, entrance to Sump 1. 1:500. |
-| [Streamway elevation](https://paperclipmonkey.github.io/caves-mendip-swildons/Swildons-streamway-elevation.pdf) | Extended elevation from the Old 40 to Sump 1, with Barnes Loop above the streamway. 1:500. |
-| [Entrance Series plan](https://paperclipmonkey.github.io/caves-mendip-swildons/Swildons-entrance-plan.pdf) | The Entrance Series down to Rolling Thunder, with cross-sections. The entrances and Zig Zags, which lie on top of the passages below, are drawn 35 m to the east, joined to them by letters. 1:200. |
-| [Entrance Series extended elevation](https://paperclipmonkey.github.io/caves-mendip-swildons/Swildons-entrance-extended-elevation.pdf) | The Entrance Series unrolled along its passages. 1:200. |
-| [Entrance Series east–west elevation](https://paperclipmonkey.github.io/caves-mendip-swildons/Swildons-entrance-elevation.pdf) | Footleg's projected elevation, only partly drawn. 1:200. |
-| [Plan, greyscale](https://paperclipmonkey.github.io/caves-mendip-swildons/Swildons-plan-bw.pdf) | For a black-and-white printer. |
-| [Plan with centreline](https://paperclipmonkey.github.io/caves-mendip-swildons/Swildons-plan-centreline.pdf) | The plan with survey legs and station names, for resurveying. 1:500. |
-| [Plan with Stanton's survey](https://paperclipmonkey.github.io/caves-mendip-swildons/Swildons-plan-with-stanton.pdf) | The plan plus Stanton's survey beyond it as centreline, with station names, for planning where to resurvey next. 1:500. |
-| [The cave in 3D](https://paperclipmonkey.github.io/caves-mendip-swildons/3d/) | The survey beneath the Environment Agency's LIDAR ground surface and satellite imagery, in the browser. See [tools/model3d](tools/model3d/README.md). |
-| [Getting there](https://paperclipmonkey.github.io/caves-mendip-swildons/surface/index.html) | For visitors new to the area: where to park and the walks to the entrance. See [tools/surface](tools/surface/README.md). |
-| Route cards (draft) | One sheet per route through the cave, with the way to go at each junction, made from the survey. On the [survey site](https://paperclipmonkey.github.io/caves-mendip-swildons/); see [tools/routes](tools/routes/README.md). |
+| [Plan](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-plan.pdf) | Entrance to Sump 1, coloured by altitude, with cross-sections along the streamway. 1:500. |
+| [Extended elevation](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-extended-elevation.pdf) | The whole drawn cave unrolled along its passages, entrance to Sump 1. 1:500. |
+| [Streamway elevation](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-streamway-elevation.pdf) | Extended elevation from the Old 40 to Sump 1, with Barnes Loop above the streamway. 1:500. |
+| [Entrance Series plan](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-entrance-plan.pdf) | The Entrance Series down to Rolling Thunder, with cross-sections. The entrances and Zig Zags, which lie on top of the passages below, are drawn 35 m to the east, joined to them by letters. 1:200. |
+| [Entrance Series extended elevation](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-entrance-extended-elevation.pdf) | The Entrance Series unrolled along its passages. 1:200. |
+| [Entrance Series east–west elevation](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-entrance-elevation.pdf) | Footleg's projected elevation, only partly drawn. 1:200. |
+| [Plan, greyscale](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-plan-bw.pdf) | For a black-and-white printer. |
+| [Plan with centreline](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-plan-centreline.pdf) | The plan with survey legs and station names, for resurveying. 1:500. |
+| [Plan with Stanton's survey](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-plan-with-stanton.pdf) | The plan plus Stanton's survey beyond it as centreline, with station names, for planning where to resurvey next. 1:500. |
+| [The cave in 3D](https://cavesurveying.github.io/uk_mendips_swildons-hole/3d/) | The survey beneath the Environment Agency's LIDAR ground surface and satellite imagery, in the browser. See [tools/model3d](tools/model3d/README.md). |
+| [Getting there](https://cavesurveying.github.io/uk_mendips_swildons-hole/surface/index.html) | For visitors new to the area: where to park and the walks to the entrance. See [tools/surface](tools/surface/README.md). |
+| Route cards (draft) | One sheet per route through the cave, with the way to go at each junction, made from the survey. On the [survey site](https://cavesurveying.github.io/uk_mendips_swildons-hole/); see [tools/routes](tools/routes/README.md). |
 
 The survey site also has the 3D model (Survex `.3d` for Aven, Therion
 `.lox` for Loch), Google Earth `.kml` files and the survey data as CSV
@@ -55,7 +55,7 @@ vertical range, fixed to the OS grid at the entrance by GPS.
   to connect the rest of his survey but flagged `duplicate`, so they
   are not counted twice.
 
-[![Extended elevation of the streamway from the Old 40 to Sump 1](docs/swildons-streamway-elevation.png)](https://paperclipmonkey.github.io/caves-mendip-swildons/Swildons-streamway-elevation.pdf)
+[![Extended elevation of the streamway from the Old 40 to Sump 1](docs/swildons-streamway-elevation.png)](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-streamway-elevation.pdf)
 
 ### Resurvey trips
 

@@ -247,7 +247,7 @@ write notes in red or orange or they will be read as walls.
 
 Beyond the resurvey only W. I. Stanton's 1950s–60s survey exists
 (`stanton/`, one folder per trip). The
-[plan with Stanton's survey](https://paperclipmonkey.github.io/caves-mendip-swildons/Swildons-plan-with-stanton.pdf)
+[plan with Stanton's survey](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-plan-with-stanton.pdf)
 shows his stations next to the resurvey's. When a new trip reaches
 one of them:
 
