@@ -39,8 +39,10 @@ station and passage come from it. Without it the map has no ground.
 
 ## The page
 
-Backgrounds are OpenStreetMap (footpaths and field boundaries) or
-Esri imagery. The passages are coloured by altitude with the colours of
+Backgrounds are OpenStreetMap data drawn with OpenFreeMap's Liberty
+style (vector tiles, free and keyless; the tiles from
+tile.openstreetmap.org are refused to a page opened from disk) or Esri
+imagery. The passages are coloured by altitude with the colours of
 `altitude-colours.th`, higher ones drawn over lower ones; clicking
 lists every level under the point. Stanton's survey beyond the resurvey
 has no drawing yet, so it is shown as a broad centreline, also coloured

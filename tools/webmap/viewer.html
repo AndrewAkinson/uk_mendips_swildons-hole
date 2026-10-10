@@ -11,8 +11,8 @@
   copy in output/map; edit tools/webmap/viewer.html). It loads map.json,
   hillshade.png and contours.geojson next to it, and the survey from
   ../Swildons-map.geojson and ../Swildons-centreline.geojson. MapLibre GL
-  JS comes from unpkg, the background from OpenStreetMap or Esri, and
-  the label fonts from OpenFreeMap.
+  JS comes from unpkg, the background map and label fonts from
+  OpenFreeMap and the imagery from Esri.
 -->
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
 <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
@@ -206,13 +206,28 @@ function arrowIcon(colour, kind) {
   return g.getImageData(0, 0, s, s);
 }
 
-// backgrounds: OpenStreetMap (footpaths and field boundaries) or Esri imagery
-const BASES = {
-  osm: { tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'], maxzoom: 19,
-         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' },
-  sat: { tiles: ['https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'], maxzoom: 19,
-         attribution: 'Imagery &copy; Esri, Maxar, Earthstar Geographics' },
-};
+// Backgrounds: OpenStreetMap data drawn by OpenFreeMap's Liberty style
+// (vector tiles, no key, and unlike tile.openstreetmap.org it works from
+// a page opened from disk), or Esri imagery
+const MAP_STYLE = 'https://tiles.openfreemap.org/styles/liberty';
+const SATELLITE = { type: 'raster', tileSize: 256, maxzoom: 19,
+  tiles: ['https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'],
+  attribution: 'Imagery &copy; Esri, Maxar, Earthstar Geographics' };
+
+// The Liberty style's sources and layers, renamed so they can't clash
+// with the survey's, or nothing if it can't be had
+async function mapStyle() {
+  try {
+    const st = await (await fetch(MAP_STYLE)).json();
+    const sources = Object.fromEntries(Object.entries(st.sources).map(([k, v]) => ['ofm-' + k, v]));
+    const layers = st.layers.filter(l => l.type !== 'fill-extrusion').map(l => ({
+      ...l, id: 'ofm-' + l.id, ...(l.source ? { source: 'ofm-' + l.source } : {}) }));
+    return { sources, layers, sprite: st.sprite };
+  } catch (e) {
+    console.warn('no background map', e);
+    return { sources: {}, layers: [], sprite: undefined };
+  }
+}
 
 // The data comes from the files beside the page, or from the page itself
 // in the single-file version (python3 -m tools.webmap --standalone)
@@ -224,10 +239,11 @@ const load = url => INLINE ? Promise.resolve(INLINE[url]) : fetch(url).then(r =>
 
 async function main() {
   const cfg = await load('map.json');
-  const [drawing, centreline, contours] = await Promise.all([
+  const [drawing, centreline, contours, base] = await Promise.all([
     load('../Swildons-map.geojson'), load('../Swildons-centreline.geojson'),
-    cfg.contours ? load(cfg.contours) : null,
+    cfg.contours ? load(cfg.contours) : null, mapStyle(),
   ]);
+  const baseIds = base.layers.map(l => l.id);
   if (INLINE) document.querySelectorAll('.dl a').forEach(a => {
     // no files beside a single-file page: save the inlined data instead
     const data = INLINE[a.getAttribute('href')];
@@ -244,8 +260,8 @@ async function main() {
   document.title = `${cfg.title} map`;
 
   const sources = {
-    osm: { type: 'raster', tileSize: 256, ...BASES.osm },
-    sat: { type: 'raster', tileSize: 256, ...BASES.sat },
+    ...base.sources,
+    sat: SATELLITE,
     drawing: { type: 'geojson', data: drawing },
     centreline: { type: 'geojson', data: centreline },
     entrance: { type: 'geojson', data: { type: 'Feature', properties: {}, geometry: { type: 'Point', coordinates: cfg.entrance.slice(0, 2) } } },
@@ -260,7 +276,7 @@ async function main() {
 
   const layers = [
     { id: 'bg', type: 'background', paint: { 'background-color': '#e9e5dc' } },
-    { id: 'osm', type: 'raster', source: 'osm', paint: { 'raster-saturation': -0.55, 'raster-contrast': -0.05 } },
+    ...base.layers,
     { id: 'sat', type: 'raster', source: 'sat', layout: { visibility: 'none' }, paint: { 'raster-saturation': -0.15 } },
     cfg.hillshade && { id: 'hillshade', type: 'raster', source: 'hillshade', paint: { 'raster-opacity': 0.5, 'raster-fade-duration': 0 } },
     contours && { id: 'contours', type: 'line', source: 'contours', filter: ['!', ['get', 'index']], minzoom: 15,
@@ -354,7 +370,7 @@ async function main() {
     container: 'map', hash: true, maxZoom: 22, minZoom: 10, attributionControl: false,
     bounds: cfg.bounds, fitBoundsOptions: { padding: window.innerWidth < 560 ? { top: 130, bottom: 30, left: 20, right: 50 }
                                           : { top: 130, bottom: 40, left: 310, right: 60 } },
-    style: { version: 8, glyphs: 'https://tiles.openfreemap.org/fonts/{fontstack}/{range}.pbf', sources, layers },
+    style: { version: 8, ...(base.sprite ? { sprite: base.sprite } : {}), glyphs: 'https://tiles.openfreemap.org/fonts/{fontstack}/{range}.pbf', sources, layers },
   });
   map.addControl(new maplibregl.NavigationControl({ visualizePitch: false }), 'top-right');
   map.addControl(new maplibregl.GeolocateControl({ positionOptions: { enableHighAccuracy: true }, trackUserLocation: true }), 'top-right');
@@ -372,7 +388,8 @@ async function main() {
   document.querySelectorAll('#base button').forEach(b => b.addEventListener('click', () => {
     document.querySelectorAll('#base button').forEach(x => x.classList.toggle('on', x === b));
     const k = b.dataset.base;
-    for (const id of ['osm', 'sat']) map.setLayoutProperty(id, 'visibility', id === k ? 'visible' : 'none');
+    for (const id of baseIds) map.setLayoutProperty(id, 'visibility', k === 'osm' ? 'visible' : 'none');
+    map.setLayoutProperty('sat', 'visibility', k === 'sat' ? 'visible' : 'none');
     if (map.getLayer('hillshade')) map.setPaintProperty('hillshade', 'raster-opacity', k === 'sat' ? 0.3 : 0.5);
   }));
 
