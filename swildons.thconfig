@@ -283,6 +283,10 @@ export map -projection extended        -layout streamway-elevation -o output/Swi
 # Vector and GIS versions of the plan.
 export map -projection plan -layout plan-sheet -fmt svg -o output/Swildons-plan.svg
 export map -projection plan -fmt kml -o output/Swildons-plan.kml
+# Shapefiles in OS grid metres, which tools/webmap turns into the
+# GeoJSON downloads and the map page. Therion writes each as a
+# directory of points, lines, areas and passage outlines.
+export map -projection plan -fmt esri -o output/esri-plan
 
 
 # ---------------------------------------------------------------------
@@ -297,6 +301,8 @@ export model -fmt vrml   -o output/Swildons.vrml
 # only. The default adds walls from every splay shot, which come out as
 # spikes wherever a splay reaches up an aven or into a side passage.
 export model -fmt loch -wall-source maps -o output/Swildons-walls.lox
+# Legs and stations as shapefiles, for tools/webmap.
+export model -fmt esri -o output/esri-model
 
 export continuation-list -fmt html -o output/Swildons-continuations.html
 export cave-list   -location on -o output/Swildons-caves.html

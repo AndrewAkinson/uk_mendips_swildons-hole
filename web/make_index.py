@@ -46,6 +46,8 @@ DATA = [
     ("Swildons-entrance-plan.svg",  "Entrance Series, SVG", "Vector, 1:200."),
     ("Swildons-plan.kml",           "Plan, KML",         "Drawn passage outlines for Google Earth."),
     ("Swildons-centreline.kml",     "Centreline, KML",   "The whole centreline for Google Earth."),
+    ("Swildons-map.geojson",        "Plan, GeoJSON",     "The drawing in lat/long: passage outlines, water, walls, detail and names, each with its altitude. For QGIS or a web map."),
+    ("Swildons-centreline.geojson", "Centreline, GeoJSON", "Every leg and station in lat/long with altitude, Stanton's marked, and the rock above each station."),
     ("Swildons-caves.html",         "Cave list",         "Summary table."),
     ("Swildons-surveys.html",       "Survey list",       "Every survey trip, with length and team."),
     ("Swildons-continuations.html", "Continuations",     "Leads still to push."),
@@ -292,6 +294,22 @@ def main():
       <h3><a href="3d/index.html">The cave beneath the ground</a></h3>
       <p>The survey in 3D under the Environment Agency&rsquo;s LIDAR ground surface and satellite imagery. Drag to turn it, scroll or pinch to zoom.</p>
       <div class="size"><a href="3d/index.html">Open in the browser</a></div>
+    </div>
+  </div>
+</div>""")
+
+    # The 2D map (tools/webmap), if it was built
+    if os.path.exists(os.path.join(OUT, "map", "index.html")):
+        thumb = ('<a class="thumb" href="map/index.html"><img src="map/preview.png" '
+                 'alt="The cave on the map, under the fields at Priddy" loading="lazy"></a>'
+                 if os.path.exists(os.path.join(OUT, "map", "preview.png")) else "")
+        doc.append(f"""<h2>On the map</h2>\n<div class="grid">
+  <div class="card">
+    {thumb}
+    <div class="body">
+      <h3><a href="map/index.html">The cave under the fields</a></h3>
+      <p>The plan over OpenStreetMap or satellite imagery, with the ground&rsquo;s shape from LIDAR. Click a passage for its depth and the rock above it, or turn on the stations.</p>
+      <div class="size"><a href="map/index.html">Open the map</a> &middot; <a href="Swildons-map.geojson">GeoJSON</a></div>
     </div>
   </div>
 </div>""")

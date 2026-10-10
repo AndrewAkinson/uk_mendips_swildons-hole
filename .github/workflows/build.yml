@@ -104,7 +104,7 @@ jobs:
       # Route cards (tools/routes): one A3 sheet per route in routes/*.toml,
       # drawn over the plan just rendered and printed to PDF by Chrome,
       # which the runner has. Plain Python, no packages needed.
-      - name: Build the route cards, surface map and 3D view
+      - name: Build the route cards, surface map, 3D view and 2D map
         run: |
           export CHROMIUM="$(command -v google-chrome || command -v chromium)"
           python3 -m tools.routes
@@ -114,6 +114,15 @@ jobs:
           # the 3D view: the cave under the LIDAR ground (cached in
           # surface/lidar/), with a still for the index page
           python3 -m tools.model3d
+          # the GeoJSON downloads and the 2D map over the ground, from
+          # Therion's shapefiles and the LIDAR tools.model3d just saved.
+          # shapely clips the area fills to the walls, as Therion does.
+          python3 -m venv "$RUNNER_TEMP/webmap"
+          "$RUNNER_TEMP/webmap/bin/pip" install -q shapely
+          "$RUNNER_TEMP/webmap/bin/python" -m tools.webmap
+          # the shapefiles are in OS grid metres within square ST, not
+          # something to publish; the GeoJSON is their published form
+          rm -rf output/esri-plan output/esri-model
 
       - name: Build the index page
         run: |
@@ -137,7 +146,7 @@ jobs:
             echo
             echo "| File | Size |"
             echo "| --- | ---: |"
-            for f in output/*.pdf output/*.svg output/*.3d output/*.lox output/*.kml; do
+            for f in output/*.pdf output/*.svg output/*.3d output/*.lox output/*.kml output/*.geojson; do
               [ -e "$f" ] || continue
               printf '| `%s` | %s |\n' "$(basename "$f")" "$(du -h "$f" | cut -f1)"
             done

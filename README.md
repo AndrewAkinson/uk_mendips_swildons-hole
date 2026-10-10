@@ -25,12 +25,13 @@ The cave's entry in the Mendip Cave Registry & Archive:
 | [Plan with centreline](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-plan-centreline.pdf) | The plan with survey legs and station names, for resurveying. 1:500. |
 | [Plan with Stanton's survey](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-plan-with-stanton.pdf) | The plan plus Stanton's survey beyond it as centreline, with station names, for planning where to resurvey next. 1:500. |
 | [The cave in 3D](https://cavesurveying.github.io/uk_mendips_swildons-hole/3d/) | The survey beneath the Environment Agency's LIDAR ground surface and satellite imagery, in the browser. See [tools/model3d](tools/model3d/README.md). |
+| [The cave on the map](https://cavesurveying.github.io/uk_mendips_swildons-hole/map/) | The plan over OpenStreetMap or satellite imagery and the LIDAR ground, with the depth and rock above every passage and station. Also as GeoJSON to download. See [tools/webmap](tools/webmap/README.md). |
 | [Getting there](https://cavesurveying.github.io/uk_mendips_swildons-hole/surface/index.html) | For visitors new to the area: where to park and the walks to the entrance. See [tools/surface](tools/surface/README.md). |
 | Route cards (draft) | One sheet per route through the cave, with the way to go at each junction, made from the survey. On the [survey site](https://cavesurveying.github.io/uk_mendips_swildons-hole/); see [tools/routes](tools/routes/README.md). |
 
 The survey site also has the 3D model (Survex `.3d` for Aven, Therion
-`.lox` for Loch), Google Earth `.kml` files and the survey data as CSV
-and SQL. The resurvey was done with DistoX and PocketTopo, and the
+`.lox` for Loch), Google Earth `.kml` files, GeoJSON of the plan and
+centreline, and the survey data as CSV and SQL. The resurvey was done with DistoX and PocketTopo, and the
 survey is drawn and built with [Therion](https://therion.speleo.sk/).
 
 ## What's surveyed
