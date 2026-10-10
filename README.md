@@ -10,6 +10,9 @@ survey of the 1950s and 60s. The survey site has every sheet, the 3D
 view, directions to the entrance and the route cards, rebuilt from this
 repository every time it changes.
 
+The cave's entry in the Mendip Cave Registry & Archive:
+[Swildons Hole](https://www.mcra.org.uk/registry/sitedetails.php?id=240).
+
 | On the survey site | |
 |---|---|
 | [Plan](https://paperclipmonkey.github.io/caves-mendip-swildons/Swildons-plan.pdf) | Entrance to Sump 1, coloured by altitude, with cross-sections along the streamway. 1:500. |
