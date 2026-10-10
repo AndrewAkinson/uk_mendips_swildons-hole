@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Swildons Hole map</title>
+<meta name="description" content="Swildons Hole, Priddy, Mendip: the survey on a map, over the ground surface.">
+<meta name="theme-color" content="#0e1219">
+<!--
+  The map page, made by tools/webmap from the survey (do not edit the
+  copy in output/map; edit tools/webmap/viewer.html). It loads map.json,
+  hillshade.png and contours.geojson next to it, and the survey from
+  ../Swildons-map.geojson and ../Swildons-centreline.geojson. MapLibre GL
+  JS comes from unpkg, the background from OpenStreetMap or Esri, and
+  the label fonts from OpenFreeMap.
+-->
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e1219;
+    --glass: rgba(14, 18, 28, .72);
+    --glass-edge: rgba(255, 255, 255, .1);
+    --text: #e9eef6;
+    --muted: #9aa6b8;
+    --accent: #7fb8cc;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
+    font: 14px/1.4 Inter, system-ui, -apple-system, "Segoe UI", sans-serif; overflow: hidden;
+    -webkit-font-smoothing: antialiased; }
+  #map { position: fixed; inset: 0; }
+  .glass { background: var(--glass); border: 1px solid var(--glass-edge); border-radius: 14px;
+    backdrop-filter: blur(14px) saturate(140%); -webkit-backdrop-filter: blur(14px) saturate(140%);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, .35); }
+
+  #title { position: fixed; top: max(12px, env(safe-area-inset-top)); left: 12px; padding: 12px 16px;
+    max-width: calc(100vw - 72px); z-index: 2; }
+  #title h1 { margin: 0; font-size: 20px; font-weight: 700; letter-spacing: -.01em; }
+  #title p { margin: 2px 0 8px; color: var(--muted); font-size: 13px; }
+  #title a.back { color: var(--muted); font-size: 12px; text-decoration: none; margin-left: 10px; font-weight: 500; }
+  #title a.back:hover { color: var(--accent); }
+  .chips { display: flex; gap: 6px; flex-wrap: wrap; }
+  .chip { font-size: 12px; padding: 3px 9px; border-radius: 999px; background: rgba(255, 255, 255, .06);
+    border: 1px solid rgba(255, 255, 255, .08); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .chip b { font-weight: 600; color: #fff; }
+
+  #panel { position: fixed; left: 12px; bottom: max(30px, calc(env(safe-area-inset-bottom) + 24px)); width: 268px;
+    max-height: calc(100vh - 190px); overflow: auto; padding: 12px 14px; z-index: 2; }
+  #panel h2 { margin: 0; font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--muted); display: flex; justify-content: space-between; align-items: center; cursor: pointer;
+    user-select: none; }
+  #panel h2::after { content: "–"; font-size: 14px; letter-spacing: 0; }
+  #panel.closed h2::after { content: "+"; }
+  #panel.closed .body { display: none; }
+  #panel h3 { margin: 12px 0 4px; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--muted); }
+  .seg { display: flex; background: rgba(255, 255, 255, .06); border-radius: 9px; padding: 2px; margin-top: 8px; }
+  .seg button { flex: 1; font: inherit; font-size: 12px; font-weight: 500; color: var(--muted); background: none;
+    border: 0; border-radius: 7px; padding: 5px 0; cursor: pointer; }
+  .seg button.on { background: rgba(127, 184, 204, .25); color: #fff; }
+  label.row { display: flex; align-items: center; gap: 8px; padding: 3px 0; cursor: pointer; font-size: 13px; }
+  label.row input { accent-color: var(--accent); margin: 0; }
+  label.row .sw { width: 18px; height: 10px; border-radius: 3px; flex: none; }
+  .slider { display: flex; align-items: center; gap: 8px; font-size: 13px; padding: 4px 0; }
+  .slider input { flex: 1; accent-color: var(--accent); }
+  .ramp { height: 10px; border-radius: 5px; margin-top: 6px;
+    background: linear-gradient(90deg, rgb(168, 82, 66), rgb(219, 122, 71), rgb(245, 173, 87), rgb(245, 219, 117),
+      rgb(194, 214, 107), rgb(128, 184, 97)); }
+  .ramp-l { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); margin-top: 3px;
+    font-variant-numeric: tabular-nums; }
+  .note { font-size: 12px; color: var(--muted); margin: 6px 0 0; }
+  .note a, .dl a { color: var(--accent); text-decoration: none; }
+  .dl { display: flex; flex-direction: column; gap: 3px; font-size: 13px; }
+  .dl a:hover, .note a:hover { text-decoration: underline; }
+
+  /* popups */
+  .maplibregl-popup-content { background: var(--glass); color: var(--text); border: 1px solid var(--glass-edge);
+    border-radius: 12px; padding: 10px 12px; font: 13px/1.4 Inter, system-ui, sans-serif;
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: 0 8px 30px rgba(0, 0, 0, .4); }
+  .maplibregl-popup-tip { display: none; }
+  .maplibregl-popup-close-button { color: var(--muted); font-size: 18px; padding: 2px 8px; }
+  .pop h4 { margin: 0 0 2px; font-size: 14px; font-weight: 600; padding-right: 16px; }
+  .pop .k { color: var(--muted); font-size: 12px; }
+  .pop table { border-collapse: collapse; margin-top: 4px; font-variant-numeric: tabular-nums; }
+  .pop td { padding: 1px 10px 1px 0; vertical-align: top; }
+  .pop td:first-child { color: var(--muted); }
+  .pop .lvl { border-top: 1px solid var(--glass-edge); margin-top: 8px; padding-top: 6px; }
+  .pop .lvl:first-of-type { border: 0; margin-top: 4px; padding-top: 0; }
+  .pop .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; vertical-align: 0; }
+
+  .maplibregl-ctrl-group { background: var(--glass); border: 1px solid var(--glass-edge); }
+  .maplibregl-ctrl-group button + button { border-top-color: var(--glass-edge); }
+  .maplibregl-ctrl-group button .maplibregl-ctrl-icon { filter: invert(1) brightness(1.4); }
+  .maplibregl-ctrl-scale { background: rgba(14, 18, 28, .6); color: var(--text); border-color: var(--text); }
+  .maplibregl-ctrl-attrib { background: rgba(14, 18, 28, .6) !important; color: var(--muted); font-size: 11px; }
+  .maplibregl-ctrl-attrib a { color: var(--text); }
+  .maplibregl-ctrl-attrib-button { filter: invert(1); }
+
+  #err { position: fixed; inset: 0; display: none; place-items: center; text-align: center; padding: 24px; color: var(--muted); }
+  @media (max-width: 560px) {
+    #title { padding: 10px 12px; }
+    #title h1 { font-size: 17px; }
+    #panel { width: calc(100vw - 24px); max-height: 55vh; bottom: max(64px, calc(env(safe-area-inset-bottom) + 56px)); }
+  }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<div id="err"></div>
+
+<header id="title" class="glass">
+  <h1><span id="t-name">Swildons Hole</span><a class="back" href="../index.html">Survey site</a></h1>
+  <p id="t-sub">The survey over the ground</p>
+  <div class="chips" id="chips"></div>
+</header>
+
+<section id="panel" class="glass">
+  <h2 id="panel-h">Layers</h2>
+  <div class="body">
+    <div class="seg" id="base">
+      <button data-base="osm" class="on">Map</button>
+      <button data-base="sat">Satellite</button>
+      <button data-base="none">None</button>
+    </div>
+
+    <h3>The ground</h3>
+    <label class="row"><input type="checkbox" data-group="hillshade" checked> Shaded relief (LIDAR)</label>
+    <label class="row"><input type="checkbox" data-group="contours" checked> Contours, every metre</label>
+
+    <h3>The cave</h3>
+    <label class="row"><input type="checkbox" data-group="passages" checked> Drawn passages</label>
+    <label class="row"><input type="checkbox" data-group="details" checked> Walls, water and detail</label>
+    <label class="row"><input type="checkbox" data-group="labels" checked> Names</label>
+    <label class="row"><input type="checkbox" data-group="legs" checked> Centreline</label>
+    <label class="row"><input type="checkbox" data-group="stanton" checked> Stanton's survey (centreline only)</label>
+    <label class="row"><input type="checkbox" data-group="stations"> Stations</label>
+    <label class="row"><input type="checkbox" data-group="splays"> Splays</label>
+    <div class="slider">Cave <input type="range" id="opacity" min="0.2" max="1" step="0.05" value="0.85"></div>
+
+    <h3>Altitude</h3>
+    <div class="ramp"></div>
+    <div class="ramp-l"><span>140 m</span><span>190 m</span><span>240 m</span></div>
+    <p class="note">Higher passages are drawn over lower ones. Click the map for what is underneath, one level above another.</p>
+
+    <h3>Download</h3>
+    <div class="dl">
+      <a href="../Swildons-map.geojson" download>Drawing, GeoJSON</a>
+      <a href="../Swildons-centreline.geojson" download>Centreline and stations, GeoJSON</a>
+    </div>
+    <p class="note">WGS84 lat/long. Passages, areas, lines and points have their altitude; stations have the depth of rock above them.</p>
+  </div>
+</section>
+
+<!--MAP_DATA-->
+<script>
+'use strict';
+const $ = id => document.getElementById(id);
+
+// Altitude colours, from altitude-colours.th (Therion's percentages as RGB)
+const ALT = [140, 'rgb(168,82,66)', 160, 'rgb(219,122,71)', 180, 'rgb(245,173,87)',
+             200, 'rgb(245,219,117)', 220, 'rgb(194,214,107)', 240, 'rgb(128,184,97)'];
+const altColour = ['interpolate', ['linear'], ['coalesce', ['get', 'altitude'], 190], ...ALT];
+function altRGB(z) {
+  for (let i = 0; i < ALT.length - 2; i += 2) {
+    if (z <= ALT[i + 2] || i === ALT.length - 4) {
+      const t = Math.max(0, Math.min(1, (z - ALT[i]) / (ALT[i + 2] - ALT[i])));
+      const a = ALT[i + 1].match(/\d+/g).map(Number), b = ALT[i + 3].match(/\d+/g).map(Number);
+      return `rgb(${a.map((v, k) => Math.round(v + (b[k] - v) * t)).join(',')})`;
+    }
+  }
+}
+const INK = '#1d1a16';
+const WATER = '#2f86d0';
+const FONT = ['Noto Sans Regular'], FONT_B = ['Noto Sans Bold'], FONT_I = ['Noto Sans Italic'];
+
+// Each checkbox shows or hides a group of layers
+const GROUPS = {
+  hillshade: ['hillshade'], contours: ['contours', 'contours-index', 'contours-label'],
+  passages: ['passages'], details: ['areas', 'water', 'detail', 'detail-dashed', 'walls', 'walls-dashed', 'flow', 'gradient', 'formations'],
+  labels: ['labels', 'climbs'], legs: ['legs'], stanton: ['stanton-casing', 'stanton'],
+  stations: ['stations', 'station-names'], splays: ['splays'],
+};
+
+function arrowIcon(colour, kind) {
+  // drawn pointing north; the layer turns them by their bearing
+  const s = 48, c = document.createElement('canvas');
+  c.width = c.height = s;
+  const g = c.getContext('2d');
+  g.lineCap = g.lineJoin = 'round';
+  if (kind === 'flow') {
+    g.strokeStyle = 'rgba(255,255,255,.9)'; g.lineWidth = 9;
+    g.beginPath(); g.moveTo(24, 42); g.lineTo(24, 10); g.moveTo(13, 21); g.lineTo(24, 8); g.lineTo(35, 21); g.stroke();
+    g.strokeStyle = colour; g.lineWidth = 4.5;
+    g.beginPath(); g.moveTo(24, 42); g.lineTo(24, 10); g.moveTo(13, 21); g.lineTo(24, 8); g.lineTo(35, 21); g.stroke();
+  } else {
+    // a gradient: an open V pointing downhill (north as drawn)
+    g.strokeStyle = 'rgba(255,255,255,.8)'; g.lineWidth = 8;
+    g.beginPath(); g.moveTo(12, 34); g.lineTo(24, 14); g.lineTo(36, 34); g.stroke();
+    g.strokeStyle = colour; g.lineWidth = 3.5;
+    g.beginPath(); g.moveTo(12, 34); g.lineTo(24, 14); g.lineTo(36, 34); g.stroke();
+  }
+  return g.getImageData(0, 0, s, s);
+}
+
+// backgrounds: OpenStreetMap (footpaths and field boundaries) or Esri imagery
+const BASES = {
+  osm: { tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'], maxzoom: 19,
+         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' },
+  sat: { tiles: ['https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'], maxzoom: 19,
+         attribution: 'Imagery &copy; Esri, Maxar, Earthstar Geographics' },
+};
+
+// The data comes from the files beside the page, or from the page itself
+// in the single-file version (python3 -m tools.webmap --standalone)
+const INLINE = window.MAP_DATA || null;
+const load = url => INLINE ? Promise.resolve(INLINE[url]) : fetch(url).then(r => {
+  if (!r.ok) throw new Error(`${url}: ${r.status}`);
+  return r.json();
+});
+
+async function main() {
+  const cfg = await load('map.json');
+  const [drawing, centreline, contours] = await Promise.all([
+    load('../Swildons-map.geojson'), load('../Swildons-centreline.geojson'),
+    cfg.contours ? load(cfg.contours) : null,
+  ]);
+  if (INLINE) document.querySelectorAll('.dl a').forEach(a => {
+    // no files beside a single-file page: save the inlined data instead
+    const data = INLINE[a.getAttribute('href')];
+    a.href = URL.createObjectURL(new Blob([JSON.stringify(data)], { type: 'application/geo+json' }));
+    a.download = a.getAttribute('href').split('/').pop();
+  });
+
+  const st = cfg.stats;
+  $('chips').innerHTML = [
+    `<span class="chip"><b>${(st.length / 1000).toFixed(1)} km</b> surveyed</span>`,
+    `<span class="chip"><b>${st.depth} m</b> deep</span>`,
+    `<span class="chip">Entrance <b>${cfg.grid_ref}</b></span>`,
+  ].join('');
+  document.title = `${cfg.title} map`;
+
+  const sources = {
+    osm: { type: 'raster', tileSize: 256, ...BASES.osm },
+    sat: { type: 'raster', tileSize: 256, ...BASES.sat },
+    drawing: { type: 'geojson', data: drawing },
+    centreline: { type: 'geojson', data: centreline },
+    entrance: { type: 'geojson', data: { type: 'Feature', properties: {}, geometry: { type: 'Point', coordinates: cfg.entrance.slice(0, 2) } } },
+  };
+  if (cfg.hillshade) sources.hillshade = { type: 'image', url: cfg.hillshade.url, coordinates: cfg.hillshade.coordinates };
+  if (contours) sources.contours = { type: 'geojson', data: contours };
+
+  const kind = k => ['==', ['get', 'kind'], k];
+  const type = (...t) => ['in', ['get', 'type'], ['literal', t]];
+  const z = (a, b, c, d) => ['interpolate', ['exponential', 1.6], ['zoom'], a, b, c, d];
+  const opacity = +$('opacity').value;
+
+  const layers = [
+    { id: 'bg', type: 'background', paint: { 'background-color': '#e9e5dc' } },
+    { id: 'osm', type: 'raster', source: 'osm', paint: { 'raster-saturation': -0.55, 'raster-contrast': -0.05 } },
+    { id: 'sat', type: 'raster', source: 'sat', layout: { visibility: 'none' }, paint: { 'raster-saturation': -0.15 } },
+    cfg.hillshade && { id: 'hillshade', type: 'raster', source: 'hillshade', paint: { 'raster-opacity': 0.5, 'raster-fade-duration': 0 } },
+    contours && { id: 'contours', type: 'line', source: 'contours', filter: ['!', ['get', 'index']], minzoom: 15,
+      paint: { 'line-color': '#8a5a2b', 'line-opacity': 0.45, 'line-width': z(15, 0.4, 20, 1.1) } },
+    contours && { id: 'contours-index', type: 'line', source: 'contours', filter: ['get', 'index'],
+      paint: { 'line-color': '#8a5a2b', 'line-opacity': 0.7, 'line-width': z(15, 0.8, 20, 2) } },
+    contours && { id: 'contours-label', type: 'symbol', source: 'contours', filter: ['get', 'index'], minzoom: 16,
+      layout: { 'symbol-placement': 'line', 'text-field': ['concat', ['to-string', ['get', 'height']], ' m'],
+                'text-font': FONT, 'text-size': 11, 'symbol-spacing': 320 },
+      paint: { 'text-color': '#7a4a1d', 'text-halo-color': 'rgba(255,255,255,.85)', 'text-halo-width': 1.4 } },
+
+    // the drawing, lowest passages first so the higher ones lie over them
+    { id: 'passages', type: 'fill', source: 'drawing', filter: kind('passage'),
+      layout: { 'fill-sort-key': ['get', 'altitude'] },
+      paint: { 'fill-color': altColour, 'fill-opacity': opacity, 'fill-outline-color': 'rgba(29,26,22,.35)' } },
+    { id: 'areas', type: 'fill', source: 'drawing', filter: ['all', kind('area'), ['!=', ['get', 'type'], 'water']],
+      paint: { 'fill-opacity': opacity * 0.45, 'fill-color': ['match', ['get', 'type'],
+        'clay', '#9a6b3c', 'pebbles', '#7c7262', 'debris', '#5d564c', 'blocks', '#4b453d', 'flowstone', '#f3ead2', '#7c7262'] } },
+    { id: 'water', type: 'fill', source: 'drawing', filter: ['all', kind('area'), ['==', ['get', 'type'], 'water']],
+      paint: { 'fill-color': WATER, 'fill-opacity': Math.min(1, opacity + 0.05) } },
+    { id: 'detail', type: 'line', source: 'drawing', minzoom: 16,
+      filter: ['all', kind('line'), type('floor-step', 'rock-border', 'rock-edge', 'border', 'rimstone-dam', 'arrow'),
+               ['!', ['in', ['get', 'subtype'], ['literal', ['invisible', 'presumed']]]]],
+      paint: { 'line-color': INK, 'line-opacity': 0.75, 'line-width': z(16, 0.35, 21, 1.4) } },
+    { id: 'detail-dashed', type: 'line', source: 'drawing', minzoom: 16,
+      filter: ['all', kind('line'), ['any', type('overhang', 'pit', 'chimney'),
+               ['all', type('border'), ['==', ['get', 'subtype'], 'presumed']]]],
+      paint: { 'line-color': INK, 'line-opacity': 0.8, 'line-width': z(16, 0.4, 21, 1.5), 'line-dasharray': [3, 2] } },
+    { id: 'walls', type: 'line', source: 'drawing',
+      filter: ['all', kind('line'), type('wall'), ['!', ['in', ['get', 'subtype'], ['literal', ['invisible', 'presumed', 'unsurveyed']]]]],
+      layout: { 'line-join': 'round', 'line-cap': 'round' },
+      paint: { 'line-color': INK, 'line-width': z(15, 0.7, 21, 3) } },
+    { id: 'walls-dashed', type: 'line', source: 'drawing',
+      filter: ['all', kind('line'), type('wall'), ['in', ['get', 'subtype'], ['literal', ['presumed', 'unsurveyed']]]],
+      paint: { 'line-color': INK, 'line-width': z(15, 0.6, 21, 2.2), 'line-dasharray': [2.5, 2] } },
+
+    // the centreline: the resurvey thin over its drawing, Stanton's (not
+    // drawn yet) as a broad line coloured by altitude like the passages
+    { id: 'splays', type: 'line', source: 'centreline', minzoom: 17, layout: { visibility: 'none' },
+      filter: ['all', kind('leg'), ['has', 'splay']],
+      paint: { 'line-color': '#55606e', 'line-width': 0.6, 'line-opacity': 0.7 } },
+    { id: 'stanton-casing', type: 'line', source: 'centreline',
+      filter: ['all', kind('leg'), ['==', ['get', 'source'], 'stanton'], ['!', ['has', 'splay']], ['!', ['has', 'duplicate']]],
+      layout: { 'line-join': 'round', 'line-cap': 'round' },
+      paint: { 'line-color': INK, 'line-opacity': opacity, 'line-width': z(14, 2.4, 21, 9) } },
+    { id: 'stanton', type: 'line', source: 'centreline',
+      filter: ['all', kind('leg'), ['==', ['get', 'source'], 'stanton'], ['!', ['has', 'splay']], ['!', ['has', 'duplicate']]],
+      layout: { 'line-join': 'round', 'line-cap': 'round', 'line-sort-key': ['get', 'altitude'] },
+      paint: { 'line-color': altColour, 'line-opacity': opacity, 'line-width': z(14, 1.4, 21, 7) } },
+    { id: 'legs', type: 'line', source: 'centreline',
+      filter: ['all', kind('leg'), ['==', ['get', 'source'], 'resurvey'], ['!', ['has', 'splay']]],
+      paint: { 'line-color': '#fffdf6', 'line-opacity': 0.85, 'line-width': z(15, 0.5, 21, 1.6), 'line-dasharray': [4, 2] } },
+
+    { id: 'flow', type: 'symbol', source: 'drawing', minzoom: 17, filter: ['all', kind('point'), type('water-flow')],
+      layout: { 'icon-image': 'flow', 'icon-rotate': ['get', 'bearing'], 'icon-rotation-alignment': 'map',
+                'icon-size': z(17, 0.28, 21, 0.6), 'icon-allow-overlap': true } },
+    { id: 'gradient', type: 'symbol', source: 'drawing', minzoom: 18, filter: ['all', kind('point'), type('gradient')],
+      layout: { 'icon-image': 'gradient', 'icon-rotate': ['get', 'bearing'], 'icon-rotation-alignment': 'map',
+                'icon-size': z(18, 0.25, 21, 0.5), 'icon-allow-overlap': true } },
+    { id: 'formations', type: 'circle', source: 'drawing', minzoom: 18,
+      filter: ['all', kind('point'), type('flowstone', 'stalagmite', 'stalactite', 'stalactites', 'curtain', 'pillar')],
+      paint: { 'circle-radius': z(18, 1.2, 21, 3), 'circle-color': '#fbf6e8', 'circle-stroke-color': INK, 'circle-stroke-width': 0.6 } },
+
+    { id: 'stations', type: 'circle', source: 'centreline', minzoom: 17, layout: { visibility: 'none' },
+      filter: kind('station'),
+      paint: { 'circle-radius': z(17, 1.5, 21, 3.5), 'circle-color': '#fff', 'circle-stroke-color': INK, 'circle-stroke-width': 1 } },
+    { id: 'station-names', type: 'symbol', source: 'centreline', minzoom: 19, layout: { visibility: 'none',
+        'text-field': ['get', 'name'], 'text-font': FONT, 'text-size': 10, 'text-offset': [0.6, 0], 'text-anchor': 'left',
+        'text-optional': true },
+      filter: kind('station'),
+      paint: { 'text-color': INK, 'text-halo-color': '#fff', 'text-halo-width': 1.2 } },
+
+    { id: 'climbs', type: 'symbol', source: 'drawing', minzoom: 19,
+      filter: ['all', kind('point'), type('label'), ['has', 'text'], ['<', ['length', ['get', 'text']], 7]],
+      layout: { 'text-field': ['get', 'text'], 'text-font': FONT_I, 'text-size': 11 },
+      paint: { 'text-color': INK, 'text-halo-color': 'rgba(255,255,255,.9)', 'text-halo-width': 1.2 } },
+    { id: 'labels', type: 'symbol', source: 'drawing', minzoom: 16,
+      filter: ['all', kind('point'), type('label'), ['has', 'text'], ['>=', ['length', ['get', 'text']], 7]],
+      layout: { 'text-field': ['get', 'text'], 'text-font': FONT_B, 'text-size': z(16, 10, 20, 15),
+                'text-max-width': 9, 'text-line-height': 1.1 },
+      paint: { 'text-color': INK, 'text-halo-color': 'rgba(255,253,246,.92)', 'text-halo-width': 1.6 } },
+
+    { id: 'entrance', type: 'circle', source: 'entrance',
+      paint: { 'circle-radius': 7, 'circle-color': INK, 'circle-stroke-color': '#fff', 'circle-stroke-width': 2.5 } },
+    { id: 'entrance-label', type: 'symbol', source: 'entrance',
+      layout: { 'text-field': 'Entrance', 'text-font': FONT_B, 'text-size': 13, 'text-offset': [0, -1.3], 'text-anchor': 'bottom' },
+      paint: { 'text-color': INK, 'text-halo-color': '#fff', 'text-halo-width': 2 } },
+  ].filter(Boolean);
+
+  const map = new maplibregl.Map({
+    container: 'map', hash: true, maxZoom: 22, minZoom: 10, attributionControl: false,
+    bounds: cfg.bounds, fitBoundsOptions: { padding: window.innerWidth < 560 ? { top: 130, bottom: 30, left: 20, right: 50 }
+                                          : { top: 130, bottom: 40, left: 310, right: 60 } },
+    style: { version: 8, glyphs: 'https://tiles.openfreemap.org/fonts/{fontstack}/{range}.pbf', sources, layers },
+  });
+  map.addControl(new maplibregl.NavigationControl({ visualizePitch: false }), 'top-right');
+  map.addControl(new maplibregl.GeolocateControl({ positionOptions: { enableHighAccuracy: true }, trackUserLocation: true }), 'top-right');
+  map.addControl(new maplibregl.ScaleControl({ unit: 'metric', maxWidth: 120 }), 'bottom-right');
+  map.addControl(new maplibregl.AttributionControl({ compact: true, customAttribution:
+    'Survey: <a href="https://github.com/CaveSurveying/uk_mendips_swildons-hole">Swildons Hole resurvey</a> · ' +
+    'LIDAR &copy; Environment Agency (OGL)' }), 'bottom-right');
+  map.dragRotate.disable();
+  map.touchZoomRotate.disableRotation();
+  map.addImage('flow', arrowIcon(WATER, 'flow'), { pixelRatio: 2 });
+  map.addImage('gradient', arrowIcon('#3b3328', 'gradient'), { pixelRatio: 2 });
+  window.map = map;
+
+  // background
+  document.querySelectorAll('#base button').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('#base button').forEach(x => x.classList.toggle('on', x === b));
+    const k = b.dataset.base;
+    for (const id of ['osm', 'sat']) map.setLayoutProperty(id, 'visibility', id === k ? 'visible' : 'none');
+    if (map.getLayer('hillshade')) map.setPaintProperty('hillshade', 'raster-opacity', k === 'sat' ? 0.3 : 0.5);
+  }));
+
+  // layer groups
+  document.querySelectorAll('input[data-group]').forEach(cb => {
+    const apply = () => (GROUPS[cb.dataset.group] || []).forEach(id =>
+      map.getLayer(id) && map.setLayoutProperty(id, 'visibility', cb.checked ? 'visible' : 'none'));
+    cb.addEventListener('change', apply);
+    map.on('load', apply);
+  });
+
+  // the cave's opacity, so the ground shows through
+  $('opacity').addEventListener('input', e => {
+    const o = +e.target.value;
+    map.setPaintProperty('passages', 'fill-opacity', o);
+    map.setPaintProperty('areas', 'fill-opacity', o * 0.45);
+    map.setPaintProperty('water', 'fill-opacity', Math.min(1, o + 0.05));
+    map.setPaintProperty('stanton', 'line-opacity', o);
+    map.setPaintProperty('stanton-casing', 'line-opacity', o);
+  });
+
+  // what's here: every level of passage under the point, top first,
+  // or the nearest station or leg
+  const m = v => v == null ? '' : `${v.toFixed(v < 10 ? 1 : 0)} m`;
+  const rows = r => `<table>${r.filter(x => x[1]).map(([k, v]) => `<tr><td>${k}</td><td>${v}</td></tr>`).join('')}</table>`;
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const popup = new maplibregl.Popup({ maxWidth: '280px', offset: 8 });
+  const clickable = ['stations', 'passages', 'stanton', 'legs'];
+  map.on('click', e => {
+    const pad = 6, box = [[e.point.x - pad, e.point.y - pad], [e.point.x + pad, e.point.y + pad]];
+    const layers = clickable.filter(id => map.getLayer(id) && map.getLayoutProperty(id, 'visibility') !== 'none');
+    const fs = map.queryRenderedFeatures(box, { layers });
+    let html = '';
+    const station = fs.find(f => f.layer.id === 'stations');
+    const passages = map.queryRenderedFeatures(e.point, { layers: layers.filter(l => l === 'passages') });
+    if (station) {
+      const p = station.properties;
+      html = `<h4>Station ${esc(p.name)}</h4>${p.aliases ? `<div class="k">also ${esc(p.aliases)}</div>` : ''}` +
+        rows([['Altitude', m(p.altitude)], ['Below the entrance', m(p.below_entrance)],
+              ['Ground above', m(p.ground)], ['Rock above', m(p.rock_above)],
+              ['Survey', p.source === 'stanton' ? "Stanton's" : 'Resurvey']]);
+    } else if (passages.length) {
+      const seen = new Set();
+      const ps = passages.map(f => f.properties).filter(p => !seen.has(p.scrap) && seen.add(p.scrap))
+        .sort((a, b) => b.altitude - a.altitude);
+      html = `<h4>${ps.length > 1 ? `${ps.length} passages here, one over another` : esc(ps[0].survey_title || 'Passage')}</h4>` +
+        ps.map(p => `<div class="lvl">${ps.length > 1 ? `<div><span class="dot" style="background:${altRGB(p.altitude)}"></span>${esc(p.survey_title || p.scrap)}</div>` : ''}` +
+          rows([['Altitude', m(p.altitude)], ['Below the entrance', m(p.below_entrance)], ['Rock above', m(p.rock_above)]]) + '</div>').join('');
+    } else {
+      const leg = fs.find(f => f.layer.id === 'stanton' || f.layer.id === 'legs');
+      if (!leg) { popup.remove(); return; }
+      const p = leg.properties;
+      html = `<h4>${esc(p.survey_title)}</h4><div class="k">${p.source === 'stanton' ? "W. I. Stanton's survey, centreline only" : 'Resurvey centreline'}</div>` +
+        rows([['Altitude', m(p.altitude)], ['Below the entrance', m(cfg.entrance[2] - p.altitude)]]);
+    }
+    popup.setLngLat(e.lngLat).setHTML(`<div class="pop">${html}</div>`).addTo(map);
+  });
+  map.on('mousemove', e => {
+    const layers = clickable.filter(id => map.getLayer(id) && map.getLayoutProperty(id, 'visibility') !== 'none');
+    map.getCanvas().style.cursor = map.queryRenderedFeatures(e.point, { layers }).length ? 'pointer' : '';
+  });
+}
+
+// the panel starts closed on a phone
+const panel = $('panel');
+if (window.innerWidth < 560) panel.classList.add('closed');
+$('panel-h').addEventListener('click', () => panel.classList.toggle('closed'));
+
+main().catch(e => {
+  console.error(e);
+  $('err').style.display = 'grid';
+  $('err').textContent = `The map couldn't load (${e.message}). It needs to be served over the web, not opened as a file.`;
+});
+</script>
+</body>
+</html>
