@@ -183,7 +183,8 @@ write into `legacy/`.
 
 Every push to `main` rebuilds the survey and publishes it
 (`.github/workflows/build.yml`). A pull request gets the built sheets
-and survey statistics in a comment instead. Some things to know:
+and survey statistics in a comment instead, with pictures of what it
+changes on each sheet ([tools/pdfdiff](tools/pdfdiff/README.md)). Some things to know:
 
 - Filenames are case-sensitive on the build machines, so an `input`
   must match the file's case exactly.
