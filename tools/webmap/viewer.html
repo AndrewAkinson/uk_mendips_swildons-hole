@@ -100,6 +100,8 @@
   .maplibregl-ctrl-attrib a { color: var(--text); }
   .maplibregl-ctrl-attrib-button { filter: invert(1); }
 
+  /* the index page's preview (?still): just the map */
+  body.still #title, body.still #panel, body.still .maplibregl-control-container { display: none; }
   #err { position: fixed; inset: 0; display: none; place-items: center; text-align: center; padding: 24px; color: var(--muted); }
   @media (max-width: 560px) {
     #title { padding: 10px 12px; }
@@ -159,6 +161,17 @@
 <script>
 'use strict';
 const $ = id => document.getElementById(id);
+const STILL = location.search.includes('still');   // the index page's preview
+if (STILL) {
+  // Chrome takes the still when the page has loaded. The page isn't
+  // loaded until this image is, and the build's server (tools.webmap's
+  // preview) holds it back until the map below says it is drawn.
+  document.body.classList.add('still');
+  const hold = document.createElement('img');
+  hold.src = '/__wait';
+  hold.hidden = true;
+  document.body.appendChild(hold);
+}
 
 // Altitude colours, from altitude-colours.th (Therion's percentages as RGB)
 const ALT = [140, 'rgb(168,82,66)', 160, 'rgb(219,122,71)', 180, 'rgb(245,173,87)',
@@ -367,8 +380,8 @@ async function main() {
   ].filter(Boolean);
 
   const map = new maplibregl.Map({
-    container: 'map', hash: true, maxZoom: 22, minZoom: 10, attributionControl: false,
-    bounds: cfg.bounds, fitBoundsOptions: { padding: window.innerWidth < 560 ? { top: 130, bottom: 30, left: 20, right: 50 }
+    container: 'map', hash: !STILL, maxZoom: 22, minZoom: 10, attributionControl: false, fadeDuration: STILL ? 0 : 300,
+    bounds: cfg.bounds, fitBoundsOptions: { padding: STILL ? 40 : window.innerWidth < 560 ? { top: 130, bottom: 30, left: 20, right: 50 }
                                           : { top: 130, bottom: 40, left: 310, right: 60 } },
     style: { version: 8, ...(base.sprite ? { sprite: base.sprite } : {}), glyphs: 'https://tiles.openfreemap.org/fonts/{fontstack}/{range}.pbf', sources, layers },
   });
@@ -383,6 +396,7 @@ async function main() {
   map.addImage('flow', arrowIcon(WATER, 'flow'), { pixelRatio: 2 });
   map.addImage('gradient', arrowIcon('#3b3328', 'gradient'), { pixelRatio: 2 });
   window.map = map;
+  if (STILL) map.once('idle', () => setTimeout(() => fetch('/__ready'), 500));
 
   // background
   document.querySelectorAll('#base button').forEach(b => b.addEventListener('click', () => {
@@ -460,6 +474,7 @@ $('panel-h').addEventListener('click', () => panel.classList.toggle('closed'));
 
 main().catch(e => {
   console.error(e);
+  if (STILL) fetch('/__ready');
   $('err').style.display = 'grid';
   $('err').textContent = `The map couldn't load (${e.message}). It needs to be served over the web, not opened as a file.`;
 });

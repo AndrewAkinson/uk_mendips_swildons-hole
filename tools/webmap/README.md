@@ -13,7 +13,7 @@ python3 -m tools.webmap --standalone preview.html    # also a single file to ope
 |---|---|
 | `output/Swildons-map.geojson` | The plan drawing. Passage outlines as polygons (`kind: passage`, one per scrap, with its altitude, depth below the entrance and the rock above it), `area`s (water, clay, pebbles, ...), `line`s (walls, borders, floor steps, pits, ...) and `point`s (labels, water flow, gradients, formations). Lines, areas and points carry the altitude of their scrap; arrows have a compass `bearing`. |
 | `output/Swildons-centreline.geojson` | Every `leg` (3D lines, with `source` resurvey or stanton, and `splay`, `duplicate`, `surface` flags) and `station` (3D points named `name@survey`, with altitude, depth below the entrance, and the LIDAR ground and rock above where there is LIDAR). |
-| `output/map/` | The page: `index.html` (MapLibre GL JS), `map.json`, `hillshade.png` and `contours.geojson` (1 m contours). |
+| `output/map/` | The page: `index.html` (MapLibre GL JS), `map.json`, `hillshade.png` and `contours.geojson` (1 m contours). With `CHROMIUM` set to a Chrome or Chromium binary, as in CI, also `preview.png`, the picture on the index page's card. |
 
 Coordinates are WGS84 longitude and latitude (RFC 7946), altitudes in
 metres above OS datum.

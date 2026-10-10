@@ -16,7 +16,9 @@ and writes them as lat/long GeoJSON:
 
 and the map page, output/map/: index.html (MapLibre GL JS), a hillshade
 and contours made from the LIDAR ground that tools.model3d has just
-saved in output/3d/, and map.json, which ties them together.
+saved in output/3d/, and map.json, which ties them together. With
+CHROMIUM set to a Chrome or Chromium binary it also saves a preview.png
+for the index page.
 """
 import argparse
 import base64
@@ -27,11 +29,12 @@ import os
 import re
 import shutil
 import struct
+import subprocess
 import sys
 import zlib
 from collections import defaultdict
 
-from tools.model3d.__main__ import ST, fit_affine, grid_to_ll, kml_entrance
+from tools.model3d.__main__ import ST, crop_png, fit_affine, grid_to_ll, kml_entrance
 from tools.webmap.shapefile import read
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -488,7 +491,7 @@ def build_map(plan, geo, ground, entrance_z):
     return collection(feats, 'Swildons Hole plan drawing')
 
 
-def build(out, plan, model, standalone=None):
+def build(out, plan, model, standalone=None, chromium=None):
     stations = read(os.path.join(model, 'stations3d'))
     ent = next(((a, p) for a, p in stations if a['_ENTRANCE'] == '1'), None)
     if not ent:
@@ -542,6 +545,8 @@ def build(out, plan, model, standalone=None):
     shutil.copy(os.path.join(HERE, 'viewer.html'), os.path.join(page, 'index.html'))
     if standalone:
         write_standalone(standalone, page, config, drawing, centreline)
+    if chromium:
+        preview(chromium, out)
     print(f"GeoJSON written: {sum(f['properties']['kind'] == 'leg' for f in centreline['features'])} legs, "
           f"{sum(f['properties']['kind'] == 'station' for f in centreline['features'])} stations, "
           f"{len(drawing['features'])} drawn features; map page in {page}", file=sys.stderr)
@@ -566,6 +571,68 @@ def write_standalone(path, page, config, drawing, centreline):
     print(f'single-file map written to {path} ({os.path.getsize(path) // 1024} kB)', file=sys.stderr)
 
 
+def preview(chromium, out, port=8766, size=(1200, 900)):
+    """A still of the map for the index page (output/map/preview.png, 4:3
+    like the cards' pictures), by headless Chrome, as tools.model3d makes
+    the 3D view's. The page loads the GeoJSON from output/, so that is
+    what is served.
+
+    Chrome's --virtual-time-budget, which the 3D view's still waits with,
+    never runs out on a MapLibre page (its web workers keep it waiting), so
+    instead the page holds its own load event: with ?still it asks for
+    /__wait, which is answered only once the map has asked for /__ready,
+    when it has finished drawing."""
+    import functools
+    import http.server
+    import threading
+    drawn = threading.Event()
+
+    class Server(http.server.SimpleHTTPRequestHandler):
+        def do_GET(self):
+            if self.path in ('/__wait', '/__ready'):
+                if self.path == '/__ready':
+                    drawn.set()
+                else:
+                    drawn.wait(90)
+                self.send_response(204)
+                self.end_headers()
+                return
+            super().do_GET()
+
+        def log_message(self, *a):
+            pass
+    srv = http.server.ThreadingHTTPServer(('127.0.0.1', port), functools.partial(Server, directory=out))
+    threading.Thread(target=srv.serve_forever, daemon=True).start()
+    png = os.path.abspath(os.path.join(out, 'map', 'preview.png'))
+    chrome = [chromium, '--headless=new', '--no-sandbox', '--hide-scrollbars']
+    try:
+        # the screenshot is the whole window, a toolbar's height taller than
+        # the page: make the window that much taller, then cut it off
+        r = subprocess.run(chrome + [f'--window-size={size[0]},{size[1]}', '--dump-dom',
+                                     'data:text/html,<script>document.write(innerHeight)</script>'],
+                           capture_output=True, text=True, timeout=60)
+        m = re.search(r'<body>(\d+)', r.stdout)
+        toolbar = size[1] - int(m.group(1)) if m else 0
+        chrome.append(f'--window-size={size[0]},{size[1] + toolbar}')
+        # if the map gave up waiting for the background (a small, plain
+        # PNG), try again
+        for _ in range(3):
+            drawn.clear()
+            subprocess.run(chrome + ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist',
+                                     f'--screenshot={png}', f'http://127.0.0.1:{port}/map/index.html?still'],
+                           check=True, timeout=180, capture_output=True)
+            if drawn.is_set() and os.path.getsize(png) > 300_000:
+                break
+        else:
+            print('the map preview looks unfinished', file=sys.stderr)
+        if toolbar:
+            crop_png(png, size[1])
+    except (subprocess.SubprocessError, OSError, ValueError) as e:
+        print(f'no map preview: {e}', file=sys.stderr)
+    finally:
+        srv.shutdown()
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split('\n\n')[0])
     ap.add_argument('--out', default='output')
@@ -573,7 +640,7 @@ def main():
     ap.add_argument('--model', default='output/esri-model', help="Therion's export model -fmt esri")
     ap.add_argument('--standalone', metavar='HTML', help='also write the map page as one self-contained file')
     args = ap.parse_args()
-    build(args.out, args.plan, args.model, args.standalone)
+    build(args.out, args.plan, args.model, args.standalone, os.environ.get('CHROMIUM'))
 
 
 if __name__ == '__main__':
