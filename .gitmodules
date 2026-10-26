@@ -1,0 +1,3 @@
+[submodule "tools/sketch2therion"]
+	path = tools/sketch2therion
+	url = https://github.com/CaveSurveying/Therion-Sketching.git

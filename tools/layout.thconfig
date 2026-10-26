@@ -4,8 +4,9 @@ encoding  utf-8
 # =====================================================================
 #
 #  Exports where Therion puts every station in plan and in the extended
-#  elevation, as XVI files. tools/sketch2therion reads them to fit
-#  sketches onto the survey. Rerun it after adding or changing survey
+#  elevation, as XVI files, and the centreline with its splays as SQL.
+#  tools/sketch2therion reads them to fit sketches onto the survey and
+#  to draw from the splays. Rerun it after adding or changing survey
 #  data (a new trip, equates, extend flags):
 #
 #    therion -l output/therion-layout.log tools/layout.thconfig
@@ -21,3 +22,4 @@ select LayoutExtended
 
 export map -projection plan     -fmt xvi -o ../output/layout-plan.xvi
 export map -projection extended -fmt xvi -o ../output/layout-extended.xvi
+export database -fmt sql -o ../output/layout.sql

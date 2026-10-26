@@ -1,1 +1,2 @@
-shapely>=2.0
+# Python libraries for tools/: the shared tools' own list.
+-r sketch2therion/requirements.txt

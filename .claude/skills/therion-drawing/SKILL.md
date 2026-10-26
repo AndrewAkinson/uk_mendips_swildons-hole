@@ -5,10 +5,26 @@ description: Conventions for drawing or editing Therion scraps (.th2) in this su
 
 # Drawing Therion scraps in this survey
 
-These come from a Therion expert's review of the converted drawings
-(Andrew Atkinson). `tools/sketch2therion` (convert, `tidy`, `roofs`,
-`details`, `sections`) follows them; keep to them when editing by hand
-too.
+The conventions live in one place, `tools/sketch2therion/Style.md`
+(the shared Therion-Sketching rules): read it before drawing or editing
+a `.th2`, and add to it what the work teaches. Do not copy its rules
+here.
+
+- Workflow (SexyTopo to a finished plan, and `review`): `tools/README.md`.
+- Cave settings (names, scale, licence): `tools/project.toml`.
+- Checks: `python3 -m tools.sketch2therion.th2lint FILE.th2`,
+  `python3 -m tools.sketch2therion review check FILE.th2`, and
+  `python3 -m tools.sketch2therion fillcheck --build --projection plan`.
+
+## The older drawings
+
+The rest of this file is what was learnt converting Footleg's
+PocketTopo sketches (2012 to 2019) with the earlier converter, from a
+Therion expert's review of the drawings (Andrew Atkinson). It still
+describes those drawings and how to edit them. For new drawings,
+`Style.md` wins where the two differ (brown, for example, is the floor
+there, not another level). Cross sections on the Swildons sheets are
+placed by `python3 -m tools.sections`.
 
 
 ## Walls and the outline
@@ -123,7 +139,7 @@ too.
 - A section drawing must not overlap a passage or another section,
   including those of other surveys on the same sheet and the displaced
   upper level of the Entrance Series.
-- `python3 -m tools.sketch2therion sections` does all of this, and
+- `python3 -m tools.sections` does all of this, and
   moves section labels off passages (see `tools/README.md`).
 
 ## Fill where nothing was drawn

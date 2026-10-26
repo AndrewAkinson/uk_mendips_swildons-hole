@@ -1,0 +1,28 @@
+encoding  utf-8
+# Check build of the plan, for the shared tools' fillcheck
+# (tools/sketch2therion/Style.md, Checking). Not a survey output: the
+# fill is coloured by scrap, with the legs and station names shown, so
+# the drawing can be checked against the survey. The ESRI and XVI
+# exports in output/check/ are what
+# `python3 -m tools.sketch2therion fillcheck --projection plan` reads.
+# Run from the top of the repository:
+#   therion -l output/whole-cave.log swildons-check.thconfig
+
+input gb_layout.thc
+
+source swildonsmaster.th
+
+select MasterPlan@SwildonsHole
+
+layout check
+  copy GB_Std
+  scale 1 500
+  colour map-fg scrap
+  debug station-names
+  symbol-show group cave-centreline
+  legend off
+endlayout
+
+export map -projection plan -layout check -o output/check/plan.pdf
+export map -projection plan -fmt esri -o output/check/plan
+export map -projection plan -fmt xvi -o output/check/plan.xvi

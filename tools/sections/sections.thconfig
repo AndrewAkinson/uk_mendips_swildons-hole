@@ -9,8 +9,8 @@ encoding  utf-8
 #  off the passages. Run from the top of the repository after the main
 #  build (which writes output/Swildons.sql and the centreline KML):
 #
-#    therion -l output/therion-sections.log tools/sketch2therion/sections.thconfig
-#    python3 -m tools.sketch2therion sections
+#    therion -l output/therion-sections.log tools/sections/sections.thconfig
+#    python3 -m tools.sections
 # ---------------------------------------------------------------------
 
 source ../../swildonsmaster.th
