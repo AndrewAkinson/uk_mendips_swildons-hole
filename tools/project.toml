@@ -25,7 +25,7 @@ plan_sketch = '(\.plan|_p|P)\.xvi$'   # regex: which .xvi sketches are plans (th
 [drawing]
 line_endings = "lf"
 map_scale = 500
-licence = "GNU General Public License v3"
+licence = "GPLv3.0+"
 
 [convert]
 # Swildons' changes to the house drawing rules
