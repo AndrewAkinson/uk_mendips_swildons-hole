@@ -1,0 +1,17 @@
+# Created with SexyTopo 1.12.3 on 2026-10-26
+
+encoding utf-8
+
+layout local
+  debug off
+  # map-header 0 0 off
+  # symbol-hide group cave-centreline
+endlayout
+
+source "Tratmans.th"
+
+export model -fmt survex -o "Tratmans-th.3d"
+
+export map -proj plan -layout local -o "Tratmans-plan.pdf"
+
+export map -proj extended -layout local -o "Tratmans-ee.pdf"

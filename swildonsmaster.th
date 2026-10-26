@@ -5,6 +5,12 @@ encoding  utf-8
 survey SwildonsHole
   #import cave centreline
   input Swildons_Centreline.th
+  input Tratmans/Tratmans.th
+
+  centreline
+    #Tratmans station 1 is the top of the rock at the top of the climb into Tratman's Temple
+    equate 1@Tratmans 23.33@BarnesLoopToTratmans.Swildons
+  endcentreline
 
   #import maps for plan drawings
   input entrance/Swildons_MAP_EntranceSeries.th
@@ -19,6 +25,7 @@ survey SwildonsHole
   map MasterPlan -title "Swildons Hole"
     EntranceSeriesPlan
     Streamway1Plan
+    TratmansMP@Tratmans
   endmap
 
   #The resurvey's survey legs. A map only draws the legs of the surveys
@@ -48,6 +55,7 @@ survey SwildonsHole
     WetWayKeyhole@Swildons
     WetWayOxbows@Swildons
     ZigZags@Swildons
+    Tratmans
   endmap
 
   map PlanWithCentreline -title "Swildons Hole"

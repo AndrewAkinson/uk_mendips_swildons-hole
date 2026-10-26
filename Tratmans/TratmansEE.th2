@@ -1,0 +1,63 @@
+encoding utf-8
+
+##XTHERION## xth_me_area_adjust -1889.76 -551.18 8188.98 1102.36
+##XTHERION## xth_me_image_insert {0.0 1 1.0} {0.0 1} "Notes/TratmansEE.xvi" 0 {}
+##XTHERION## xth_me_area_zoom_to 25
+
+scrap TratmansEE1 -projection extended
+
+point 0.0 0.0 station -name 1
+
+point 548.046 185.14809 station -name 2
+
+point 789.3344 115.351585 station -name 3
+
+point 1216.019 193.91954 station -name 4
+
+point 1362.9672 326.07834 station -name 5
+
+point 1597.6941 279.1747 station -name 6
+
+point 1837.168 305.75394 station -name 7
+
+point 2197.7754 309.742 station -name 8
+
+point 2516.472 298.42722 station -name 9
+
+point 2866.6877 346.81607 station -name 10
+
+point 3134.246 383.6256 station -name 11
+
+point 2903.5334 356.65915 station -name 12
+
+point 3291.5325 428.3317 station -name 13
+
+point 3576.1558 361.39868 station -name 14
+
+point 4044.4075 396.3325 station -name 15
+
+point 4225.9673 429.219 station -name 16
+
+point 4421.914 435.9475 station -name 17
+
+point 4646.393 418.01758 station -name 18
+
+point 4860.4204 290.0935 station -name 19
+
+point 5252.3667 250.28104 station -name 20
+
+point 5508.928 197.46082 station -name 21
+
+point 5805.13 205.90689 station -name 22
+
+point 6020.731 266.2396 station -name 23
+
+point 6340.721 248.72269 station -name 24
+
+point 6437.02 264.8376 station -name 25
+
+endscrap
+
+scrap TratmansEE2 -projection extended
+
+endscrap
