@@ -9,6 +9,10 @@ map TratmansMP
 endmap
 input "TratmansEe.th2"
 
+map TratmansMEe -projection extended
+  TratmansSEe1
+endmap
+
 
 centreline
 date 2026.10.20
