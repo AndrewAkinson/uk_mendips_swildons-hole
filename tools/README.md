@@ -88,7 +88,7 @@ Tratman's Temple is the example here: the survey `Tratmans`, in
 
    ```bash
    python3 -m tools.sketch2therion plan Tratmans/Notes/TratmansP.xvi --survey Tratmans \
-     --author 2026.10.20 "Andrew Atkinson" --copyright 2026 "Andrew Atkinson" \
+     --author 2026.10.20 "Andrew Atkinson" --copyright 2026 "Andrew Atkinson, GPLv3.0+" \
      -o Tratmans/TratmansP.th2
    python3 -m tools.sketch2therion roofs Tratmans/TratmansP.th2
    python3 -m tools.sketch2therion details Tratmans/TratmansP.th2
