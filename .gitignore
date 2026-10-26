@@ -4,13 +4,13 @@ therion.log
 # OSTN15 grid-shift file, fetched by CI and by hand (see README)
 proj/
 
-# What the older SVN-era configs in legacy/ write next to themselves
-/legacy/*.pdf
-/legacy/*.svg
-/legacy/*.kml
-/legacy/*.lox
-/legacy/*.3d
-/legacy/*.vrml
+# What the older SVN-era configs ignre
+*.pdf
+*.svg
+*.kml
+*.lox
+*.3d
+*.vrml
 
 *.xvi.bak
 .DS_Store
