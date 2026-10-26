@@ -1,10 +1,10 @@
 encoding utf-8
 
 ##XTHERION## xth_me_area_adjust -1889.76 -551.18 8188.98 1102.36
-##XTHERION## xth_me_image_insert {0.0 1 1.0} {0.0 1} "Notes/TratmansEE.xvi" 0 {}
+##XTHERION## xth_me_image_insert {0.0 1 1.0} {0.0 1} "Notes/TratmansEe.xvi" 0 {}
 ##XTHERION## xth_me_area_zoom_to 25
 
-scrap TratmansEE1 -projection extended
+scrap TratmansSEe1 -projection extended
 
 point 0.0 0.0 station -name 1
 
@@ -58,6 +58,6 @@ point 6437.02 264.8376 station -name 25
 
 endscrap
 
-scrap TratmansEE2 -projection extended
+scrap TratmansSEe2 -projection extended
 
 endscrap

@@ -17,7 +17,7 @@ plan_map_file = "swildonsmaster.th" # defined here
 [names]
 # {survey} is a survey's name, e.g. Tratmans.
 survey_file = "{survey}/{survey}.th"
-plan_file = "{survey}/{survey}.plan.th2"
+plan_file = "{survey}/{survey}P.th2"      # names as imported from SexyTopo (Style.md)
 scrap_prefix = "{survey}S"          # the converter adds P1, P2, ... (plan) or Ee1, ... (extended)
 survey_plan_map = "{survey}MP"
 plan_sketch = '(\.plan|_p|P)\.xvi$'   # regex: which .xvi sketches are plans (the rest are elevations)

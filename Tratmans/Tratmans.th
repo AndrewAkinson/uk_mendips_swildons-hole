@@ -2,12 +2,12 @@ encoding utf-8
 survey Tratmans
 # Created with SexyTopo 1.12.3 on 2026-10-26
 
-input "Tratmans.plan.th2"
+input "TratmansP.th2"
 
 map TratmansMP
   TratmansSP1
 endmap
-input "TratmansEE.th2"
+input "TratmansEe.th2"
 
 
 centreline
