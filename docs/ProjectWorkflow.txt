@@ -11,8 +11,8 @@ See tools/README.md for the full workflow. In short:
    drawn using SexyTopo's cross-section tool. Black/brown/grey for walls, blue water, green formations,
    red/orange for notes (ignored by the converter).
 2) Export to Therion from SexyTopo, and copy the export and SexyTopo's own files into
-   <area>/<yyyy-mm-dd>/sexytopo/.
-3) Make <area>/<yyyy-mm-dd>/Swildons_<Where>.th from tools/new-trip-template.th with the exported data, team and copyright.
+   <area>/<Survey>/sexytopo/, the folder named after the trip's survey.
+3) Make <area>/<Survey>/<Survey>.th from tools/new-trip-template.th with the exported data, team and copyright.
    Input it in Swildons_Centreline.th, equate its first station to the station it started from, and add
    the survey to the ResurveyCentreline map in swildonsmaster.th.
 4) Export Therion's station layout:  therion -l output/therion-layout.log tools/layout.thconfig
@@ -22,7 +22,7 @@ See tools/README.md for the full workflow. In short:
 
 Using Pocket Topo (2012-2019 trips)
 1) Surveying using PocketTopo on a PDA underground.
-2) Copy the .top file from PocketTopo into the trip's folder, <area>/<yyyy-mm-dd>/pockettopo/.
+2) Copy the .top file from PocketTopo into the trip's folder, <area>/<Survey>/pockettopo/.
 3) Export the text format from PocketTopo using the same filename as the .top file (but with the file extension .txt).
 4) Export the Therion format data from PocketTopo using the same filename as before but with '_th.txt' as the suffix.
 

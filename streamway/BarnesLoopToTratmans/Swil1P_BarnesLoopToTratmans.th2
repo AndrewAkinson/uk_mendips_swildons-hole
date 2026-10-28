@@ -2,7 +2,7 @@ encoding  utf-8
 # Licence: GNU General Public License v3 (see LICENSE at the top of the repository)
 ##XTHERION## xth_me_area_adjust -374.7 -1430.0 1692.6 1355.8
 ##XTHERION## xth_me_area_zoom_to 100
-##XTHERION## xth_me_image_insert {1000.0 1 1.0} {1000.0 23.0} ../2019-01-05/pockettopo/Swil20190105_BarnesLoopToSump1_th_p.xvi 0 {}
+##XTHERION## xth_me_image_insert {1000.0 1 1.0} {1000.0 23.0} ../TratmansToSump1/pockettopo/Swil20190105_BarnesLoopToSump1_th_p.xvi 0 {}
 
 
 scrap BarnesLoopSP1 -projection plan -author 2017.10.14 "Footleg" -copyright 2017 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]

@@ -124,13 +124,13 @@ to refine the drawings in xTherion.
 trip, drawings included.** `docs/ProjectWorkflow.txt` has the original
 PocketTopo workflow.
 
-The survey is filed by area, then by trip date:
+The survey is filed by area, then by trip:
 
 ```
 entrance/                 the Entrance Series, down to the Old 40 and Rolling Thunder
   Swildons_MAP*.th        its maps: which drawings make up each sheet
-  2013-06-30/             one folder per trip, named by its date
-    Swildons_*.th         the trip's survey data and team, inputting its drawings
+  WetWayOxbows/           one folder per trip, named after its survey
+    WetWayOxbows.th       the trip's survey data and team, inputting its drawings
     Swil1P_*.th2          plan drawings
     Swil1E_*.th2          elevation drawings, which also hold the cross-sections
     pockettopo/           the original PocketTopo files and their exports
@@ -140,9 +140,10 @@ stanton/                  W. I. Stanton's survey, one folder per trip (1951-62)
   logbooks/               scans and a transcription of his logbooks
 ```
 
-A new trip goes in a new dated folder in its area (for example
-`streamway/2026-11-07/`), with SexyTopo's files in a `sexytopo/`
-folder inside it.
+A new trip goes in a new folder in its area, named after its survey,
+with its .th named the same (for example
+`streamway/Sump1ToSwildons2/Sump1ToSwildons2.th`) and SexyTopo's files
+in a `sexytopo/` folder inside it.
 
 | Path | What it is |
 |---|---|

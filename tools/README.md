@@ -162,11 +162,11 @@ export `_th.txt`. Two more commands help:
 
 ```bash
 # a PocketTopo sketch as an XVI backdrop for xTherion
-python3 -m tools.sketch2therion xvi entrance/2016-07-09/pockettopo/Trip.top --view elevation \
-  -o entrance/2016-07-09/pockettopo/Trip_th_e.xvi
+python3 -m tools.sketch2therion xvi entrance/Trip/pockettopo/Trip.top --view elevation \
+  -o entrance/Trip/pockettopo/Trip_th_e.xvi
 # copy PocketTopo's left/right leg directions into the trip's .th
-python3 -m tools.sketch2therion extend entrance/2016-07-09/pockettopo/Trip_th.txt \
-  entrance/2016-07-09/Swildons_Trip.th
+python3 -m tools.sketch2therion extend entrance/Trip/pockettopo/Trip_th.txt \
+  entrance/Trip/Trip.th
 ```
 
 PocketTopo's Therion export sometimes lists a side view's stations
