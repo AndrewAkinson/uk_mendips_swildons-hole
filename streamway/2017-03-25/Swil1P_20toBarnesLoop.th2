@@ -103,30 +103,51 @@ point 2665.1529133858267 135.5096850393702 station -name 21.0
 
 point 2665.0 400.0 label -text "<centre>20ft<br>Pot" -scale l
 
-  line border -id line-1 -close on
+line border -id line-1 -close on
     2328.2 285.6
     2328.2 285.6 2351.6 274.9 2350.0 251.5
     2348.4 228.2 2337.7 224.3 2320.5 217.8
     2303.2 211.3 2269.8 223.3 2268.8 231.4
     2267.8 239.5 2263.3 278.5 2268.8 282.7
     2274.3 286.9 2328.2 285.6 2328.2 285.6
-  endline
-  area water
+endline
+area water
     line-1
-  endarea
-  line wall -subtype presumed
+endarea
+line wall -subtype presumed
     2497.3 296.8
     2516.6 278.4
     2527.3 266.3
-  endline
-  line wall -subtype presumed
+endline
+line wall -subtype presumed
     2514.4 322.3
     2514.4 322.3 2519.8 312.3 2524.4 307.1
     2528.9 302.0 2534.9 294.9 2536.9 294.0
     2538.9 293.1 2542.5 288.7 2542.5 288.7
-  endline
-  point 2660.3 244.2 gradient -orientation 201.843
-  point 2610.6 255.8 gradient -orientation 208.553
+endline
+point 2660.3 244.2 gradient -orientation 201.843
+point 2610.6 255.8 gradient -orientation 208.553
+
+line section -direction both
+  2377.35 189.58
+  2717.65 262.15
+endline
+
+point 2261.42 -57.46 section -scrap xs21_4
+
+line section -direction both
+  2294.27 124.38
+  2267.15 293.94
+endline
+
+point 2248.02 435.40 section -scrap xs21_6
+
+line section -direction both
+  2039.66 117.27
+  1988.82 246.55
+endline
+
+point 2075.05 19.23 section -scrap xs21_8
 endscrap
 
 
@@ -530,6 +551,7 @@ line border -subtype invisible -id StreamwaySP2-water2 -close on
   868.4 929.3
   859.0 954.0
   860.5 961.1
+  864.40 965.10
 endline
 
 area water
@@ -704,22 +726,53 @@ point 195.07 1189.33 station -name 21.24
 
 point 92.99 1257.20 station -name 21.25
 
-  line rock-border -close on
+line rock-border -close on
     617.1 1157.8
     610.0 1158.3
     607.8 1154.9
     613.0 1151.7
-  endline
-  line rock-border -close on
+  617.10 1157.80
+endline
+line rock-border -close on
     584.4 1176.6
     583.8 1169.7
     589.2 1171.3
     588.6 1175.2
-  endline
-  line rock-border -close on
+  584.40 1176.60
+endline
+line rock-border -close on
     1451.2 460.4
     1407.6 445.8
     1424.9 419.8
     1462.4 434.1
-  endline
+  1451.20 460.40
+endline
+
+line section -direction both
+  1376.48 371.58
+  1480.05 518.78
+endline
+
+point 1248.86 197.53 section -scrap xs21_16
+
+line section -direction both
+  1095.62 694.19
+  1205.48 830.03
+endline
+
+point 958.01 531.02 section -scrap xs21_18
+
+line section -direction both
+  707.29 997.51
+  819.13 1112.43
+endline
+
+point 964.31 1255.50 section -scrap xs21_21
+
+line section -direction both
+  835.79 1034.78
+  442.36 1253.37
+endline
+
+point 528.87 946.02 section -scrap xs21_22
 endscrap

@@ -78,6 +78,20 @@ point 2426.9304724409444 344.451811023622 station -name 11.27
 
 point 2375.1204724409445 537.281811023622 station -name 11.28
 
+
+line section -direction both
+  2503.63 170.10
+  2446.15 154.05
+endline
+
+point 2539.41 180.08 section -scrap xs_WetWayOxbows_11_26@WetWayOxbows
+
+line section -direction both
+  2464.48 354.65
+  2401.74 337.61
+endline
+
+point 2509.18 366.79 section -scrap xs_WetWayOxbows_11_27@WetWayOxbows
 endscrap
 
 
@@ -253,6 +267,34 @@ point 2357.0504724409443 138.1118110236221 station -name 11.24
 
 point 2484.5304724409443 110.0818110236221 station -name 11.25
 
+
+line section -direction both
+  1584.79 469.40
+  1591.21 529.24
+endline
+
+point 1638.97 973.98 section -scrap xs_WetWayOxbows_11_19@WetWayOxbows
+
+line section -direction both
+  1836.97 687.29
+  1740.07 448.03
+endline
+
+point 1670.03 275.01 section -scrap xs_WetWayOxbows_11_20@WetWayOxbows
+
+line section -direction both
+  2060.57 175.54
+  2111.04 258.99
+endline
+
+point 1979.56 379.20 section -scrap xs_WetWayOxbows_11_22@WetWayOxbows
+
+line section -direction both
+  2360.07 181.90
+  2348.50 14.21
+endline
+
+point 2587.39 -354.16 section -scrap xs_WetWayOxbows_11_24@WetWayOxbows
 endscrap
 
 
@@ -497,6 +539,34 @@ point 1507.2804724409443 569.131811023622 station -name 11.17
 
 point 1493.7004724409444 508.5818110236221 station -name 11.18
 
+
+line section -direction both
+  1352.46 738.56
+  1481.81 723.06
+endline
+
+point 1226.49 664.95 section -scrap xs_WetWayOxbows_11_16@WetWayOxbows
+
+line section -direction both
+  1449.13 472.70
+  1547.82 552.15
+endline
+
+point 1372.46 570.76 section -scrap xs_WetWayOxbows_11_18@WetWayOxbows
+
+line section -direction both
+  1392.05 949.54
+  1322.06 909.99
+endline
+
+point 1194.78 838.07 section -scrap xs_WetWayOxbows_11_31@WetWayOxbows
+
+line section -direction both
+  1165.83 1210.86
+  1129.93 1077.69
+endline
+
+point 1470.69 1129.31 section -scrap xs_WetWayOxbows_11_35@WetWayOxbows
 endscrap
 
 
@@ -616,6 +686,24 @@ point 943.4604724409442 1089.0118110236222 station -name 11.37
 
 point 1030.3904724409444 1108.861811023622 station -name 11.36
 
+
+point 729.38 978.31 station -name 11.41
+
+line section -direction both
+  737.02 944.13
+  707.50 1076.22
+endline
+
+point 655.37 1309.54 section -scrap xs_WetWayOxbows_11_41@WetWayOxbows
+
+point 395.43 934.88 station -name 11.43
+
+line section -direction both
+  378.27 862.31
+  408.81 991.42
+endline
+
+point 799.01 829.21 section -scrap xs_WetWayOxbows_11_43@WetWayOxbows
 endscrap
 
 
@@ -676,6 +764,13 @@ point 2119.1304724409442 670.0818110236221 station -name 11.3
 
 point 2230.1204724409445 760.391811023622 station -name 11.2
 
+
+line section -direction both
+  2144.05 621.46
+  2101.95 703.59
+endline
+
+point 2174.28 575.43 section -scrap xs_WetWayOxbows_11_3@WetWayOxbows
 endscrap
 
 
@@ -981,6 +1076,41 @@ point 1907.1304724409445 806.141811023622 station -name 11.8@WetWayOxbows
 
 point 2164.7204724409444 808.8218110236221 station -name 11.9@WetWayOxbows
 
+
+line section -direction both
+  1951.51 598.45
+  1959.21 700.83
+endline
+
+point 1962.24 1344.17 section -scrap xs_WetWayOxbows_11_6@WetWayOxbows
+
+line section -direction both
+  1880.37 820.64
+  1948.53 783.68
+endline
+
+point 1624.60 598.18 section -scrap xs_WetWayOxbows_11_8@WetWayOxbows
+
+line section -direction both
+  1873.41 713.88
+  1791.26 657.37
+endline
+
+point 1868.49 521.15 section -scrap xs_WetWayOxbows_11_10@WetWayOxbows
+
+line section -direction both
+  1727.44 808.91
+  1704.24 647.59
+endline
+
+point 1812.58 817.32 section -scrap xs_WetWayOxbows_11_12@WetWayOxbows
+
+line section -direction both
+  1456.01 816.69
+  1468.03 731.12
+endline
+
+point 1373.34 1404.37 section -scrap xs_WetWayOxbows_11_15@WetWayOxbows
 endscrap
 
 
@@ -1091,6 +1221,13 @@ point 1661.0604724409443 757.6818110236221 station -name 14.3
 
 point 1686.9704724409444 712.3218110236221 station -name 14.4
 
+
+line section -direction both
+  1489.24 832.57
+  1534.85 886.24
+endline
+
+point 1568.17 926.39 section -scrap xs_WetWayKeyhole_14_2@WetWayKeyhole
 endscrap
 
 

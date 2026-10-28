@@ -335,6 +335,13 @@ line section -direction both
 endline
 
 point 27.56 1161.22 section -scrap xs_WaterRift_8_14
+
+line section -direction both
+  1532.70 855.83
+  1122.40 850.23
+endline
+
+point 1195.55 850.67 section -scrap xs_WaterRift_8_13
 endscrap
 
 scrap xs_WaterRift_8_14 -projection none -author 2013.06.29 "Footleg" -copyright 2013 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]

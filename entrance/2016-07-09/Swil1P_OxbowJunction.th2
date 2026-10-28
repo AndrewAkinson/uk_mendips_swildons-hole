@@ -124,6 +124,20 @@ point 110.11606299212576 539.4129921259841 station -name 15.5
 
 point 80.39606299212596 573.8929921259842 station -name 15.6
 
+
+line section -direction both
+  110.84 474.04
+  154.16 532.21
+endline
+
+point 33.25 560.77 section -scrap xs_OxbowJunction_15_3
+
+line section -direction both
+  213.88 308.61
+  114.53 320.64
+endline
+
+point -301.71 371.07 section -scrap xs_OxbowJunction_15_8
 endscrap
 
 
@@ -193,6 +207,27 @@ point 76.49606299212587 404.7229921259842 station -name 15.25
 
 point 139.40606299212595 384.2129921259842 station -name 15.24
 
+
+line section -direction both
+  131.98 359.64
+  174.25 498.51
+endline
+
+point 120.45 -273.35 section -scrap xs_OxbowJunction_15_24
+
+line section -direction both
+  115.68 344.50
+  63.55 424.44
+endline
+
+point -71.09 631.00 section -scrap xs_OxbowJunction_15_25
+
+line section -direction both
+  107.67 347.92
+  23.15 330.13
+endline
+
+point 8.88 -99.38 section -scrap xs_OxbowJunction_15_26
 endscrap
 
 

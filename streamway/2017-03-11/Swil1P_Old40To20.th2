@@ -383,6 +383,43 @@ point 1708.4992913385822 66.8932283464568 station -name 17.9
 
 point 1849.7292913385827 135.04322834645677 station -name 17.8
 
+
+line section -direction both
+  1473.34 116.23
+  1605.64 353.56
+endline
+
+point 1344.26 -103.10 section -scrap xs17_10
+
+line section -direction both
+  1191.38 319.53
+  1317.97 519.33
+endline
+
+point 1073.16 143.08 section -scrap xs17_12
+
+line section -direction both
+  1019.17 426.94
+  1167.73 650.26
+endline
+
+point 1217.92 718.11 section -scrap xs17_13
+
+line section -direction both
+  906.52 526.82
+  1003.42 729.75
+endline
+
+point 679.99 72.98 section -scrap xs17_14
+
+point 607.01 823.48 station -name 17.19
+
+line section -direction both
+  607.90 696.76
+  606.44 903.69
+endline
+
+point 605.04 523.77 section -scrap xs17_19
 endscrap
 
 
@@ -548,6 +585,13 @@ point 355.3592913385819 897.203228346457 station -name 17.21
 
 point 474.6092913385819 821.3032283464571 station -name 17.20
 
+
+line section -direction both
+  193.24 981.86
+  364.86 1118.26
+endline
+
+point 531.83 1320.69 section -scrap xs17_22
 endscrap
 
 
@@ -905,6 +949,20 @@ line wall -id l69-1861-151 -reverse on
   smooth off
 endline
 
+
+line section -direction both
+  2246.34 822.54
+  2085.34 841.01
+endline
+
+point 2424.11 798.48 section -scrap xs17_1
+
+line section -direction both
+  2279.73 555.70
+  2119.85 503.95
+endline
+
+point 2130.97 505.20 section -scrap xs17_3
 endscrap
 
 

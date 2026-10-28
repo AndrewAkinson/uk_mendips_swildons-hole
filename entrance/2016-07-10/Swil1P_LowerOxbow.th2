@@ -126,6 +126,41 @@ point 966.1463779527558 112.4394488188976 station -name 16.6
 
 point 901.5363779527556 127.1694488188976 station -name 16.7
 
+
+line section -direction both
+  1218.78 -25.71
+  1175.47 127.12
+endline
+
+point 1362.55 -533.45 section -scrap xs_LowerOxbow_16_2
+
+line section -direction both
+  1053.85 35.85
+  1105.84 116.06
+endline
+
+point 1138.78 166.86 section -scrap xs_LowerOxbow_16_4
+
+line section -direction both
+  1002.95 68.89
+  1026.21 146.37
+endline
+
+point 884.97 -322.90 section -scrap xs_LowerOxbow_16_5
+
+line section -direction both
+  964.78 83.88
+  967.65 145.08
+endline
+
+point 955.86 -106.74 section -scrap xs_LowerOxbow_16_6
+
+line section -direction both
+  898.71 101.36
+  904.45 156.39
+endline
+
+point 889.29 9.70 section -scrap xs_LowerOxbow_16_7
 endscrap
 
 
@@ -249,6 +284,34 @@ point 787.6363779527558 170.9094488188976 station -name 16.9
 
 point 867.1663779527557 127.7594488188976 station -name 16.8
 
+
+line section -direction both
+  860.89 101.77
+  877.18 168.21
+endline
+
+point 828.69 -29.12 section -scrap xs_LowerOxbow_16_8
+
+line section -direction both
+  759.08 139.95
+  819.95 206.55
+endline
+
+point 937.22 334.60 section -scrap xs_LowerOxbow_16_9
+
+line section -direction both
+  646.33 258.86
+  675.39 327.54
+endline
+
+point 606.68 164.87 section -scrap xs_LowerOxbow_16_11
+
+line section -direction both
+  513.48 302.85
+  543.41 381.77
+endline
+
+point 363.53 -92.35 section -scrap xs_LowerOxbow_16_12
 endscrap
 
 
@@ -419,6 +482,27 @@ point 231.75 606.0 gradient -orientation 235.6
 
 point 187.75 687.0 gradient -orientation 242.2
 
+
+line section -direction both
+  404.91 325.54
+  450.54 419.28
+endline
+
+point 540.79 603.32 section -scrap xs_LowerOxbow_16_13
+
+line section -direction both
+  188.33 500.76
+  282.62 589.07
+endline
+
+point 117.42 433.95 section -scrap xs_LowerOxbow_16_15
+
+line section -direction both
+  416.52 222.10
+  333.21 190.40
+endline
+
+point 208.01 142.70 section -scrap xs_LowerOxbow_16_18
 endscrap
 
 

@@ -61,6 +61,13 @@ point 115.35196850393686 179.52559055118127 station -name 25.1
 
 point 87.52196850393693 34.365590551181185 station -name 25.0
 
+
+line section -direction both
+  92.45 305.30
+  165.33 301.54
+endline
+
+point 283.10 295.49 section -scrap xs_RollingThunder_25_2
 endscrap
 
 
@@ -243,6 +250,34 @@ point 94.5619685039369 563.5055905511813 station -name 25.5
 
 point 151.1819685039368 471.3755905511812 station -name 25.4
 
+
+line section -direction both
+  110.27 465.04
+  179.02 475.45
+endline
+
+point 452.20 516.90 section -scrap xs_RollingThunder_25_4
+
+line section -direction both
+  80.97 807.76
+  150.44 806.89
+endline
+
+point 249.34 805.64 section -scrap xs_RollingThunder_25_8
+
+line section -direction both
+  84.52 890.43
+  152.37 887.80
+endline
+
+point -31.57 894.81 section -scrap xs_RollingThunder_25_9
+
+line section -direction both
+  78.44 1152.75
+  137.15 1170.27
+endline
+
+point 239.40 1176.40 section -scrap xs_RollingThunder_25_12
 endscrap
 
 

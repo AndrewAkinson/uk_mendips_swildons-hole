@@ -135,6 +135,34 @@ point 590.7117322834646 1213.1088976377953 station -name 10.1
 
 point 610.7117322834646 1293.5088976377954 station -name 10.0
 
+
+line section -direction both
+  618.06 1197.34
+  550.97 1235.43
+endline
+
+point 62.36 1513.04 section -scrap xs_KenneysDigToShowerbath_10_1
+
+line section -direction both
+  631.32 1170.79
+  533.80 1195.41
+endline
+
+point 483.94 1301.69 section -scrap xs_KenneysDigToShowerbath_10_2
+
+line section -direction both
+  645.66 1042.02
+  569.48 1092.65
+endline
+
+point 259.94 1016.91 section -scrap xs_KenneysDigToShowerbath_10_3
+
+line section -direction both
+  322.06 1102.55
+  328.74 1015.82
+endline
+
+point -149.69 1035.83 section -scrap xs_KenneysDigToShowerbath_10_4
 endscrap
 
 
@@ -278,6 +306,13 @@ line section -direction both
 endline
 
 point 330.08 675.95 section -scrap xs_KenneysDigToShowerbath_10_7
+
+line section -direction both
+  597.33 1008.21
+  572.99 1073.21
+endline
+
+point 582.71 945.79 section -scrap xs_KenneysDigToShowerbath_10_5
 endscrap
 
 
@@ -358,6 +393,13 @@ line section -direction both
 endline
 
 point 1836.22 1021.65 section -scrap xs_KenneysDigToShowerbath_10_15
+
+line section -direction both
+  1419.32 973.12
+  1389.81 1114.96
+endline
+
+point 1517.61 1148.43 section -scrap xs_KenneysDigToShowerbath_10_17
 endscrap
 
 scrap xs_KenneysDigToShowerbath_10_15 -projection none -author 2013.06.30 "Footleg" -copyright 2013 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
