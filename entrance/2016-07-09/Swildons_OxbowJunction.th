@@ -2,6 +2,7 @@ encoding  utf-8
 survey OxbowJunction
 
   input Swil1P_OxbowJunction.th2
+  input Swil1E_ext_OxbowJunction.th2
   
   centreline
     copyright 2016 "Paul 'Footleg' Fretwell"

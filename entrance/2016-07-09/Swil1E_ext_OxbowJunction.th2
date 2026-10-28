@@ -386,59 +386,59 @@ endline
 
 
 
-point 1000.00 1000.00 station -name 15.1@OxbowJunction
+point 1000.00 1000.00 station -name 15.1
 
-point 1008.43 1054.09 station -name 15.2@OxbowJunction
+point 1008.43 1054.09 station -name 15.2
 
-point 1081.89 1048.11 station -name 15.3@OxbowJunction
+point 1081.89 1048.11 station -name 15.3
 
-point 1118.78 1074.41 station -name 15.4@OxbowJunction
+point 1118.78 1074.41 station -name 15.4
 
-point 1141.89 1072.48 station -name 15.5@OxbowJunction
+point 1141.89 1072.48 station -name 15.5
 
-point 1187.44 1072.24 station -name 15.6@OxbowJunction
+point 1187.44 1072.24 station -name 15.6
 
-point 955.87 1009.69 station -name 15.7@OxbowJunction
+point 955.87 1009.69 station -name 15.7
 
-point 872.20 1067.68 station -name 15.8@OxbowJunction
+point 872.20 1067.68 station -name 15.8
 
-point 779.37 1177.28 station -name 15.9@OxbowJunction
+point 779.37 1177.28 station -name 15.9
 
-point 604.88 1400.98 station -name 15.10@OxbowJunction
+point 604.88 1400.98 station -name 15.10
 
-point 579.33 1455.12 station -name 15.11@OxbowJunction
+point 579.33 1455.12 station -name 15.11
 
-point 609.69 1425.94 station -name 15.12@OxbowJunction
+point 609.69 1425.94 station -name 15.12
 
-point 657.40 1474.13 station -name 15.13@OxbowJunction
+point 657.40 1474.13 station -name 15.13
 
-point 687.60 1515.79 station -name 15.14@OxbowJunction
+point 687.60 1515.79 station -name 15.14
 
-point 717.64 1537.68 station -name 15.15@OxbowJunction
+point 717.64 1537.68 station -name 15.15
 
-point 734.45 1538.90 station -name 15.16@OxbowJunction
+point 734.45 1538.90 station -name 15.16
 
-point 788.70 1608.35 station -name 15.17@OxbowJunction
+point 788.70 1608.35 station -name 15.17
 
-point 572.83 1376.77 station -name 15.18@OxbowJunction
+point 572.83 1376.77 station -name 15.18
 
-point 502.60 1388.03 station -name 15.19@OxbowJunction
+point 502.60 1388.03 station -name 15.19
 
-point 437.28 1386.77 station -name 15.20@OxbowJunction
+point 437.28 1386.77 station -name 15.20
 
-point 367.13 1348.62 station -name 15.21@OxbowJunction
+point 367.13 1348.62 station -name 15.21
 
-point 339.33 1324.92 station -name 15.22@OxbowJunction
+point 339.33 1324.92 station -name 15.22
 
-point 295.28 1306.22 station -name 15.23@OxbowJunction
+point 295.28 1306.22 station -name 15.23
 
-point 1007.56 1133.27 station -name 15.24@OxbowJunction
+point 1007.56 1133.27 station -name 15.24
 
-point 1073.74 1184.29 station -name 15.25@OxbowJunction
+point 1073.74 1184.29 station -name 15.25
 
-point 1139.61 1255.16 station -name 15.26@OxbowJunction
+point 1139.61 1255.16 station -name 15.26
 
-point 1226.10 1274.80 station -name 15.27@OxbowJunction
+point 1226.10 1274.80 station -name 15.27
 endscrap
 
 scrap xs_OxbowJunction_15_26 -projection none -author 2016.07.09 "Footleg" -copyright 2016 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
@@ -446,11 +446,22 @@ scrap xs_OxbowJunction_15_26 -projection none -author 2016.07.09 "Footleg" -copy
 # Cross-section at station 15.26.
 
 line wall -close on
-  988.19 995.47
-  1000.04 1001.39 1007.65 1000.86 1017.43 995.69
-  1008.29 989.64 996.20 989.94 985.84 990.51
-  986.57 992.05 987.45 993.91 988.19 995.47
+  1115.46 1305.84
+  1115.00 1304.58 1114.07 1302.99 1115.78 1302.77
+  1117.50 1302.55 1121.07 1304.14 1125.76 1304.49
+  1130.46 1304.85 1140.60 1304.58 1143.96 1304.89
+  1147.32 1305.21 1145.42 1305.37 1145.92 1306.37
+  1146.43 1307.37 1147.07 1309.83 1146.97 1310.89
+  1146.86 1311.96 1146.14 1312.24 1145.29 1312.75
+  1144.45 1313.25 1144.82 1313.76 1141.91 1313.93
+  1139.00 1314.10 1131.15 1314.03 1127.83 1313.79
+  1124.51 1313.55 1123.53 1313.05 1121.98 1312.48
+  1120.43 1311.90 1119.62 1311.44 1118.53 1310.33
+  1117.45 1309.23 1115.92 1307.10 1115.46 1305.84
 endline
+
+point 1129.49 1313.94 station -name 15.26
+
 endscrap
 
 scrap xs_OxbowJunction_15_25 -projection none -author 2016.07.09 "Footleg" -copyright 2016 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
@@ -458,38 +469,90 @@ scrap xs_OxbowJunction_15_25 -projection none -author 2016.07.09 "Footleg" -copy
 # Cross-section at station 15.25.
 
 line wall -close on
-  975.51 993.76
-  976.27 998.16 977.36 1002.62 978.34 1006.74
-  983.56 1007.91 988.09 1008.68 993.50 1008.97
-  1000.23 1001.23 1002.16 997.60 1003.18 987.31
-  994.10 985.27 985.80 985.26 975.88 987.74
-  975.76 989.70 975.63 991.78 975.51 993.76
+  1062.75 1280.22
+  1061.72 1283.39 1059.92 1283.68 1058.70 1284.62
+  1057.49 1285.57 1057.80 1285.89 1055.45 1285.89
+  1053.10 1285.89 1047.09 1285.66 1044.60 1284.60
+  1042.11 1283.55 1041.53 1281.86 1040.50 1279.55
+  1039.48 1277.23 1038.84 1273.08 1038.46 1270.72
+  1038.07 1268.36 1037.98 1266.59 1038.19 1265.40
+  1038.40 1264.21 1036.20 1264.23 1039.70 1263.58
+  1043.19 1262.93 1054.95 1261.18 1059.15 1261.51
+  1063.36 1261.84 1064.33 1262.46 1064.93 1265.58
+  1065.53 1268.70 1063.79 1277.04 1062.75 1280.22
 endline
+
+point 1062.96 1276.93 station -name 15.25
+
 endscrap
 
 scrap xs_OxbowJunction_15_24 -projection none -author 2016.07.09 "Footleg" -copyright 2016 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
 
 # Cross-section at station 15.24.
 
-line wall -close on
-  988.84 967.71
-  992.02 993.87 987.84 1008.49 1011.54 1013.41
-  1019.97 998.60 1020.61 985.38 1018.60 967.82
-  1008.69 967.46 998.74 967.11 988.84 967.71
+line wall -subtype sand
+  1007.25 1227.13
+  1007.25 1228.19 1007.49 1231.64 1007.25 1233.48
+  1007.01 1235.33 1006.53 1236.55 1005.82 1238.21
+  1005.11 1239.86 1004.01 1242.00 1002.97 1243.42
+  1001.92 1244.84 1000.79 1245.94 999.57 1246.72
+  998.35 1247.50 996.95 1247.88 995.63 1248.10
+  994.32 1248.32 993.51 1248.61 991.70 1248.05
+  989.88 1247.49 986.65 1246.46 984.76 1244.75
+  982.86 1243.04 981.12 1240.82 980.33 1237.81
+  979.54 1234.80 980.67 1231.05 980.03 1226.69
+  979.39 1222.33 977.10 1215.69 976.49 1211.63
+  975.87 1207.57 976.37 1203.88 976.34 1202.33
 endline
+
+line wall -subtype sand
+  976.34 1202.33
+  976.59 1202.08 976.32 1201.16 977.82 1200.85
+  979.32 1200.55 980.48 1200.36 985.35 1200.51
+  990.21 1200.66 1003.21 1201.27 1007.00 1201.74
+  1010.79 1202.21 1007.87 1201.96 1008.08 1203.31
+  1008.30 1204.67 1008.42 1205.89 1008.28 1209.86
+  1008.14 1213.83 1007.42 1224.25 1007.25 1227.13
+endline
+
+point 987.56 1234.02 station -name 15.24
+
 endscrap
 
 scrap xs_OxbowJunction_15_8 -projection none -author 2016.07.09 "Footleg" -copyright 2016 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
 
 # Cross-section at station 15.8.
 
-line wall -close on
-  987.12 1010.27
-  994.82 1040.02 1001.15 1063.28 1026.65 1081.23
-  1028.28 1055.42 1005.15 994.29 999.31 958.26
-  997.46 958.15 989.84 956.97 986.94 956.43
-  984.62 975.05 983.52 991.82 987.12 1010.27
+line wall
+  870.23 1280.09
+  872.94 1288.16 882.80 1317.09 886.47 1328.51
+  890.14 1339.93 891.21 1343.26 892.28 1348.59
+  893.34 1353.92 893.61 1358.76 892.87 1360.50
+  892.13 1362.24 890.87 1361.43 887.85 1359.02
+  884.83 1356.61 878.51 1350.64 874.76 1346.03
+  871.00 1341.42 867.69 1335.99 865.31 1331.37
+  862.93 1326.74 862.04 1323.34 860.49 1318.27
+  858.93 1313.21 857.81 1306.78 855.96 1300.95
+  854.10 1295.13 850.59 1287.02 849.36 1283.33
+  848.13 1279.64 848.58 1283.58 848.58 1278.81
+  848.58 1274.03 848.84 1261.43 849.36 1254.69
+  849.89 1247.95 851.33 1241.08 851.73 1238.35
 endline
+
+line wall
+  851.73 1238.35
+  851.87 1238.01 851.38 1236.70 852.61 1236.29
+  853.84 1235.88 857.48 1235.73 859.11 1235.89
+  860.73 1236.06 861.42 1236.61 862.36 1237.27
+  863.29 1237.93 864.03 1238.04 864.72 1239.83
+  865.41 1241.62 865.75 1242.67 866.49 1248.00
+  867.23 1253.33 868.33 1266.32 869.15 1271.82
+  869.97 1277.31 871.23 1279.59 871.41 1280.97
+  871.59 1282.35 870.43 1280.23 870.23 1280.09
+endline
+
+point 864.72 1278.51 station -name 15.8
+
 endscrap
 
 scrap xs_OxbowJunction_15_3 -projection none -author 2016.07.09 "Footleg" -copyright 2016 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
@@ -497,80 +560,24 @@ scrap xs_OxbowJunction_15_3 -projection none -author 2016.07.09 "Footleg" -copyr
 # Cross-section at station 15.3.
 
 line wall -close on
-  989.49 1023.25
-  996.09 1027.90 994.85 1027.39 1002.44 1027.85
-  1008.29 1015.10 1013.25 1004.64 1013.01 991.25
-  1004.49 990.30 998.04 990.48 990.22 992.07
-  987.51 1003.42 986.58 1011.89 989.49 1023.25
+  1077.24 922.64
+  1078.34 918.87 1080.06 916.33 1082.40 915.02
+  1084.74 913.72 1088.85 914.71 1091.30 914.83
+  1093.75 914.95 1095.69 915.26 1097.11 915.76
+  1098.53 916.25 1099.18 916.73 1099.84 917.80
+  1100.49 918.87 1100.88 920.32 1101.02 922.16
+  1101.16 923.99 1101.21 926.24 1100.67 928.82
+  1100.12 931.40 1099.14 934.34 1097.73 937.64
+  1096.33 940.94 1093.95 945.83 1092.23 948.61
+  1090.51 951.39 1088.90 953.29 1087.42 954.31
+  1085.93 955.34 1084.59 955.05 1083.31 954.75
+  1082.03 954.45 1080.83 953.71 1079.72 952.53
+  1078.61 951.34 1077.29 950.11 1076.64 947.64
+  1075.99 945.16 1075.71 941.84 1075.81 937.68
+  1075.91 933.51 1076.14 926.42 1077.24 922.64
 endline
+
+point 1087.96 925.74 station -name 15.3
+
 endscrap
 
-scrap OxbowJunctionXS -projection plan -author 2016.07.09 "Footleg" -copyright 2016 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
-
-# Where each cross-section is cut (line section) and drawn (point section).
-
-line section -direction both
-  1011.93 1089.19
-  991.69 937.92
-endline
-
-point 943.21 574.72 section -scrap xs_OxbowJunction_15_26
-
-point 1030.12 1148.98 label -text "15.26" -scale xs
-
-point 943.21 612.17 label -text "15.26" -scale xs
-
-line section -direction both
-  1047.19 1005.07
-  994.95 1085.17
-endline
-
-point 873.48 1271.40 section -scrap xs_OxbowJunction_15_25
-
-point 961.17 1084.07 label -text "15.25" -scale xs
-
-point 873.48 1315.09 label -text "15.25" -scale xs
-
-line section -direction both
-  1070.52 1020.66
-  1075.58 1195.15
-endline
-
-point 1054.09 450.34 section -scrap xs_OxbowJunction_15_24
-
-point 1049.28 1234.79 label -text "15.24" -scale xs
-
-point 1054.09 505.90 label -text "15.24" -scale xs
-
-line section -direction both
-  1147.01 970.92
-  1047.48 982.94
-endline
-
-point 623.61 1034.22 section -scrap xs_OxbowJunction_15_8
-
-point 991.05 931.91 label -text "15.8" -scale xs
-
-point 623.61 1127.47 label -text "15.8" -scale xs
-
-line section -direction both
-  1007.34 1188.46
-  1110.85 1143.38
-endline
-
-point 959.91 1223.62 section -scrap xs_OxbowJunction_15_3
-
-point 927.62 1237.68 label -text "15.3" -scale xs
-
-point 1099.40 1218.98 label -text "15.3" -scale xs
-
-point 1071.26 1046.06 station -name 15.24@OxbowJunction
-
-point 1062.20 1164.57 station -name 15.3@OxbowJunction
-
-point 1105.12 975.98 station -name 15.8@OxbowJunction
-
-point 1000.00 1000.00 station -name 15.26@OxbowJunction
-
-point 1007.87 1065.35 station -name 15.25@OxbowJunction
-endscrap

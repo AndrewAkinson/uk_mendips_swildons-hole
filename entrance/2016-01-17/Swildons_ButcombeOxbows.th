@@ -2,6 +2,7 @@ encoding  utf-8
 survey ButcombeOxbows
 
   input Swil1P_ButcombeOxbows.th2
+  input Swil1E_ext_ButcombeOxbows.th2
 
   centreline
     copyright 2016 "Paul 'Footleg' Fretwell"

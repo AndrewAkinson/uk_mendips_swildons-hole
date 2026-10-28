@@ -1,5 +1,6 @@
 encoding  utf-8
 survey WetWayOxbows
+  input Swil1E_ext_WetWayOxbows.th2
 
   centreline
     copyright 2016 "Paul 'Footleg' Fretwell"

@@ -2,6 +2,7 @@ encoding  utf-8
 survey WaterRift
 
   input Swil1P_WaterChamberToBelow40.th2
+  input Swil1E_ext_WaterRift.th2
 
 centreline
   team "Tony 'Badger'/Radmall" notes           #PDA

@@ -539,6 +539,27 @@ point 853.3113385826769 479.09763779527566 station -name 13.1
 
 point 910.1213385826768 278.5076377952756 station -name 13.17
 
+
+line section -direction both
+  770.86 421.21
+  881.18 498.62
+endline
+
+point 904.62 634.01 section -scrap xs_WaterChamber_13_1
+
+line section -direction both
+  805.79 19.92
+  933.72 483.53
+endline
+
+point 883.84 46.75 section -scrap xs_WaterChamber_13_8
+
+line section -direction both
+  1298.62 180.83
+  1321.99 88.63
+endline
+
+point 1238.75 438.63 section -scrap xs_WaterChamber_13_21
 endscrap
 
 
@@ -593,6 +614,13 @@ endline
 
 point 469.171338582677 175.11763779527564 station -name 13.12
 
+
+line section -direction both
+  476.41 150.53
+  452.93 230.31
+endline
+
+point 447.02 250.39 section -scrap xs_WaterChamber_13_12
 endscrap
 
 
@@ -685,6 +713,13 @@ point 63.701338582676726 272.87763779527563 station -name 13.15
 
 point 180.86133858267704 289.87763779527563 station -name 13.14
 
+
+line section -direction both
+  161.54 236.14
+  191.05 318.34
+endline
+
+point 234.38 438.92 section -scrap xs_WaterChamber_13_14
 endscrap
 
 
@@ -802,6 +837,27 @@ point 732.5213385826769 680.9476377952756 station -name 13.3
 
 point 760.3113385826769 550.9476377952756 station -name 13.2
 
+
+line section -direction both
+  688.52 651.08
+  752.34 694.33
+endline
+
+point 875.19 777.61 section -scrap xs_WaterChamber_13_3
+
+line section -direction both
+  591.70 752.50
+  652.53 788.97
+endline
+
+point 873.48 921.42 section -scrap xs_WaterChamber_13_4
+
+line section -direction both
+  569.24 833.26
+  625.12 870.35
+endline
+
+point 878.68 1038.69 section -scrap xs_WaterChamber_13_5
 endscrap
 
 
@@ -952,6 +1008,13 @@ point 1837.1213385826768 254.72763779527565 station -name 13.24
 
 point 1749.251338582677 216.09763779527566 station -name 13.23
 
+
+line section -direction both
+  1815.74 294.07
+  1849.33 232.26
+endline
+
+point 1617.58 658.80 section -scrap xs_WaterChamber_13_24
 endscrap
 
 
@@ -1036,6 +1099,20 @@ point 2059.5713385826766 357.24763779527564 station -name 13.26
 
 point 1938.3113385826769 316.4176377952756 station -name 13.25
 
+
+line section -direction both
+  1912.48 369.34
+  2037.57 113.06
+endline
+
+point 2509.83 290.09 section -scrap xs_WaterChamber_13_25
+
+line section -direction both
+  2070.77 379.46
+  2034.39 307.31
+endline
+
+point 2226.25 687.67 section -scrap xs_WaterChamber_13_26
 endscrap
 
 

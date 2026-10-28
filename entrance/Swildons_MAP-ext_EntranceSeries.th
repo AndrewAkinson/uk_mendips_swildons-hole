@@ -7,24 +7,24 @@ map EntranceSeriesExtended -projection extended -title "Swildons Hole - Entrance
   EntToWaterChamberEE2@Swildons
   EntToWaterChamberEE3@Swildons
   EntToWaterChamberEE4@Swildons
-  ShortDryWayEE1@Swildons
-  WaterRiftEE1@Swildons
-  WaterRiftEE2@Swildons
-  Old40RouteEE1@Swildons
-  KenneysDigEE1@Swildons
-  KenneysDigEE2@Swildons
-  ShowerbathAreaEE1@Swildons
-  WetWayOxbowsEE1@Swildons
-  WetWayOxbowsEE2@Swildons
-  WetWayOxbowsEE3@Swildons
-  ButcombeOxbowsEE1@Swildons
-  ButcombeOxbowsEE2@Swildons
-  OxbowJunctionEE1@Swildons
-  WaterChamberEE1@Swildons
-  WaterChamberEE2@Swildons
-  LowerOxbowEE1@Swildons
-  CisternDigEE1@Swildons
-  CisternDigEE2@Swildons
-  RollingThunderEE1@Swildons
-  WetWayKeyholeEE1@Swildons
+  ShortDryWayEE1@ShortDryWay.Swildons
+  WaterRiftEE1@WaterRift.Swildons
+  WaterRiftEE2@WaterRift.Swildons
+  Old40RouteEE1@Old40Route.Swildons
+  KenneysDigEE1@KenneysDigToShowerbath.Swildons
+  KenneysDigEE2@KenneysDigToShowerbath.Swildons
+  ShowerbathAreaEE1@ShowerbathArea.Swildons
+  WetWayOxbowsEE1@WetWayOxbows.Swildons
+  WetWayOxbowsEE2@WetWayOxbows.Swildons
+  WetWayOxbowsEE3@WetWayOxbows.Swildons
+  ButcombeOxbowsEE1@ButcombeOxbows.Swildons
+  ButcombeOxbowsEE2@ButcombeOxbows.Swildons
+  OxbowJunctionEE1@OxbowJunction.Swildons
+  WaterChamberEE1@WaterChamber.Swildons
+  WaterChamberEE2@WaterChamber.Swildons
+  LowerOxbowEE1@LowerOxbow.Swildons
+  CisternDigEE1@CisternDig.Swildons
+  CisternDigEE2@CisternDig.Swildons
+  RollingThunderEE1@RollingThunder.Swildons
+  WetWayKeyholeEE1@WetWayKeyhole.Swildons
 endmap

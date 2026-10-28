@@ -44,19 +44,6 @@ survey Swildons
 
   #Entrance Series extended elevation and cross-sections, from the PocketTopo sketches
   input entrance/2013-02-23/Swil1E_ext_EntToWaterChamber.th2
-  input entrance/2013-02-24/Swil1E_ext_ShortDryWay.th2
-  input entrance/2013-06-29/Swil1E_ext_WaterRift.th2
-  input entrance/2013-06-29/Swil1E_ext_Old40Route.th2
-  input entrance/2013-06-30/Swil1E_ext_KenneysDig.th2
-  input entrance/2013-06-30/Swil1E_ext_ShowerbathArea.th2
-  input entrance/2016-01-16/Swil1E_ext_WetWayOxbows.th2
-  input entrance/2016-01-17/Swil1E_ext_ButcombeOxbows.th2
-  input entrance/2016-07-09/Swil1E_ext_OxbowJunction.th2
-  input entrance/2016-07-09/Swil1E_ext_WaterChamber.th2
-  input entrance/2016-07-10/Swil1E_ext_LowerOxbow.th2
-  input entrance/2017-03-11/Swil1E_ext_CisternDig.th2
-  input entrance/2019-01-05/Swil1E_ext_RollingThunder.th2
-  input entrance/2016-07-09/Swil1E_ext_WetWayKeyhole.th2
 
   centreline
     copyright 2019 "Paul 'Footleg' Fretwell"

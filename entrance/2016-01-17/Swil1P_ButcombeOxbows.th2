@@ -314,6 +314,27 @@ endline
 
 point 772.0506299212597 272.79763779527536 station -name 12.10
 
+
+line section -direction both
+  883.72 522.72
+  819.37 590.48
+endline
+
+point 799.04 629.06 section -scrap xs_ButcombeOxbows_12_1
+
+line section -direction both
+  994.47 391.11
+  1039.21 302.11
+endline
+
+point 1389.87 311.48 section -scrap xs_ButcombeOxbows_12_6
+
+line section -direction both
+  805.99 269.98
+  737.13 275.51
+endline
+
+point 1360.36 225.56 section -scrap xs_ButcombeOxbows_12_10
 endscrap
 
 
@@ -487,6 +508,34 @@ point 531.8906299212597 620.6676377952754 station -name 12.23
 point 606.3406299212596 546.5776377952755 station -name 12.22
 
 point 116.5 738.0 dimensions -value [1.5 0.5]
+
+line section -direction both
+  551.44 546.54
+  633.59 546.81
+endline
+
+point 758.04 517.02 section -scrap xs_ButcombeOxbows_12_22
+
+line section -direction both
+  506.81 567.00
+  552.90 665.41
+endline
+
+point 489.17 709.11 section -scrap xs_ButcombeOxbows_12_23
+
+line section -direction both
+  387.30 606.51
+  411.82 675.26
+endline
+
+point 424.58 709.46 section -scrap xs_ButcombeOxbows_12_24
+
+line section -direction both
+  49.11 755.87
+  152.72 838.56
+endline
+
+point 215.29 39.29 section -scrap xs_ButcombeOxbows_12_28
 endscrap
 
 
@@ -662,6 +711,27 @@ point 944.8406299212596 184.28763779527537 station -name 12.13
 point 890.2706299212596 170.07763779527534 station -name 12.12
 
 point 783.2706299212596 170.46763779527544 station -name 12.11
+
+line section -direction both
+  880.78 236.93
+  895.07 136.72
+endline
+
+point 1196.92 200.60 section -scrap xs_ButcombeOxbows_12_12
+
+line section -direction both
+  556.45 102.59
+  550.79 173.45
+endline
+
+point 268.58 61.32 section -scrap xs_ButcombeOxbows_12_17
+
+line section -direction both
+  537.11 104.67
+  442.21 132.01
+endline
+
+point 372.88 -107.52 section -scrap xs_ButcombeOxbows_12_19
 endscrap
 
 

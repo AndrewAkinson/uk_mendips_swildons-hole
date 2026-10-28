@@ -927,6 +927,55 @@ line rock-border -close on
   -2162.3 1258.7
 endline
 
+
+line section -direction both
+  -683.83 922.84
+  -725.54 1160.88
+endline
+
+point -603.00 428.41 section -scrap xs24_18
+
+line section -direction both
+  -1963.23 1032.32
+  -1844.86 1399.96
+endline
+
+point -2021.04 899.25 section -scrap xs24_23
+
+line section -direction both
+  -2376.67 1169.31
+  -2310.54 1508.62
+endline
+
+point -2366.51 1600.02 section -scrap xs24_25
+
+line section -direction both
+  -3174.27 1308.79
+  -2680.43 1443.70
+endline
+
+point -2774.87 1763.25 section -scrap xs24_26
+
+line section -direction both
+  -2940.06 1087.55
+  -3315.84 1242.43
+endline
+
+point -2591.05 938.54 section -scrap xs24_31
+
+line section -direction both
+  -1440.38 1395.92
+  -1355.82 1127.39
+endline
+
+point -1478.11 1519.61 section -scrap xs24_40
+
+line section -direction both
+  -705.13 1290.35
+  -780.39 933.55
+endline
+
+point -672.91 1433.28 section -scrap xs24_42
 endscrap
 
 
@@ -1718,6 +1767,27 @@ area water
   TratmansToSump1SP2-water2
 endarea
 
+
+line section -direction both
+  1045.27 721.82
+  844.22 504.84
+endline
+
+point 671.87 324.46 section -scrap xs24_5
+
+line section -direction both
+  858.43 481.25
+  849.50 642.92
+endline
+
+point 869.19 247.73 section -scrap xs24_8
+
+line section -direction both
+  158.48 780.65
+  236.74 1007.61
+endline
+
+point 257.99 1063.57 section -scrap xs24_12
 endscrap
 
 

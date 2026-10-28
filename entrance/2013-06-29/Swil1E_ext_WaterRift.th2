@@ -743,27 +743,27 @@ point 1418.94 820.79 flowstone
 
 point 1434.42 841.00 flowstone
 
-point 1000.00 1000.00 station -name 8.1@WaterRift
+point 1000.00 1000.00 station -name 8.1
 
-point 1152.52 923.58 station -name 8.2@WaterRift
+point 1152.52 923.58 station -name 8.2
 
-point 1354.72 776.26 station -name 8.3@WaterRift
+point 1354.72 776.26 station -name 8.3
 
-point 1412.48 757.68 station -name 8.4@WaterRift
+point 1412.48 757.68 station -name 8.4
 
-point 1576.81 697.32 station -name 8.5@WaterRift
+point 1576.81 697.32 station -name 8.5
 
-point 1658.82 680.35 station -name 8.6@WaterRift
+point 1658.82 680.35 station -name 8.6
 
-point 1852.13 639.37 station -name 8.7@WaterRift
+point 1852.13 639.37 station -name 8.7
 
-point 1905.20 603.23 station -name 8.8@WaterRift
+point 1905.20 603.23 station -name 8.8
 
-point 2168.39 577.40 station -name 8.9@WaterRift
+point 2168.39 577.40 station -name 8.9
 
-point 2260.94 594.09 station -name 8.10@WaterRift
+point 2260.94 594.09 station -name 8.10
 
-point 2395.00 534.25 station -name 8.11@WaterRift
+point 2395.00 534.25 station -name 8.11
 endscrap
 
 scrap WaterRiftEE2 -projection extended -author 2013.06.29 "Footleg" -copyright 2013 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
@@ -845,191 +845,48 @@ point 1281.51 1090.16 flowstone
 
 point 1204.76 1104.42 stalactite
 
-point 1000.00 1000.00 station -name 8.13@WaterRift
+point 1000.00 1000.00 station -name 8.13
 
-point 1172.68 991.61 station -name 8.14@WaterRift
+point 1172.68 991.61 station -name 8.14
 
-point 1483.15 982.76 station -name 8.15@WaterRift
+point 1483.15 982.76 station -name 8.15
 
-point 1660.67 970.35 station -name 8.16@WaterRift
+point 1660.67 970.35 station -name 8.16
 endscrap
 
 scrap xs_WaterRift_8_13 -projection none -author 2013.06.29 "Footleg" -copyright 2013 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
 
 # Cross-section at station 8.13.
 
-line wall -close on
-  991.53 976.26
-  994.21 1027.93 1003.14 1080.17 1012.76 1130.51
-  1024.45 1098.92 1022.11 1065.53 1028.05 1032.57
-  1030.97 1016.37 1038.74 973.24 1030.48 966.77
-  1026.04 963.28 1000.58 969.11 993.12 968.76
-  991.94 974.31 992.36 972.32 991.53 976.26
+line wall
+  260.51 -351.18
+  260.36 -342.13 259.87 -306.70 259.62 -296.85
+  259.38 -287.01 259.94 -295.01 259.03 -292.13
+  258.12 -289.25 255.22 -287.08 254.16 -279.58
+  253.10 -272.07 253.33 -255.83 252.69 -247.10
+  252.05 -238.36 251.36 -233.64 250.32 -227.17
+  249.29 -220.70 247.67 -213.51 246.49 -208.27
+  245.30 -203.03 244.22 -198.85 243.24 -195.72
+  242.25 -192.60 241.37 -190.11 240.58 -189.52
+  239.79 -188.93 239.30 -186.35 238.51 -192.18
+  237.73 -198.01 238.68 -204.83 235.86 -224.51
+  233.03 -244.20 224.51 -290.46 221.53 -310.29
+  218.56 -330.12 218.58 -337.97 217.99 -343.51
 endline
+
+line wall
+  217.99 -343.51
+  218.43 -344.47 220.16 -347.98 220.65 -349.26
+  221.14 -350.54 221.09 -350.84 220.94 -351.18
+  220.80 -351.53 219.76 -351.26 219.76 -351.33
+  219.76 -351.41 219.39 -351.70 220.94 -351.63
+  222.49 -351.55 223.45 -350.57 229.06 -350.89
+  234.67 -351.21 249.22 -353.42 254.61 -353.55
+  259.99 -353.67 260.41 -352.02 261.40 -351.63
+  262.38 -351.23 260.66 -351.26 260.51 -351.18
+endline
+
+point 228.03 -320.48 station -name 8.13
+
 endscrap
 
-scrap xs_WaterRift_8_14 -projection none -author 2013.06.29 "Footleg" -copyright 2013 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
-
-# Cross-section at station 8.14.
-
-line wall -close on
-  957.76 1160.79
-  957.63 1165.37 957.04 1182.88 956.97 1188.27
-  956.89 1193.65 956.62 1193.29 957.32 1193.11
-  958.01 1192.93 960.40 1188.50 961.14 1187.16
-  961.89 1185.83 961.94 1186.33 961.77 1185.08
-  961.60 1183.84 960.66 1182.69 960.12 1179.69
-  959.58 1176.69 958.94 1173.46 958.54 1167.09
-  958.14 1160.72 957.96 1146.22 957.70 1141.50
-  957.43 1136.77 957.56 1139.25 956.97 1138.74
-  956.38 1138.23 954.07 1135.95 954.17 1138.46
-  954.28 1140.96 956.99 1150.39 957.59 1153.76
-  958.19 1157.13 957.75 1157.50 957.77 1158.67
-  957.80 1159.85 957.76 1160.44 957.76 1160.79
-endline
-endscrap
-
-scrap xs_WaterRift_8_6 -projection none -author 2013.06.29 "Footleg" -copyright 2013 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
-
-# Cross-section at station 8.6.
-
-line wall -close on
-  921.00 1126.18
-  922.59 1138.01
-  943.29 1096.43 960.31 1059.39 994.47 1026.88
-  1019.61 1002.96 1056.28 991.85 1072.47 959.73
-  1054.42 962.23 1037.58 971.09 1021.82 980.97
-  976.87 1009.14 980.95 1016.65 957.76 1057.15
-  944.75 1079.86 930.70 1101.80 921.00 1126.18
-endline
-
-line rock-border -close on
-  989.73 1017.32
-  998.77 1019.02
-  1001.26 1008.31
-  991.47 1008.76
-  989.73 1017.32
-endline
-
-line rock-border -close on
-  1008.84 1005.45
-  1009.06 1001.24
-  1007.37 1005.61
-  1008.84 1005.45
-endline
-endscrap
-
-scrap xs_WaterRift_8_3 -projection none -author 2013.06.29 "Footleg" -copyright 2013 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
-
-# Cross-section at station 8.3.
-
-line wall -close on
-  998.11 1006.10
-  997.67 1011.86 994.59 1016.85 1001.48 1021.74
-  1009.51 1027.44 1026.62 1023.54 1035.51 1023.68
-  1048.40 1023.89 1061.01 1028.67 1073.76 1027.96
-  1084.84 1027.35 1093.67 1021.67 1105.12 1022.50
-  1122.39 1023.75 1138.59 1032.64 1156.33 1030.56
-  1171.59 1028.76 1197.34 1024.06 1196.90 1005.08
-  1196.04 968.10 1103.29 991.34 1077.79 993.99
-  1050.99 996.78 1023.23 995.55 998.11 1006.10
-endline
-
-line rock-border -close on
-  1014.12 1007.58
-  1011.23 1007.55
-  1008.18 1012.12
-  1016.83 1015.94
-  1014.12 1007.58
-endline
-
-line rock-border -close on
-  1031.95 1014.09
-  1031.27 1006.43
-  1029.88 1005.68
-  1028.01 1012.99
-  1031.95 1014.09
-endline
-
-line rock-border -close on
-  1080.89 1016.58
-  1085.35 1006.78
-  1085.41 1004.49
-  1080.89 1016.58
-endline
-
-line border
-  1119.37 993.50
-  1119.62 993.63 1120.32 993.09 1120.85 994.24
-  1121.38 995.40 1121.54 995.19 1122.54 1000.44
-  1123.54 1005.70 1126.13 1021.56 1126.85 1025.79
-endline
-
-line border
-  1103.62 1007.68
-  1102.96 1007.87 1100.04 1009.88 1099.64 1008.86
-  1099.23 1007.84 1099.40 1000.68 1101.21 1001.55
-  1103.02 1002.42 1107.26 1012.36 1110.49 1014.10
-  1113.71 1015.84 1118.87 1012.36 1120.55 1012.01
-endline
-
-line border
-  1057.56 1019.49
-  1059.42 1019.55 1067.62 1021.14 1068.71 1019.88
-  1069.79 1018.63 1063.31 1013.53 1064.08 1011.96
-  1064.85 1010.38 1071.77 1010.69 1073.31 1010.43
-endline
-endscrap
-
-scrap WaterRiftXS -projection plan -author 2013.06.29 "Footleg" -copyright 2013 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
-
-# Where each cross-section is cut (line section) and drawn (point section).
-
-line section -direction both
-  1383.81 1005.27
-  966.08 999.54
-endline
-
-point 1153.72 1002.10 section -scrap xs_WaterRift_8_13
-
-line section -direction both
-  1028.95 829.02
-  904.98 819.54
-endline
-
-point 665.72 801.24 section -scrap xs_WaterRift_8_14
-
-point 881.43 817.73 label -text "8.14" -scale xs
-
-point 665.72 935.49 label -text "8.14" -scale xs
-
-line section -direction both
-  1407.34 904.31
-  1461.06 940.98
-endline
-
-point 1552.15 1003.14 section -scrap xs_WaterRift_8_6
-
-point 1498.76 961.82 label -text "8.6" -scale xs
-
-point 1552.15 1126.42 label -text "8.6" -scale xs
-
-line section -direction both
-  1657.89 703.39
-  1691.47 799.53
-endline
-
-point 1558.24 418.12 section -scrap xs_WaterRift_8_3
-
-point 1699.26 821.83 label -text "8.3" -scale xs
-
-point 1558.24 472.25 label -text "8.3" -scale xs
-
-point 1670.87 740.55 station -name 8.3@WaterRift
-
-point 1000.00 1000.00 station -name 8.13@WaterRift
-
-point 1004.72 827.17 station -name 8.14@WaterRift
-
-point 1427.56 918.11 station -name 8.6@WaterRift
-endscrap
