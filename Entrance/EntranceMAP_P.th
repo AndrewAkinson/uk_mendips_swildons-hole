@@ -1,0 +1,101 @@
+encoding  utf-8
+#Swildons Hole, Priddy, Mendip, Somerset, UK
+#Resurvey Project. Lead by Paul 'Footleg' Fretwell, Jun. 2013 - Feb. 2017
+#Plan Maps for Entrance Series
+
+# (input statements for drawings are in the corresponding centreline data .th files)
+
+join LongDryWaySP1@Swildons ShortDryWaySP1@ShortDryWay.Swildons
+join KenneysSP1@KenneysDigToShowerbath.Swildons LongDryWaySP1@Swildons
+join KenneysSP1@KenneysDigToShowerbath.Swildons BaptismCrawlSP1@ShowerbathArea.Swildons
+join ShortDryWaySP1@ShortDryWay.Swildons BaptismCrawlSP1@ShowerbathArea.Swildons
+join ShortDryWaySP3@ShortDryWay.Swildons ShortDryWaySP5@Swildons
+join EntranceSP2@Swildons ShowerbathSP1@ShowerbathArea.Swildons
+join KenneysSP2@KenneysDigToShowerbath.Swildons ShowerbathSP3@ShowerbathArea.Swildons
+join ShowerbathSP4@KenneysDigToShowerbath.Swildons ShowerbathSP3@ShowerbathArea.Swildons
+join KenneysSP2@KenneysDigToShowerbath.Swildons UpperOxbowSP1@Swildons
+join KenneysSP2@KenneysDigToShowerbath.Swildons WetWaySP1@Swildons
+join KenneysSP2@KenneysDigToShowerbath.Swildons WetWaySP2@Swildons
+join ButcombeChamberSP1@ButcombeOxbows.Swildons UpperOxbowSP2@Swildons
+join OldGrottoStreamSP2@Swildons WaterChamberSP1@WaterChamber.Swildons
+join WetWaySP4@Swildons WetWaySP5@WaterChamber.Swildons
+join UpperOxbowSP3@Swildons ButcombeOxbowSP1@ButcombeOxbows.Swildons
+join OxbowJunctionSP1@OxbowJunction.Swildons ButcombeOxbowSP1@ButcombeOxbows.Swildons
+join LowerOxbowSP3@LowerOxbow.Swildons WaterChamberSP1@WaterChamber.Swildons
+join WaterChamberSP1@WaterChamber.Swildons WaterRiftSP1@WaterRift.Swildons
+join WaterRiftSP2@WaterRift.Swildons Old40to20SP1@Old40To20.Swildons
+join Old40to20SP1@Old40To20.Swildons RollingThunderSP1@RollingThunder.Swildons
+
+map EntranceSeriesPlan -title "Swildons Hole - Entrance Series"
+  elevfixSP@Swildons
+  LongDryWaySP4@Swildons
+    break
+  EntranceSP1@Swildons
+  EntranceSP2@Swildons
+  LongDryWaySP3@Swildons
+  LongDryWaySP1@Swildons
+  LongDryWaySP2@Swildons
+  KenneysSP2@KenneysDigToShowerbath.Swildons
+  KenneysSP1@KenneysDigToShowerbath.Swildons
+  WetWaySP3@Swildons
+  WetWaySP2@Swildons
+  WetWaySP1@Swildons
+  OxbowJunctionSP4@OxbowJunction.Swildons
+  CisternDigSP1@CisternDig.Swildons
+    break
+  UpperOxbowSP4@Swildons
+  UpperOxbowSP3@Swildons
+  UpperOxbowSP2@Swildons
+  UpperOxbowSP1@Swildons
+  DryWayStreamSP1@Swildons
+  ShowerbathSP1@ShowerbathArea.Swildons
+  OxbowJunctionSP3@OxbowJunction.Swildons
+  OxbowJunctionSP2@OxbowJunction.Swildons
+  OxbowJunctionSP1@OxbowJunction.Swildons
+  ButcombeChamberSP2@ButcombeOxbows.Swildons
+  ButcombeChamberSP1@ButcombeOxbows.Swildons
+  ButcombeOxbowSP1@ButcombeOxbows.Swildons
+    break
+  ShowerbathSP2@ShowerbathArea.Swildons
+  ShowerbathSP3@ShowerbathArea.Swildons
+  ShowerbathSP4@KenneysDigToShowerbath.Swildons
+    break
+  DryWayStreamSP2@Swildons
+  LongDryWaySP5@Swildons
+  NewGrottoesSP1@Swildons
+  BoulderChamberSP1@Swildons
+  BoulderChamberSP2@Swildons
+  ShortDryWaySP1@ShortDryWay.Swildons
+  ShortDryWaySP2@ShortDryWay.Swildons
+  ShortDryWaySP3@ShortDryWay.Swildons
+  BaptismCrawlSP1@ShowerbathArea.Swildons
+  OldGrottoSP1@Swildons
+  ShortDryWaySP5@Swildons
+  Old40SP2@Old40Route.Swildons
+  Old40SP1@Old40Route.Swildons
+    break
+  LowerOxbowSP1@LowerOxbow.Swildons
+  LowerOxbowSP2@LowerOxbow.Swildons
+  LowerOxbowSP3@LowerOxbow.Swildons
+  OldGrottoStreamSP3@Swildons
+  OldGrottoStreamSP2@Swildons
+  OldGrottoStreamSP1@Swildons
+  WetWaySP4@Swildons
+  WetWaySP5@WaterChamber.Swildons
+  WetWaySP6@WaterChamber.Swildons
+  WaterChamberSP2@WaterChamber.Swildons
+  WaterChamberSP1@WaterChamber.Swildons
+  WaterChamberDigSP1@WaterChamber.Swildons
+  WaterChamberDigSP2@WaterChamber.Swildons
+  WaterRiftSP1@WaterRift.Swildons
+  WaterRiftSP2@WaterRift.Swildons
+  RollingThunderSP1@RollingThunder.Swildons
+  RollingThunderSP2@RollingThunder.Swildons
+  Old40to20SP1@Old40To20.Swildons
+endmap
+
+# The 1:200 Entrance Series sheet: the plan above plus the cross-sections
+# (too small and busy for the 1:500 whole-cave plan).
+map EntranceSeriesPlanSections -title "Swildons Hole - Entrance Series"
+  EntranceSeriesPlan
+endmap

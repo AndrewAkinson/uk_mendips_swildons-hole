@@ -18,7 +18,7 @@ The cave's entry in the Mendip Cave Registry & Archive:
 | [Plan](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-plan.pdf) | Entrance to Sump 1, coloured by altitude, with cross-sections along the streamway. 1:500. |
 | [Extended elevation](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-extended-elevation.pdf) | The whole drawn cave unrolled along its passages, entrance to Sump 1. 1:500. |
 | [Streamway elevation](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-streamway-elevation.pdf) | Extended elevation from the Old 40 to Sump 1, with Barnes Loop above the streamway. 1:500. |
-| [Entrance Series plan](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-entrance-plan.pdf) | The Entrance Series down to Rolling Thunder, with cross-sections. The entrances and Zig Zags, which lie on top of the passages below, are drawn 35 m to the east, joined to them by letters. 1:200. |
+| [Entrance Series plan](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-entrance-plan.pdf) | The Entrance Series down to Rolling Thunder, with cross-sections. 1:200. |
 | [Entrance Series extended elevation](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-entrance-extended-elevation.pdf) | The Entrance Series unrolled along its passages. 1:200. |
 | [Entrance Series east–west elevation](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-entrance-elevation.pdf) | Footleg's projected elevation, only partly drawn. 1:200. |
 | [Plan, greyscale](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-plan-bw.pdf) | For a black-and-white printer. |
@@ -128,7 +128,8 @@ The survey is filed by area, then by sketch:
 
 ```
 Entrance/                 the Entrance Series, down to the Old 40 and Rolling Thunder
-  Swildons_MAP*.th        its maps: which drawings make up each sheet
+  EntranceMAP_*.th        its maps: which drawings make up each sheet
+                          (P plan, Ee extended elevation, E000 elevation)
   WetWayOxbows/           one folder per sketch file (PocketTopo or SexyTopo),
                           named after its survey
     *.th                  each survey's data and team, inputting its drawings

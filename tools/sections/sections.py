@@ -42,12 +42,10 @@ CENTRELINE_KML = 'output/Swildons-centreline.kml'
 SHEETS = {
     'entrance': {'files': ('Entrance/**/*Ee.th2', 'Entrance/**/*P.th2',
                            '*/**/Swil1E_ext_*.th2', 'Entrance/**/Swil1P_*.th2'),
-                 'maps': {'Swildons Hole - Entrance Series': (0.0, 0.0),
-                          'Upper level: the entrances and Zig Zags': (0.0, 0.0)}},
+                 'maps': {'Swildons Hole - Entrance Series': (0.0, 0.0)}},
     'master': {'files': ('Streamway/**/*Ee.th2', 'Streamway/**/*P.th2',
                          '*/**/Swil1E_[!e]*.th2'),
                'maps': {'Swildons Hole - Entrance Series': (0.0, 0.0),
-                        'Upper level: the entrances and Zig Zags': (0.0, 0.0),
                         'Swildons 1 - Streamway': (0.0, 0.0)}},
 }
 MARGIN = 0.4        # metres kept clear round passages and sections

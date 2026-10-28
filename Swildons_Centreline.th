@@ -16,7 +16,6 @@ survey Swildons
   input Entrance/EntToWaterChamber/InletOffOldGrottoToWaterChamber.th
   #Combined sketch for all 5 of the above
   input Entrance/EntToWaterChamber/Swil1P_Ent-OldGrotto-WaterChamber.th2
-  input Entrance/Swil1P_EntranceLevels.th2
   
   input Entrance/WetWayOxbows/WetWayOxbows.th
   input Entrance/WetWayOxbows/WetWayKeyhole.th

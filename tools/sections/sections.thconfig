@@ -3,9 +3,8 @@ encoding  utf-8
 #  Passage outlines for placing cross-sections (tools/sketch2therion)
 # =====================================================================
 #
-#  The plan maps the cross-sections are drawn on, as KML: the lower and
-#  upper levels of the Entrance Series (drawn apart on the 1:200 sheet)
-#  and the streamway. `sections` reads them to keep the cross-sections
+#  The plan maps the cross-sections are drawn on, as KML: the Entrance
+#  Series and the streamway. `sections` reads them to keep the cross-sections
 #  off the passages. Run from the top of the repository after the main
 #  build (which writes output/Swildons.sql and the centreline KML):
 #
@@ -15,8 +14,7 @@ encoding  utf-8
 
 source ../../swildonsmaster.th
 
-select EntranceSeriesLowerLevel@SwildonsHole
-select EntranceSeriesTopLevel@SwildonsHole
+select EntranceSeriesPlan@SwildonsHole
 select Streamway1Plan@SwildonsHole
 
 export map -projection plan -fmt kml -o ../../output/sections-passages.kml
