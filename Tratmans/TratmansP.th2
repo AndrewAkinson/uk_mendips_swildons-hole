@@ -729,24 +729,24 @@ scrap TratmansPX21 -projection none -author 2026.10.20 "Andrew Atkinson" -copyri
 # Cross-section at station 21.
 
 
-line wall -reverse on -subtype sand
-  1388.5 -3914.96
-  1366.06 -3921.52 1341.07 -3940.44 1318.07 -3957.56
+line wall -subtype sand
+  1318.07 -3957.56
   smooth off
+  1341.07 -3940.44 1366.06 -3921.52 1388.5 -3914.96
 endline
 
-line wall -reverse on -subtype sand
-  1302.02 -3957.56
-  1302.22 -3950.18 1305.71 -3937.89 1300.12 -3931.84
-  1294.46 -3925.71 1281.81 -3929.29 1274.53 -3927.63
-  1248.11 -3921.62 1218.93 -3911.05 1194.52 -3899.37
-  smooth off
-endline
-
-line wall -reverse on
+line wall -subtype sand
   1194.52 -3899.37
-  1225.57 -3821.53 1345.0 -3873.11 1388.5 -3914.96
   smooth off
+  1218.93 -3911.05 1248.11 -3921.62 1274.53 -3927.63
+  1281.81 -3929.29 1294.46 -3925.71 1300.12 -3931.84
+  1305.71 -3937.89 1302.22 -3950.18 1302.02 -3957.56
+endline
+
+line wall
+  1388.5 -3914.96
+  smooth off
+  1345.0 -3873.11 1225.57 -3821.53 1194.52 -3899.37
 endline
 
 line border -id TratmansPX21-water1 -close on -subtype invisible
