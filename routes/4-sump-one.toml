@@ -26,5 +26,5 @@ From Sump 1 back up the streamway: through Tratman's Temple, past Barnes Loop, u
 
 # The first junction has four ways off it: show more around it
 [[decision]]
-at = "17.0@Old40to20"
+at = "17.0@Old40To20"
 width = 40

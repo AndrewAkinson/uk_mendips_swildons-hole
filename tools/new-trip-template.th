@@ -1,6 +1,6 @@
 encoding  utf-8
-# A new resurvey trip. Copy into the trip's folder, <area>/<yyyy-mm-dd>/,
-# as Swildons_<Where>.th (e.g. streamway/2026-11-07/Swildons_Sump1ToSwildons2.th)
+# A new resurvey trip. Copy into the trip's folder, <area>/<Survey>/,
+# as <Survey>.th (e.g. Streamway/Sump1ToSwildons2/Sump1ToSwildons2.th)
 # and fill in.
 # SexyTopo's Therion export writes the centreline block for you: paste
 # its data and extend lines in place of the example below, keeping the
@@ -9,8 +9,8 @@ encoding  utf-8
 survey Sump1ToSwildons2 -title "Sump 1 to Swildons Two"
 
   # The drawings, once converted (tools/sketch2therion), in the same folder:
-  # input Swil1P_Sump1ToSwildons2.th2
-  # input Swil1E_Sump1ToSwildons2.th2
+  # input Sump1ToSwildons2P.th2
+  # input Sump1ToSwildons2Ee.th2
 
   centreline
     copyright yyyy "Copyright Holder"

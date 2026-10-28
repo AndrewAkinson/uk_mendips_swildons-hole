@@ -18,7 +18,7 @@ The cave's entry in the Mendip Cave Registry & Archive:
 | [Plan](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-plan.pdf) | Entrance to Sump 1, coloured by altitude, with cross-sections along the streamway. 1:500. |
 | [Extended elevation](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-extended-elevation.pdf) | The whole drawn cave unrolled along its passages, entrance to Sump 1. 1:500. |
 | [Streamway elevation](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-streamway-elevation.pdf) | Extended elevation from the Old 40 to Sump 1, with Barnes Loop above the streamway. 1:500. |
-| [Entrance Series plan](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-entrance-plan.pdf) | The Entrance Series down to Rolling Thunder, with cross-sections. The entrances and Zig Zags, which lie on top of the passages below, are drawn 35 m to the east, joined to them by letters. 1:200. |
+| [Entrance Series plan](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-entrance-plan.pdf) | The Entrance Series down to Rolling Thunder, with cross-sections. 1:200. |
 | [Entrance Series extended elevation](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-entrance-extended-elevation.pdf) | The Entrance Series unrolled along its passages. 1:200. |
 | [Entrance Series east–west elevation](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-entrance-elevation.pdf) | Footleg's projected elevation, only partly drawn. 1:200. |
 | [Plan, greyscale](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-plan-bw.pdf) | For a black-and-white printer. |
@@ -124,25 +124,31 @@ to refine the drawings in xTherion.
 trip, drawings included.** `docs/ProjectWorkflow.txt` has the original
 PocketTopo workflow.
 
-The survey is filed by area, then by trip date:
+The survey is filed by area, then by sketch:
 
 ```
-entrance/                 the Entrance Series, down to the Old 40 and Rolling Thunder
-  Swildons_MAP*.th        its maps: which drawings make up each sheet
-  2013-06-30/             one folder per trip, named by its date
-    Swildons_*.th         the trip's survey data and team, inputting its drawings
-    Swil1P_*.th2          plan drawings
-    Swil1E_*.th2          elevation drawings, which also hold the cross-sections
+Entrance/                 the Entrance Series, down to the Old 40 and Rolling Thunder
+  EntranceMAP_*.th        its maps: which drawings make up each sheet
+                          (P plan, Ee extended elevation, E000 elevation)
+  WetWayOxbows/           one folder per sketch file (PocketTopo or SexyTopo),
+                          named after its survey
+    *.th                  each survey's data and team, inputting its drawings
+    *P.th2                plan drawings
+    *Ee.th2               extended elevations, which also hold the cross-sections
+    *E000.th2             elevations projected to 000, scraps XSE000_1, XSE000_2, …
     pockettopo/           the original PocketTopo files and their exports
-streamway/                the Old 40 to Sump 1, laid out the same way
-stanton/                  W. I. Stanton's survey, one folder per trip (1951-62)
+Streamway/                the Old 40 to Sump 1, laid out the same way
+Stanton/                  W. I. Stanton's survey, one folder per trip (1951-62)
   Swildons_WIS*.th        joins his trips together
   logbooks/               scans and a transcription of his logbooks
 ```
 
-A new trip goes in a new dated folder in its area (for example
-`streamway/2026-11-07/`), with SexyTopo's files in a `sexytopo/`
-folder inside it.
+A new trip's sketch goes in a new folder in its area, named after its survey,
+with its .th named the same (for example
+`Streamway/Sump1ToSwildons2/Sump1ToSwildons2.th`) and SexyTopo's files
+in a `sexytopo/` folder inside it. Where one sketch file holds several
+surveys, as in `Entrance/EntToWaterChamber/`, they share its folder and
+drawings.
 
 | Path | What it is |
 |---|---|

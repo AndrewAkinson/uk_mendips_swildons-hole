@@ -137,8 +137,7 @@ placed by `python3 -m tools.sections`.
   direction (along the survey, from the station towards the next) on
   its left.
 - A section drawing must not overlap a passage or another section,
-  including those of other surveys on the same sheet and the displaced
-  upper level of the Entrance Series.
+  including those of other surveys on the same sheet.
 - `python3 -m tools.sections` does all of this, and
   moves section labels off passages (see `tools/README.md`).
 

@@ -1,0 +1,61 @@
+encoding  utf-8
+survey WetWayKeyhole
+  input WetWayKeyholeEe.th2
+
+  centreline
+    copyright 2016 "Paul 'Footleg' Fretwell"
+
+    date 2016.07.09
+
+    team "Paul 'Footleg'/Fretwell" notes
+    team "Thomas Starnes" instruments
+    team "Paul Wilman" dog
+    
+    data normal from to compass clino tape
+    extend right
+    14.0 - 342.39 -15.41 5.437
+    14.0 - 338.47 -16.47 4.019
+    14.0 - 316.14 -5.55 2.535
+    14.0 14.1 129.54 20.03 2.371  #14.0=11.33 bottom tip of downward pointing grey roof pendant at stream level
+    14.1 - 237.83 14.43 0.345
+    14.1 - 251.93 88.00 2.867
+    14.1 - 150.99 -84.83 1.281
+    14.1 - 44.46 -8.32 0.228
+    14.1 14.2 140.28 8.34 3.302
+    14.2 - 22.40 81.06 1.706
+    14.2 - 34.96 18.80 0.450
+    14.2 - 211.36 18.45 0.158
+    14.2 - 155.56 -87.90 1.318
+    14.2 14.3 122.60 16.04 4.786
+    14.3 - 179.40 81.38 3.188
+    14.3 - 212.32 -1.71 1.205
+    14.3 - 162.23 -81.41 1.644
+    14.3 - 47.33 -14.00 0.161
+    14.3 - 271.96 -17.32 0.491
+    14.3 14.4 150.27 -8.53 1.342
+    14.4 - 7.52 10.64 0.661
+    14.4 - 41.77 9.61 0.802
+    14.4 - 40.28 56.31 1.595
+    14.4 - 346.07 75.16 3.617
+    14.4 - 333.19 -85.80 1.455
+    14.4 14.5 36.68 25.95 1.929
+    14.5 - 184.33 4.74 0.823
+    14.5 - 97.97 -85.21 0.605
+    14.5 - 182.54 86.61 3.049
+    14.5 14.6 118.84 40.43 2.083  #14.6=11.11 top of round white calcite blob in middle of calcite lump on wall.
+    14.6 - 14.69 38.95 0.461
+    14.6 - 274.40 80.41 1.956
+    14.6 - 214.09 6.72 0.316
+    14.6 - 170.05 -78.89 1.592
+    # Extended-elevation direction of each leg, as Footleg set it in PocketTopo
+    # (these only affect the extended elevation)
+    extend right 14.0 14.1
+    extend right 14.1 14.2
+    extend right 14.2 14.3
+    extend right 14.3 14.4
+    extend right 14.4 14.5
+    extend right 14.5 14.6
+  endcentreline
+
+endsurvey
+

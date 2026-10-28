@@ -131,7 +131,7 @@ Tratman's Temple is the example here: the survey `Tratmans`, in
 ## Joining up with Stanton's survey
 
 Beyond the resurvey only W. I. Stanton's 1950s–60s survey exists
-(`stanton/`, one folder per trip). The
+(`Stanton/`, one folder per trip). The
 [plan with Stanton's survey](https://cavesurveying.github.io/uk_mendips_swildons-hole/Swildons-plan-with-stanton.pdf)
 shows his stations next to the resurvey's. When a new trip reaches
 one of them:
@@ -142,7 +142,7 @@ one of them:
   measurements from the Forty.
 - **Flag the replaced legs.** Find the legs of his that the new trip
   replaces, and flag them `duplicate` in his file, as in
-  `stanton/1953-02-08/swildons1-c.th`:
+  `Stanton/1953-02-08/swildons1-c.th`:
 
   ```
   flags duplicate
@@ -162,11 +162,11 @@ export `_th.txt`. Two more commands help:
 
 ```bash
 # a PocketTopo sketch as an XVI backdrop for xTherion
-python3 -m tools.sketch2therion xvi entrance/2016-07-09/pockettopo/Trip.top --view elevation \
-  -o entrance/2016-07-09/pockettopo/Trip_th_e.xvi
+python3 -m tools.sketch2therion xvi Entrance/Trip/pockettopo/Trip.top --view elevation \
+  -o Entrance/Trip/pockettopo/Trip_th_e.xvi
 # copy PocketTopo's left/right leg directions into the trip's .th
-python3 -m tools.sketch2therion extend entrance/2016-07-09/pockettopo/Trip_th.txt \
-  entrance/2016-07-09/Swildons_Trip.th
+python3 -m tools.sketch2therion extend Entrance/Trip/pockettopo/Trip_th.txt \
+  Entrance/Trip/Trip.th
 ```
 
 PocketTopo's Therion export sometimes lists a side view's stations
