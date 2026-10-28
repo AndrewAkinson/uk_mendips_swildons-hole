@@ -5,13 +5,13 @@ encoding  utf-8
 
 # (input statements for drawings are in the corresponding centreline data .th files)
 
- join ShortDryWaySE1@ShortDryWay.Swildons ShortDryWaySE2@ShortDryWay.Swildons
+ join ShortDryWaySE000_1@ShortDryWay.Swildons ShortDryWaySE000_2@ShortDryWay.Swildons
 
 map EntranceSeriesElevEW -projection [elevation 000] -title "Swildons Hole - Entrance Series Elevation"
 # elevfixSP@Swildons
-  OldGrottoSE1@LongDryWay.Swildons
-  ShortDryWaySE1@ShortDryWay.Swildons
-  ShortDryWaySE2@ShortDryWay.Swildons
+  EntToWaterChamberSE000_1@LongDryWay.Swildons
+  ShortDryWaySE000_1@ShortDryWay.Swildons
+  ShortDryWaySE000_2@ShortDryWay.Swildons
 endmap
 
 map EntranceSeriesElevEWCentreline -projection [elevation 000] -title "Swildons Hole - Entrance Series Elevation"

@@ -7,11 +7,11 @@ encoding  utf-8
 
 #join LongDryWaySP1@Swildons ShortDryWaySP1@ShortDryWay.Swildons
 
-join Old40to20SP3@Old40To20.Swildons StreamwaySP1@20ftToBarnesLoop.Swildons
+join Old40To20SP3@Old40To20.Swildons StreamwaySP1@20ftToBarnesLoop.Swildons
 
 map Streamway1Plan -title "Swildons 1 - Streamway"
-  Old40to20SP2@Old40To20.Swildons
-  Old40to20SP3@Old40To20.Swildons
+  Old40To20SP2@Old40To20.Swildons
+  Old40To20SP3@Old40To20.Swildons
   StreamwaySP1@20ftToBarnesLoop.Swildons
   StreamwaySP2@20ftToBarnesLoop.Swildons
   DblPotsSP1@DblPotsDownstream.Swildons

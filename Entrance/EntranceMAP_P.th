@@ -23,8 +23,8 @@ join UpperOxbowSP3@Swildons ButcombeOxbowSP1@ButcombeOxbows.Swildons
 join OxbowJunctionSP1@OxbowJunction.Swildons ButcombeOxbowSP1@ButcombeOxbows.Swildons
 join LowerOxbowSP3@LowerOxbow.Swildons WaterChamberSP1@WaterChamber.Swildons
 join WaterChamberSP1@WaterChamber.Swildons WaterRiftSP1@WaterRift.Swildons
-join WaterRiftSP2@WaterRift.Swildons Old40to20SP1@Old40To20.Swildons
-join Old40to20SP1@Old40To20.Swildons RollingThunderSP1@RollingThunder.Swildons
+join WaterRiftSP2@WaterRift.Swildons Old40To20SP1@Old40To20.Swildons
+join Old40To20SP1@Old40To20.Swildons RollingThunderSP1@RollingThunder.Swildons
 
 map EntranceSeriesPlan -title "Swildons Hole - Entrance Series"
   elevfixSP@Swildons
@@ -91,7 +91,7 @@ map EntranceSeriesPlan -title "Swildons Hole - Entrance Series"
   WaterRiftSP2@WaterRift.Swildons
   RollingThunderSP1@RollingThunder.Swildons
   RollingThunderSP2@RollingThunder.Swildons
-  Old40to20SP1@Old40To20.Swildons
+  Old40To20SP1@Old40To20.Swildons
 endmap
 
 # The 1:200 Entrance Series sheet: the plan above plus the cross-sections

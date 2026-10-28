@@ -234,7 +234,7 @@ endscrap
 
 
 
-scrap Old40to20SP1xxx -projection plan -author 2017.03.05 "Footleg" -copyright 2017 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
+scrap Old40To20SP1xxx -projection plan -author 2017.03.05 "Footleg" -copyright 2017 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
 
 point 1164.75 1241.75 dimensions -value [11 1.8]
 

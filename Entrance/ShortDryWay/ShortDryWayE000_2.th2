@@ -5,7 +5,7 @@ encoding  utf-8
 
 
 
-scrap ShortDryWaySE2 -projection [elevation 000] -flip horizontal -author 2017.03.21 "Footleg" -copyright 2017 "Paul 'Footleg' Fretwell" -scale [-128.0 -128.0 8553.196850393699 -128.0 0.0 0.0 220.50239999999994 0.0 m]
+scrap ShortDryWaySE000_2 -projection [elevation 000] -flip horizontal -author 2017.03.21 "Footleg" -copyright 2017 "Paul 'Footleg' Fretwell" -scale [-128.0 -128.0 8553.196850393699 -128.0 0.0 0.0 220.50239999999994 0.0 m]
 
 line wall
   2173.5 588.0

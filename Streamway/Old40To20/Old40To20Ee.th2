@@ -1,7 +1,7 @@
 encoding  utf-8
 # Licence: GNU General Public License v3 (see LICENSE at the top of the repository)
 
-scrap Old40to20SE1 -projection extended -author 2017.03.11 "Footleg" -copyright 2017 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
+scrap Old40To20SE1 -projection extended -author 2017.03.11 "Footleg" -copyright 2017 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
 
 # Extended elevation traced from Footleg's PocketTopo side-view sketch: roof and floor
 # from the black lines (inside lines as thin borders), pools from the blue hatching.

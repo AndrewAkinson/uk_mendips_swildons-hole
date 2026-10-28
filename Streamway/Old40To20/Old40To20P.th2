@@ -5,7 +5,7 @@ encoding  utf-8
 
 
 
-scrap Old40to20SP2 -projection plan -author 2019.01.06 "Footleg" -copyright 2019 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
+scrap Old40To20SP2 -projection plan -author 2019.01.06 "Footleg" -copyright 2019 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
 
 line wall -reverse on
   603.0 845.0
@@ -424,7 +424,7 @@ endscrap
 
 
 
-scrap Old40to20SP3 -projection plan -author 2019.01.06 "Footleg" -copyright 2019 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
+scrap Old40To20SP3 -projection plan -author 2019.01.06 "Footleg" -copyright 2019 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
 
 line wall
   72.25 1155.25
@@ -596,7 +596,7 @@ endscrap
 
 
 
-scrap Old40to20SP1 -projection plan -author 2017.10.25 "Footleg" -copyright 2017 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
+scrap Old40To20SP1 -projection plan -author 2017.10.25 "Footleg" -copyright 2017 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
 
 point 2279.0 1172.0 label -text "<centre>8ft<br>Drop" -scale s
 

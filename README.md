@@ -135,6 +135,7 @@ Entrance/                 the Entrance Series, down to the Old 40 and Rolling Th
     *.th                  each survey's data and team, inputting its drawings
     *P.th2                plan drawings
     *Ee.th2               extended elevations, which also hold the cross-sections
+    *E000.th2             elevations projected to 000, scraps XSE000_1, XSE000_2, …
     pockettopo/           the original PocketTopo files and their exports
 Streamway/                the Old 40 to Sump 1, laid out the same way
 Stanton/                  W. I. Stanton's survey, one folder per trip (1951-62)

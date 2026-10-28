@@ -5,7 +5,7 @@ encoding  utf-8
 # (input statements for drawings are in the corresponding centreline data .th files)
 
 map StreamwayElevation -projection extended -title "Swildons Hole - Streamway, Old 40 to Sump 1"
-  Old40to20SE1@Old40To20.Swildons
+  Old40To20SE1@Old40To20.Swildons
   20ftToBarnesLoopSE1@20ftToBarnesLoop.Swildons
   DblPotsDownstreamSE1@DblPotsDownstream.Swildons
   BarnesLoopToTratmansSE2@BarnesLoopToTratmans.Swildons

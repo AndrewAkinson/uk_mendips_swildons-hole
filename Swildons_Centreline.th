@@ -15,12 +15,12 @@ survey Swildons
   input Entrance/EntToWaterChamber/OldGrottoToWaterChamber.th
   input Entrance/EntToWaterChamber/InletOffOldGrottoToWaterChamber.th
   #Combined sketch for all 5 of the above
-  input Entrance/EntToWaterChamber/Swil1P_Ent-OldGrotto-WaterChamber.th2
+  input Entrance/EntToWaterChamber/EntToWaterChamberP.th2
   
   input Entrance/WetWayOxbows/WetWayOxbows.th
   input Entrance/WetWayOxbows/WetWayKeyhole.th
   #Combined sketch for all 2 of the above
-  input Entrance/WetWayOxbows/Swil1P_WetWayOxbows.th2
+  input Entrance/WetWayOxbows/WetWayOxbowsP.th2
   
   #The following data files import their respective sketches
   #directly inside their sub-survey data blocks.
@@ -42,7 +42,7 @@ survey Swildons
   input Streamway/TratmansToSump1/TratmansToSump1.th
 
   #Entrance Series extended elevation and cross-sections, from the PocketTopo sketches
-  input Entrance/EntToWaterChamber/Swil1E_ext_EntToWaterChamber.th2
+  input Entrance/EntToWaterChamber/EntToWaterChamberEe.th2
 
   centreline
     copyright 2019 "Paul 'Footleg' Fretwell"

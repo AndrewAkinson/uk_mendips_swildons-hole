@@ -115,7 +115,7 @@ class Survey:
         return math.dist(self.pos[a], self.pos[b])
 
     # -- passage names -----------------------------------------------------------
-    def load_labels(self, patterns=('Entrance/**/*P.th2', 'Streamway/**/*P.th2', '*/**/Swil1P_*.th2')):
+    def load_labels(self, patterns=('Entrance/**/*P.th2', 'Streamway/**/*P.th2')):
         """Labels from the plan drawings, in survey coordinates."""
         for f in sorted({f for g in patterns for f in glob.glob(g, recursive=True)}):
             txt = open(f, encoding='utf-8', errors='replace').read().replace('\r', '')

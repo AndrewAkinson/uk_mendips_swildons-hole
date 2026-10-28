@@ -2,8 +2,8 @@ encoding  utf-8
 survey ShortDryWay
 
   input ShortDryWayP.th2
-  input Swil1E_ShortDryWay.th2
-  input Swil1E_ShortDryWay2.th2
+  input ShortDryWayE000.th2
+  input ShortDryWayE000_2.th2
   input ShortDryWayEe.th2
 
   centreline
