@@ -16,8 +16,8 @@ Passages come from Therion's KML of the plan maps, put into survey
 coordinates by fitting it to the centreline. Run from the top of the
 repository after the main build:
 
-    therion -l output/therion-sections.log tools/sketch2therion/sections.thconfig
-    python3 -m tools.sketch2therion sections
+    therion -l output/therion-sections.log tools/sections/sections.thconfig
+    python3 -m tools.sections
 """
 import glob
 import math
@@ -31,7 +31,7 @@ from shapely.ops import unary_union
 from shapely.prepared import prep
 
 from ..routes.survey import Survey, _fit
-from .tidy import bezier_points, parse_scrap, scale_of
+from ..sketch2therion.tidy import bezier_points, parse_scrap, scale_of
 
 PASSAGES_KML = 'output/sections-passages.kml'
 CENTRELINE_KML = 'output/Swildons-centreline.kml'

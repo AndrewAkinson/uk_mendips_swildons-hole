@@ -1,0 +1,14 @@
+{
+  "sexyTopoVersionName": "1.12.3",
+  "sexyTopoVersionCode": 97,
+  "name": "Tratmans",
+  "active-station": "25",
+  "connections": {
+    "1": [
+      [
+        "content:\/\/com.android.externalstorage.documents\/tree\/primary%3ADocuments%2FSurveys%2FSwildons%2FBarnesLoopToSump1\/document\/primary%3ADocuments%2FSurveys%2FSwildons%2FBarnesLoopToSump1",
+        "23.33"
+      ]
+    ]
+  }
+}

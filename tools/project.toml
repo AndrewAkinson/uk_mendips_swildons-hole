@@ -1,0 +1,40 @@
+# Swildons' settings for the shared tools in tools/sketch2therion
+# (CaveSurveying/Therion-Sketching). The drawing rules are shared:
+# tools/sketch2therion/Style.md and rules.toml. Paths are relative to
+# the top of the repository.
+
+[cave]
+name = "Swildons"
+title = "Swildons Hole"
+folder = "."                        # surveys drawn with these tools are in their own folders here, e.g. Tratmans/
+master = "swildonsmaster.th"        # sources every survey
+survey = "SwildonsHole"             # its top-level survey
+thconfig = "swildons.thconfig"      # the CI build
+check_build = "swildons-check.thconfig"   # plan with the fill and legs, for fillcheck
+plan_map = "MasterPlan"             # the cave's plan map,
+plan_map_file = "swildonsmaster.th" # defined here
+
+[names]
+# {survey} is a survey's name, e.g. Tratmans.
+survey_file = "{survey}/{survey}.th"
+plan_file = "{survey}/{survey}P.th2"      # names as imported from SexyTopo (Style.md)
+scrap_prefix = "{survey}S"          # the converter adds P1, P2, ... (plan) or Ee1, ... (extended)
+survey_plan_map = "{survey}MP"
+plan_sketch = '(\.plan|_p|P)\.xvi$'   # regex: which .xvi sketches are plans (the rest are elevations)
+
+[drawing]
+line_endings = "lf"
+map_scale = 500
+licence = "GPLv3.0+"
+
+[convert]
+# Swildons' changes to the house drawing rules
+# (tools/sketch2therion/rules.toml), each with its reason. None so far.
+
+[build]
+outputs = "output"
+log = "output/therion.log"
+layout_plan = "output/layout-plan.xvi"
+layout_extended = "output/layout-extended.xvi"
+sql = "output/layout.sql"
+review_plan = "output/review-plan.pdf"
