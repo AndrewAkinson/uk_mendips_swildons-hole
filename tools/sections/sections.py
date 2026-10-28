@@ -1,8 +1,8 @@
 """Cross-section markers: which way they look, and where they're drawn.
 
-Each converted survey has a plan scrap (its name ends XS) holding, for
-every cross-section, a `line section` across the passage at the station
-and a `point section` where Therion draws the section itself. This
+A plan scrap holds, for each of its cross-sections, a `line section`
+across the passage at the station and a `point section` where Therion
+draws the section itself. This
 
 - turns every `line section` so its arrows (`-direction both`) point the
   way the section is seen: looking along the survey, from the station
@@ -39,12 +39,11 @@ CENTRELINE_KML = 'output/Swildons-centreline.kml'
 # The sheets the cross-sections are drawn on: which surveys' sections
 # (by th2 file), and which plan maps (by KML title) they must keep off,
 # each with the offset it is drawn at on that sheet (metres east, north).
-ENTRANCE_TOP_SHIFT = (35.0, 0.0)        # EntranceSeriesTopLevel [35 0 m] in entrance/Swildons_MAP_EntranceSeries.th
 SHEETS = {
-    'entrance': {'files': '*/**/Swil1E_ext_*.th2',
+    'entrance': {'files': ('*/**/Swil1E_ext_*.th2', 'entrance/**/Swil1P_*.th2'),
                  'maps': {'Swildons Hole - Entrance Series': (0.0, 0.0),
-                          'Upper level: the entrances and Zig Zags': ENTRANCE_TOP_SHIFT}},
-    'master': {'files': '*/**/Swil1E_[!e]*.th2',
+                          'Upper level: the entrances and Zig Zags': (0.0, 0.0)}},
+    'master': {'files': ('*/**/Swil1E_[!e]*.th2', 'streamway/**/Swil1P_*.th2'),
                'maps': {'Swildons Hole - Entrance Series': (0.0, 0.0),
                         'Upper level: the entrances and Zig Zags': (0.0, 0.0),
                         'Swildons 1 - Streamway': (0.0, 0.0)}},
@@ -205,16 +204,15 @@ FILES = {}     # path -> (text, {scrap name: parsed objects}) for writing back
 def collect(survey, sheet):
     """The cross-sections on a sheet, each with what's needed to place it."""
     secs = []
-    for path in sorted(glob.glob(SHEETS[sheet]['files'], recursive=True)):
+    for path in sorted({f for g in SHEETS[sheet]['files'] for f in glob.glob(g, recursive=True)}):
         text = open(path, 'rb').read().decode('utf-8').replace('\r\n', '\n')
         FILES[path] = (text, {})
         bodies = {m.group(2): (m.group(1), m.group(3)) for m in _scraps(text)}
         sv = _survey_of(path)
         for m in _scraps(text):
             name = m.group(2)
-            if not (name.endswith('XS') or name.endswith('XSTop')):
+            if '-projection plan' not in m.group(1) or not re.search(r'^line section', m.group(3), re.M):
                 continue
-            shift = ENTRANCE_TOP_SHIFT if (sheet == 'entrance' and name.endswith('XSTop')) else (0.0, 0.0)
             K = scale_of(m.group(1))
             objs = parse_scrap(m.group(3))
             FILES[path][1][name] = objs
@@ -246,9 +244,11 @@ def collect(survey, sheet):
                     xs = re.search(r'-scrap (\S+)', o.head).group(1)
                     sec = Section()
                     sec.path, sec.scrap, sec.xs, sec.line, sec.point = path, name, xs, line, o
-                    sec.shift, sec.to_grid, sec.to_scrap, sec.K = shift, to_grid, to_scrap, K
+                    sec.to_grid, sec.to_scrap, sec.K = to_grid, to_scrap, K
                     sec.station = _station_of(xs, sv)
-                    sec.labels = labels
+                    # the labels naming it (a plan scrap has other labels too)
+                    base = sec.station.split('@')[0] if sec.station else None
+                    sec.labels = [l for l in labels if f'-text "{base}"' in l.head]
                     hb = bodies.get(xs)
                     sec.shape = _footprint(hb[1], scale_of(hb[0])) if hb else None
                     v = o.head.split()
@@ -260,17 +260,8 @@ def collect(survey, sheet):
     return secs
 
 
-def _grid(self, p):
-    x, y = self.to_grid(p)
-    return (x + self.shift[0], y + self.shift[1])
-
-
-def _scrap(self, p):
-    return self.to_scrap((p[0] - self.shift[0], p[1] - self.shift[1]))
-
-
-Section.grid = _grid
-Section.scrap_xy = _scrap
+Section.grid = lambda self, p: self.to_grid(p)
+Section.scrap_xy = lambda self, p: self.to_scrap(p)
 
 
 # -- doing it ---------------------------------------------------------------------
@@ -314,7 +305,7 @@ def extend_cut(sec, passages, others, arrow):
     mid = Point((x0 + x1) / 2, (y0 + y1) / 2)
     if sec.station and sec.station in sec.survey.lookup:
         g = sec.survey.pos[sec.survey.lookup[sec.station]]
-        mid = Point(g[0] + sec.shift[0], g[1] + sec.shift[1])
+        mid = Point(g[0], g[1])
     here = min(getattr(passages, 'geoms', [passages]), key=lambda p: p.distance(mid))
 
     def exit_at(sign):
