@@ -18,6 +18,5 @@ map Streamway1Plan -title "Swildons 1 - Streamway"
   BarnesLoopSP1@BarnesLoopToTratmans.Swildons
   TratmansToSump1SP1@TratmansToSump1.Swildons
   TratmansToSump1SP2@TratmansToSump1.Swildons
-  TratmansToSump1XS@TratmansToSump1.Swildons
 endmap
 
