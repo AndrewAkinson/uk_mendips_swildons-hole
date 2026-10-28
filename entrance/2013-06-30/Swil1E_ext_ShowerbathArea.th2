@@ -545,59 +545,59 @@ endline
 
 point 1651.50 868.82 flowstone
 
-point 1000.00 1000.00 station -name 20.0@ShowerbathArea
+point 1000.00 1000.00 station -name 20.0
 
-point 1136.65 932.44 station -name 20.1@ShowerbathArea
+point 1136.65 932.44 station -name 20.1
 
-point 1231.42 899.25 station -name 20.2@ShowerbathArea
+point 1231.42 899.25 station -name 20.2
 
-point 1437.99 871.69 station -name 20.3@ShowerbathArea
+point 1437.99 871.69 station -name 20.3
 
-point 1490.63 822.24 station -name 20.4@ShowerbathArea
+point 1490.63 822.24 station -name 20.4
 
-point 1610.91 796.30 station -name 20.5@ShowerbathArea
+point 1610.91 796.30 station -name 20.5
 
-point 1644.37 752.76 station -name 20.6@ShowerbathArea
+point 1644.37 752.76 station -name 20.6
 
-point 1736.46 731.42 station -name 20.7@ShowerbathArea
+point 1736.46 731.42 station -name 20.7
 
-point 1539.53 874.96 station -name 20.8@ShowerbathArea
+point 1539.53 874.96 station -name 20.8
 
-point 1649.72 877.68 station -name 20.9@ShowerbathArea
+point 1649.72 877.68 station -name 20.9
 
-point 1843.15 766.34 station -name 20.10@ShowerbathArea
+point 1843.15 766.34 station -name 20.10
 
-point 2008.27 751.38 station -name 20.11@ShowerbathArea
+point 2008.27 751.38 station -name 20.11
 
-point 2020.04 737.68 station -name 20.12@ShowerbathArea
+point 2020.04 737.68 station -name 20.12
 
-point 2137.36 745.63 station -name 20.13@ShowerbathArea
+point 2137.36 745.63 station -name 20.13
 
-point 2196.77 746.81 station -name 20.14@ShowerbathArea
+point 2196.77 746.81 station -name 20.14
 
-point 2280.51 833.62 station -name 20.15@ShowerbathArea
+point 2280.51 833.62 station -name 20.15
 
-point 2375.47 856.18 station -name 20.16@ShowerbathArea
+point 2375.47 856.18 station -name 20.16
 
-point 2390.59 978.35 station -name 20.17@ShowerbathArea
+point 2390.59 978.35 station -name 20.17
 
-point 2442.36 966.69 station -name 20.18@ShowerbathArea
+point 2442.36 966.69 station -name 20.18
 
-point 2530.71 1003.50 station -name 20.19@ShowerbathArea
+point 2530.71 1003.50 station -name 20.19
 
-point 2221.61 742.95 station -name 20.20@ShowerbathArea
+point 2221.61 742.95 station -name 20.20
 
-point 2275.08 644.84 station -name 20.21@ShowerbathArea
+point 2275.08 644.84 station -name 20.21
 
-point 2347.52 632.64 station -name 20.22@ShowerbathArea
+point 2347.52 632.64 station -name 20.22
 
-point 2407.60 654.65 station -name 20.23@ShowerbathArea
+point 2407.60 654.65 station -name 20.23
 
-point 2459.25 620.75 station -name 20.24@ShowerbathArea
+point 2459.25 620.75 station -name 20.24
 
-point 2542.01 625.59 station -name 20.25@ShowerbathArea
+point 2542.01 625.59 station -name 20.25
 
-point 2629.13 679.13 station -name 20.26@ShowerbathArea
+point 2629.13 679.13 station -name 20.26
 endscrap
 
 scrap xs_ShowerbathArea_20_27 -projection none -author 2013.06.30 "Footleg" -copyright 2013 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
@@ -856,27 +856,27 @@ point 1290.98 457.40 label -text "20.2" -scale xs
 
 point 1197.25 531.86 label -text "20.2" -scale xs
 
-point 1489.76 393.70 station -name 20.4@ShowerbathArea
+point 1489.76 393.70 station -name 20.4
 
-point 1377.56 286.61 station -name 20.7@ShowerbathArea
+point 1377.56 286.61 station -name 20.7
 
-point 1503.94 722.05 station -name 20.16@ShowerbathArea
+point 1503.94 722.05 station -name 20.16
 
-point 1532.28 415.35 station -name 20.8@ShowerbathArea
+point 1532.28 415.35 station -name 20.8
 
-point 1000.00 1000.00 station -name 20.27@ShowerbathArea
+point 1000.00 1000.00 station -name 20.27
 
-point 1132.68 949.21 station -name 20.25@ShowerbathArea
+point 1132.68 949.21 station -name 20.25
 
-point 1252.76 925.20 station -name 20.23@ShowerbathArea
+point 1252.76 925.20 station -name 20.23
 
-point 1338.58 547.64 station -name 20.2@ShowerbathArea
+point 1338.58 547.64 station -name 20.2
 
-point 1627.56 469.29 station -name 20.9@ShowerbathArea
+point 1627.56 469.29 station -name 20.9
 
-point 1313.39 592.52 station -name 20.11@ShowerbathArea
+point 1313.39 592.52 station -name 20.11
 
-point 1299.21 887.01 station -name 20.22@ShowerbathArea
+point 1299.21 887.01 station -name 20.22
 
-point 1045.28 942.13 station -name 20.26@ShowerbathArea
+point 1045.28 942.13 station -name 20.26
 endscrap

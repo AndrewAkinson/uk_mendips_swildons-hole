@@ -386,59 +386,59 @@ endline
 
 
 
-point 1000.00 1000.00 station -name 15.1@OxbowJunction
+point 1000.00 1000.00 station -name 15.1
 
-point 1008.43 1054.09 station -name 15.2@OxbowJunction
+point 1008.43 1054.09 station -name 15.2
 
-point 1081.89 1048.11 station -name 15.3@OxbowJunction
+point 1081.89 1048.11 station -name 15.3
 
-point 1118.78 1074.41 station -name 15.4@OxbowJunction
+point 1118.78 1074.41 station -name 15.4
 
-point 1141.89 1072.48 station -name 15.5@OxbowJunction
+point 1141.89 1072.48 station -name 15.5
 
-point 1187.44 1072.24 station -name 15.6@OxbowJunction
+point 1187.44 1072.24 station -name 15.6
 
-point 955.87 1009.69 station -name 15.7@OxbowJunction
+point 955.87 1009.69 station -name 15.7
 
-point 872.20 1067.68 station -name 15.8@OxbowJunction
+point 872.20 1067.68 station -name 15.8
 
-point 779.37 1177.28 station -name 15.9@OxbowJunction
+point 779.37 1177.28 station -name 15.9
 
-point 604.88 1400.98 station -name 15.10@OxbowJunction
+point 604.88 1400.98 station -name 15.10
 
-point 579.33 1455.12 station -name 15.11@OxbowJunction
+point 579.33 1455.12 station -name 15.11
 
-point 609.69 1425.94 station -name 15.12@OxbowJunction
+point 609.69 1425.94 station -name 15.12
 
-point 657.40 1474.13 station -name 15.13@OxbowJunction
+point 657.40 1474.13 station -name 15.13
 
-point 687.60 1515.79 station -name 15.14@OxbowJunction
+point 687.60 1515.79 station -name 15.14
 
-point 717.64 1537.68 station -name 15.15@OxbowJunction
+point 717.64 1537.68 station -name 15.15
 
-point 734.45 1538.90 station -name 15.16@OxbowJunction
+point 734.45 1538.90 station -name 15.16
 
-point 788.70 1608.35 station -name 15.17@OxbowJunction
+point 788.70 1608.35 station -name 15.17
 
-point 572.83 1376.77 station -name 15.18@OxbowJunction
+point 572.83 1376.77 station -name 15.18
 
-point 502.60 1388.03 station -name 15.19@OxbowJunction
+point 502.60 1388.03 station -name 15.19
 
-point 437.28 1386.77 station -name 15.20@OxbowJunction
+point 437.28 1386.77 station -name 15.20
 
-point 367.13 1348.62 station -name 15.21@OxbowJunction
+point 367.13 1348.62 station -name 15.21
 
-point 339.33 1324.92 station -name 15.22@OxbowJunction
+point 339.33 1324.92 station -name 15.22
 
-point 295.28 1306.22 station -name 15.23@OxbowJunction
+point 295.28 1306.22 station -name 15.23
 
-point 1007.56 1133.27 station -name 15.24@OxbowJunction
+point 1007.56 1133.27 station -name 15.24
 
-point 1073.74 1184.29 station -name 15.25@OxbowJunction
+point 1073.74 1184.29 station -name 15.25
 
-point 1139.61 1255.16 station -name 15.26@OxbowJunction
+point 1139.61 1255.16 station -name 15.26
 
-point 1226.10 1274.80 station -name 15.27@OxbowJunction
+point 1226.10 1274.80 station -name 15.27
 endscrap
 
 scrap xs_OxbowJunction_15_26 -projection none -author 2016.07.09 "Footleg" -copyright 2016 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
@@ -564,13 +564,13 @@ point 927.62 1237.68 label -text "15.3" -scale xs
 
 point 1099.40 1218.98 label -text "15.3" -scale xs
 
-point 1071.26 1046.06 station -name 15.24@OxbowJunction
+point 1071.26 1046.06 station -name 15.24
 
-point 1062.20 1164.57 station -name 15.3@OxbowJunction
+point 1062.20 1164.57 station -name 15.3
 
-point 1105.12 975.98 station -name 15.8@OxbowJunction
+point 1105.12 975.98 station -name 15.8
 
-point 1000.00 1000.00 station -name 15.26@OxbowJunction
+point 1000.00 1000.00 station -name 15.26
 
-point 1007.87 1065.35 station -name 15.25@OxbowJunction
+point 1007.87 1065.35 station -name 15.25
 endscrap

@@ -419,24 +419,24 @@ line wall -outline none
   2000.60 1143.49 2026.05 1146.18 2033.15 1147.09
 endline
 
-point 1000.00 1000.00 station -name 9.1@Old40Route
+point 1000.00 1000.00 station -name 9.1
 
-point 1209.57 1019.61 station -name 9.2@Old40Route
+point 1209.57 1019.61 station -name 9.2
 
-point 1319.57 1106.06 station -name 9.3@Old40Route
+point 1319.57 1106.06 station -name 9.3
 
-point 1363.66 1108.86 station -name 9.4@Old40Route
+point 1363.66 1108.86 station -name 9.4
 
-point 1398.39 1131.77 station -name 9.5@Old40Route
+point 1398.39 1131.77 station -name 9.5
 
-point 1497.48 1140.63 station -name 9.6@Old40Route
+point 1497.48 1140.63 station -name 9.6
 
-point 1613.86 1133.90 station -name 9.7@Old40Route
+point 1613.86 1133.90 station -name 9.7
 
-point 1794.17 1033.19 station -name 9.8@Old40Route
+point 1794.17 1033.19 station -name 9.8
 
-point 1846.89 1011.61 station -name 9.9@Old40Route
+point 1846.89 1011.61 station -name 9.9
 
-point 1941.93 725.98 station -name 9.10@Old40Route
+point 1941.93 725.98 station -name 9.10
 endscrap
 

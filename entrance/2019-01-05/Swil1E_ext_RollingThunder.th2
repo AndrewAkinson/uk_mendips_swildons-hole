@@ -81,31 +81,31 @@ endline
 
 point 1147.80 975.38 flowstone
 
-point 1000.00 1000.00 station -name 25.0@RollingThunder
+point 1000.00 1000.00 station -name 25.0
 
-point 1147.82 961.71 station -name 25.1@RollingThunder
+point 1147.82 961.71 station -name 25.1
 
-point 1273.32 942.61 station -name 25.2@RollingThunder
+point 1273.32 942.61 station -name 25.2
 
-point 1372.44 949.88 station -name 25.3@RollingThunder
+point 1372.44 949.88 station -name 25.3
 
-point 1444.63 980.11 station -name 25.4@RollingThunder
+point 1444.63 980.11 station -name 25.4
 
-point 1552.77 1009.09 station -name 25.5@RollingThunder
+point 1552.77 1009.09 station -name 25.5
 
-point 1677.13 1069.53 station -name 25.6@RollingThunder
+point 1677.13 1069.53 station -name 25.6
 
-point 1698.78 1061.96 station -name 25.7@RollingThunder
+point 1698.78 1061.96 station -name 25.7
 
-point 1801.28 1067.49 station -name 25.8@RollingThunder
+point 1801.28 1067.49 station -name 25.8
 
-point 1883.16 1089.05 station -name 25.9@RollingThunder
+point 1883.16 1089.05 station -name 25.9
 
-point 1990.43 1115.49 station -name 25.10@RollingThunder
+point 1990.43 1115.49 station -name 25.10
 
-point 2049.73 1117.34 station -name 25.11@RollingThunder
+point 2049.73 1117.34 station -name 25.11
 
-point 2159.96 1155.83 station -name 25.12@RollingThunder
+point 2159.96 1155.83 station -name 25.12
 endscrap
 
 scrap xs_RollingThunder_25_12 -projection none -author 2019.01.05 "Footleg" -copyright 2019 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
@@ -250,13 +250,13 @@ endline
 
 point 1179.48 136.30 section -scrap xs_RollingThunder_25_2
 
-point 1000.00 1000.00 station -name 25.12@RollingThunder
+point 1000.00 1000.00 station -name 25.12
 
-point 1015.75 729.53 station -name 25.9@RollingThunder
+point 1015.75 729.53 station -name 25.9
 
-point 1055.12 311.81 station -name 25.4@RollingThunder
+point 1055.12 311.81 station -name 25.4
 
-point 1043.31 143.31 station -name 25.2@RollingThunder
+point 1043.31 143.31 station -name 25.2
 
-point 1011.81 647.64 station -name 25.8@RollingThunder
+point 1011.81 647.64 station -name 25.8
 endscrap

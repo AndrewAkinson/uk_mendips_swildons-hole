@@ -514,35 +514,35 @@ line wall -outline none
   1046.00 1115.26 1039.47 1113.96 1035.78 1113.63
 endline
 
-point 1000.00 1000.00 station -name 10.5@KenneysDigToShowerbath
+point 1000.00 1000.00 station -name 10.5
 
-point 1163.27 922.32 station -name 10.6@KenneysDigToShowerbath
+point 1163.27 922.32 station -name 10.6
 
-point 1278.11 936.73 station -name 10.7@KenneysDigToShowerbath
+point 1278.11 936.73 station -name 10.7
 
-point 1424.41 935.63 station -name 10.8@KenneysDigToShowerbath
+point 1424.41 935.63 station -name 10.8
 
-point 1502.20 963.58 station -name 10.9@KenneysDigToShowerbath
+point 1502.20 963.58 station -name 10.9
 
-point 1805.59 973.43 station -name 10.10@KenneysDigToShowerbath
+point 1805.59 973.43 station -name 10.10
 
-point 1890.20 981.97 station -name 10.11@KenneysDigToShowerbath
+point 1890.20 981.97 station -name 10.11
 
-point 1815.24 1064.29 station -name 10.12@KenneysDigToShowerbath
+point 1815.24 1064.29 station -name 10.12
 
-point 1983.86 1091.02 station -name 10.13@KenneysDigToShowerbath
+point 1983.86 1091.02 station -name 10.13
 
-point 2068.31 1094.02 station -name 10.14@KenneysDigToShowerbath
+point 2068.31 1094.02 station -name 10.14
 
-point 2125.91 1120.00 station -name 10.15@KenneysDigToShowerbath
+point 2125.91 1120.00 station -name 10.15
 
-point 2345.71 1193.03 station -name 10.16@KenneysDigToShowerbath
+point 2345.71 1193.03 station -name 10.16
 
-point 2544.84 1260.79 station -name 10.17@KenneysDigToShowerbath
+point 2544.84 1260.79 station -name 10.17
 
-point 1000.55 1035.20 station -name 10.18@KenneysDigToShowerbath
+point 1000.55 1035.20 station -name 10.18
 
-point 2163.98 1213.07 station -name 10.20@KenneysDigToShowerbath
+point 2163.98 1213.07 station -name 10.20
 endscrap
 
 scrap KenneysDigEE2 -projection extended -author 2013.06.30 "Footleg" -copyright 2013 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
@@ -629,13 +629,13 @@ endline
 
 
 
-point 1000.00 1000.00 station -name 10.0@KenneysDigToShowerbath
+point 1000.00 1000.00 station -name 10.0
 
-point 1082.87 1023.78 station -name 10.1@KenneysDigToShowerbath
+point 1082.87 1023.78 station -name 10.1
 
-point 1120.63 1047.99 station -name 10.2@KenneysDigToShowerbath
+point 1120.63 1047.99 station -name 10.2
 
-point 1510.63 1014.69 station -name 10.4@KenneysDigToShowerbath
+point 1510.63 1014.69 station -name 10.4
 endscrap
 
 scrap xs_KenneysDigToShowerbath_10_17 -projection none -author 2013.06.30 "Footleg" -copyright 2013 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
@@ -836,23 +836,23 @@ point 119.89 1197.06 label -text "10.1" -scale xs
 
 point -354.42 1539.79 label -text "10.1" -scale xs
 
-point 179.92 1162.99 station -name 10.1@KenneysDigToShowerbath
+point 179.92 1162.99 station -name 10.1
 
-point 57.09 811.42 station -name 10.7@KenneysDigToShowerbath
+point 57.09 811.42 station -name 10.7
 
-point 152.76 1137.40 station -name 10.2@KenneysDigToShowerbath
+point 152.76 1137.40 station -name 10.2
 
-point 647.64 806.30 station -name 10.15@KenneysDigToShowerbath
+point 647.64 806.30 station -name 10.15
 
-point 182.68 979.92 station -name 10.5@KenneysDigToShowerbath
+point 182.68 979.92 station -name 10.5
 
-point 482.28 631.89 station -name 10.12@KenneysDigToShowerbath
+point 482.28 631.89 station -name 10.12
 
-point 169.69 644.09 station -name 10.9@KenneysDigToShowerbath
+point 169.69 644.09 station -name 10.9
 
-point 1000.00 1000.00 station -name 10.17@KenneysDigToShowerbath
+point 1000.00 1000.00 station -name 10.17
 
-point -80.71 1003.94 station -name 10.4@KenneysDigToShowerbath
+point -80.71 1003.94 station -name 10.4
 
-point 190.16 1024.80 station -name 10.3@KenneysDigToShowerbath
+point 190.16 1024.80 station -name 10.3
 endscrap

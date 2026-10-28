@@ -300,28 +300,28 @@ line wall -outline none
   1839.75 848.87 1816.59 868.99 1789.99 881.61
 endline
 
-point 1000.00 1000.00 station -name 3.1@ShortDryWay
+point 1000.00 1000.00 station -name 3.1
 
-point 1095.00 880.04 station -name 3.2@ShortDryWay
+point 1095.00 880.04 station -name 3.2
 
-point 1261.89 939.72 station -name 3.3@ShortDryWay
+point 1261.89 939.72 station -name 3.3
 
-point 1288.27 887.95 station -name 3.5@ShortDryWay
+point 1288.27 887.95 station -name 3.5
 
-point 1468.15 803.19 station -name 3.6@ShortDryWay
+point 1468.15 803.19 station -name 3.6
 
-point 1659.84 755.91 station -name 3.7@ShortDryWay
+point 1659.84 755.91 station -name 3.7
 
-point 1765.08 687.28 station -name 3.8@ShortDryWay
+point 1765.08 687.28 station -name 3.8
 
-point 2023.23 631.73 station -name 3.9@ShortDryWay
+point 2023.23 631.73 station -name 3.9
 
-point 2067.01 633.54 station -name 3.10@ShortDryWay
+point 2067.01 633.54 station -name 3.10
 
-point 2235.98 644.76 station -name 3.11@ShortDryWay
+point 2235.98 644.76 station -name 3.11
 
-point 2359.17 606.42 station -name 3.12@ShortDryWay
+point 2359.17 606.42 station -name 3.12
 
-point 2542.95 595.87 station -name 3.13@ShortDryWay
+point 2542.95 595.87 station -name 3.13
 endscrap
 

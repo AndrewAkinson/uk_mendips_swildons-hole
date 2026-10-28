@@ -743,27 +743,27 @@ point 1418.94 820.79 flowstone
 
 point 1434.42 841.00 flowstone
 
-point 1000.00 1000.00 station -name 8.1@WaterRift
+point 1000.00 1000.00 station -name 8.1
 
-point 1152.52 923.58 station -name 8.2@WaterRift
+point 1152.52 923.58 station -name 8.2
 
-point 1354.72 776.26 station -name 8.3@WaterRift
+point 1354.72 776.26 station -name 8.3
 
-point 1412.48 757.68 station -name 8.4@WaterRift
+point 1412.48 757.68 station -name 8.4
 
-point 1576.81 697.32 station -name 8.5@WaterRift
+point 1576.81 697.32 station -name 8.5
 
-point 1658.82 680.35 station -name 8.6@WaterRift
+point 1658.82 680.35 station -name 8.6
 
-point 1852.13 639.37 station -name 8.7@WaterRift
+point 1852.13 639.37 station -name 8.7
 
-point 1905.20 603.23 station -name 8.8@WaterRift
+point 1905.20 603.23 station -name 8.8
 
-point 2168.39 577.40 station -name 8.9@WaterRift
+point 2168.39 577.40 station -name 8.9
 
-point 2260.94 594.09 station -name 8.10@WaterRift
+point 2260.94 594.09 station -name 8.10
 
-point 2395.00 534.25 station -name 8.11@WaterRift
+point 2395.00 534.25 station -name 8.11
 endscrap
 
 scrap WaterRiftEE2 -projection extended -author 2013.06.29 "Footleg" -copyright 2013 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
@@ -845,13 +845,13 @@ point 1281.51 1090.16 flowstone
 
 point 1204.76 1104.42 stalactite
 
-point 1000.00 1000.00 station -name 8.13@WaterRift
+point 1000.00 1000.00 station -name 8.13
 
-point 1172.68 991.61 station -name 8.14@WaterRift
+point 1172.68 991.61 station -name 8.14
 
-point 1483.15 982.76 station -name 8.15@WaterRift
+point 1483.15 982.76 station -name 8.15
 
-point 1660.67 970.35 station -name 8.16@WaterRift
+point 1660.67 970.35 station -name 8.16
 endscrap
 
 scrap xs_WaterRift_8_13 -projection none -author 2013.06.29 "Footleg" -copyright 2013 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
@@ -879,11 +879,11 @@ endline
 
 point 1214.32 1002.40 section -scrap xs_WaterRift_8_13
 
-point 1670.87 740.55 station -name 8.3@WaterRift
+point 1670.87 740.55 station -name 8.3
 
-point 1000.00 1000.00 station -name 8.13@WaterRift
+point 1000.00 1000.00 station -name 8.13
 
-point 1004.72 827.17 station -name 8.14@WaterRift
+point 1004.72 827.17 station -name 8.14
 
-point 1427.56 918.11 station -name 8.6@WaterRift
+point 1427.56 918.11 station -name 8.6
 endscrap

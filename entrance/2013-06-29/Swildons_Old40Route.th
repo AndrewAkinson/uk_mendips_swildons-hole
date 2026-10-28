@@ -2,6 +2,7 @@ encoding  utf-8
 survey Old40Route
 
   input Swil1P_Old40Route.th2
+  input Swil1E_ext_Old40Route.th2
 
 centreline
   team "Ben Kent" notes      #PDA

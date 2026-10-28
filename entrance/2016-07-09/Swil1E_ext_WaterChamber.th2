@@ -177,37 +177,37 @@ area water
   WaterChamberEE1-water1
 endarea
 
-point 1000.00 1000.00 station -name 13.1@WaterChamber
+point 1000.00 1000.00 station -name 13.1
 
-point 1117.52 1070.24 station -name 13.2@WaterChamber
+point 1117.52 1070.24 station -name 13.2
 
-point 1250.47 1082.28 station -name 13.3@WaterChamber
+point 1250.47 1082.28 station -name 13.3
 
-point 1396.06 1051.97 station -name 13.4@WaterChamber
+point 1396.06 1051.97 station -name 13.4
 
-point 1487.72 1046.30 station -name 13.5@WaterChamber
+point 1487.72 1046.30 station -name 13.5
 
-point 1577.44 1041.93 station -name 13.6@WaterChamber
+point 1577.44 1041.93 station -name 13.6
 
-point 960.20 1077.95 station -name 13.7@WaterChamber
+point 960.20 1077.95 station -name 13.7
 
-point 1008.58 1066.81 station -name 13.8@WaterChamber
+point 1008.58 1066.81 station -name 13.8
 
-point 1084.76 1055.20 station -name 13.9@WaterChamber
+point 1084.76 1055.20 station -name 13.9
 
-point 1246.22 1009.88 station -name 13.10@WaterChamber
+point 1246.22 1009.88 station -name 13.10
 
-point 1309.45 985.83 station -name 13.11@WaterChamber
+point 1309.45 985.83 station -name 13.11
 
-point 1433.46 960.51 station -name 13.12@WaterChamber
+point 1433.46 960.51 station -name 13.12
 
-point 1638.31 891.06 station -name 13.13@WaterChamber
+point 1638.31 891.06 station -name 13.13
 
-point 1768.15 861.54 station -name 13.14@WaterChamber
+point 1768.15 861.54 station -name 13.14
 
-point 1886.57 837.20 station -name 13.15@WaterChamber
+point 1886.57 837.20 station -name 13.15
 
-point 1374.80 1001.46 station -name 13.16@WaterChamber
+point 1374.80 1001.46 station -name 13.16
 endscrap
 
 scrap WaterChamberEE2 -projection extended -author 2016.07.09 "Footleg" -copyright 2016 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
@@ -512,23 +512,23 @@ area water
   WaterChamberEE2-water1
 endarea
 
-point 1000.00 1000.00 station -name 13.19@WaterChamber
+point 1000.00 1000.00 station -name 13.19
 
-point 1043.35 985.43 station -name 13.20@WaterChamber
+point 1043.35 985.43 station -name 13.20
 
-point 1125.47 876.89 station -name 13.21@WaterChamber
+point 1125.47 876.89 station -name 13.21
 
-point 1416.18 944.96 station -name 13.22@WaterChamber
+point 1416.18 944.96 station -name 13.22
 
-point 1572.20 939.13 station -name 13.23@WaterChamber
+point 1572.20 939.13 station -name 13.23
 
-point 1668.19 943.62 station -name 13.24@WaterChamber
+point 1668.19 943.62 station -name 13.24
 
-point 1786.69 1033.39 station -name 13.25@WaterChamber
+point 1786.69 1033.39 station -name 13.25
 
-point 1914.65 1071.61 station -name 13.26@WaterChamber
+point 1914.65 1071.61 station -name 13.26
 
-point 2097.05 1129.96 station -name 13.27@WaterChamber
+point 2097.05 1129.96 station -name 13.27
 endscrap
 
 scrap xs_WaterChamber_13_26 -projection none -author 2016.07.09 "Footleg" -copyright 2016 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
@@ -790,25 +790,25 @@ point -244.77 1196.65 label -text "13.1" -scale xs
 
 point -16.92 1310.33 label -text "13.1" -scale xs
 
-point -448.03 1384.65 station -name 13.4@WaterChamber
+point -448.03 1384.65 station -name 13.4
 
-point -220.87 735.43 station -name 13.8@WaterChamber
+point -220.87 735.43 station -name 13.8
 
-point -204.33 1101.97 station -name 13.1@WaterChamber
+point -204.33 1101.97 station -name 13.1
 
-point 779.92 893.70 station -name 13.24@WaterChamber
+point 779.92 893.70 station -name 13.24
 
-point 1000.00 1000.00 station -name 13.26@WaterChamber
+point 1000.00 1000.00 station -name 13.26
 
-point -584.25 791.73 station -name 13.12@WaterChamber
+point -584.25 791.73 station -name 13.12
 
-point 257.48 762.99 station -name 13.21@WaterChamber
+point 257.48 762.99 station -name 13.21
 
-point -328.35 1301.57 station -name 13.3@WaterChamber
+point -328.35 1301.57 station -name 13.3
 
-point -874.41 901.57 station -name 13.14@WaterChamber
+point -874.41 901.57 station -name 13.14
 
-point 879.92 957.09 station -name 13.25@WaterChamber
+point 879.92 957.09 station -name 13.25
 
-point -458.66 1475.59 station -name 13.5@WaterChamber
+point -458.66 1475.59 station -name 13.5
 endscrap

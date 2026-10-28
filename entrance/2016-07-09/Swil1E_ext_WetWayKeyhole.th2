@@ -160,19 +160,19 @@ line border
 endline
 
 
-point 1000.00 1000.00 station -name 14.0@WetWayKeyhole
+point 1000.00 1000.00 station -name 14.0
 
-point 1087.68 1031.97 station -name 14.1@WetWayKeyhole
+point 1087.68 1031.97 station -name 14.1
 
-point 1216.30 1050.83 station -name 14.2@WetWayKeyhole
+point 1216.30 1050.83 station -name 14.2
 
-point 1397.36 1102.87 station -name 14.3@WetWayKeyhole
+point 1397.36 1102.87 station -name 14.3
 
-point 1449.61 1095.04 station -name 14.4@WetWayKeyhole
+point 1449.61 1095.04 station -name 14.4
 
-point 1517.91 1128.27 station -name 14.5@WetWayKeyhole
+point 1517.91 1128.27 station -name 14.5
 
-point 1580.35 1181.46 station -name 14.6@WetWayKeyhole
+point 1580.35 1181.46 station -name 14.6
 endscrap
 
 scrap xs_WetWayKeyhole_14_2 -projection none -author 2016.07.09 "Footleg" -copyright 2016 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
@@ -204,5 +204,5 @@ point 1111.99 1132.74 label -text "14.2" -scale xs
 
 point 923.24 1000.65 label -text "14.2" -scale xs
 
-point 1000.00 1000.00 station -name 14.2@WetWayKeyhole
+point 1000.00 1000.00 station -name 14.2
 endscrap

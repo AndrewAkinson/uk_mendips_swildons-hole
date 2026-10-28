@@ -2,6 +2,7 @@ encoding  utf-8
 survey LowerOxbow
 
   input Swil1P_LowerOxbow.th2
+  input Swil1E_ext_LowerOxbow.th2
 
   centreline
     copyright 2016 "Paul 'Footleg' Fretwell"

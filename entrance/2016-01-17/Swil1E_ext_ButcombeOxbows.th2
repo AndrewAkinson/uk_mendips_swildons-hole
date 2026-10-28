@@ -512,59 +512,59 @@ line wall -outline none
   1305.41 1521.31 1311.57 1515.98 1313.54 1514.02
 endline
 
-point 1000.00 1000.00 station -name 12.0@ButcombeOxbows
+point 1000.00 1000.00 station -name 12.0
 
-point 1122.32 959.96 station -name 12.1@ButcombeOxbows
+point 1122.32 959.96 station -name 12.1
 
-point 1164.09 971.93 station -name 12.2@ButcombeOxbows
+point 1164.09 971.93 station -name 12.2
 
-point 1239.41 1096.26 station -name 12.3@ButcombeOxbows
+point 1239.41 1096.26 station -name 12.3
 
-point 1338.43 1232.44 station -name 12.4@ButcombeOxbows
+point 1338.43 1232.44 station -name 12.4
 
-point 1142.91 1288.54 station -name 12.5@ButcombeOxbows
+point 1142.91 1288.54 station -name 12.5
 
-point 1029.13 1375.35 station -name 12.6@ButcombeOxbows
+point 1029.13 1375.35 station -name 12.6
 
-point 1000.59 1362.44 station -name 12.7@ButcombeOxbows
+point 1000.59 1362.44 station -name 12.7
 
-point 891.69 1323.54 station -name 12.8@ButcombeOxbows
+point 891.69 1323.54 station -name 12.8
 
-point 1264.61 1327.56 station -name 12.9@ButcombeOxbows
+point 1264.61 1327.56 station -name 12.9
 
-point 1207.52 1330.16 station -name 12.10@ButcombeOxbows
+point 1207.52 1330.16 station -name 12.10
 
-point 1104.61 1329.88 station -name 12.11@ButcombeOxbows
+point 1104.61 1329.88 station -name 12.11
 
-point 997.60 1362.95 station -name 12.12@ButcombeOxbows
+point 997.60 1362.95 station -name 12.12
 
-point 941.22 1422.52 station -name 12.13@ButcombeOxbows
+point 941.22 1422.52 station -name 12.13
 
-point 910.28 1433.15 station -name 12.14@ButcombeOxbows
+point 910.28 1433.15 station -name 12.14
 
-point 1146.61 1249.80 station -name 12.15@ButcombeOxbows
+point 1146.61 1249.80 station -name 12.15
 
-point 1263.70 1201.77 station -name 12.16@ButcombeOxbows
+point 1263.70 1201.77 station -name 12.16
 
-point 1346.57 1147.48 station -name 12.17@ButcombeOxbows
+point 1346.57 1147.48 station -name 12.17
 
-point 1412.48 1138.27 station -name 12.18@ButcombeOxbows
+point 1412.48 1138.27 station -name 12.18
 
-point 1443.70 1141.38 station -name 12.19@ButcombeOxbows
+point 1443.70 1141.38 station -name 12.19
 
-point 1532.09 1213.98 station -name 12.20@ButcombeOxbows
+point 1532.09 1213.98 station -name 12.20
 
-point 1484.49 938.66 station -name 12.21@ButcombeOxbows
+point 1484.49 938.66 station -name 12.21
 
-point 1541.34 888.66 station -name 12.22@ButcombeOxbows
+point 1541.34 888.66 station -name 12.22
 
-point 1646.38 845.28 station -name 12.23@ButcombeOxbows
+point 1646.38 845.28 station -name 12.23
 
-point 1780.83 804.25 station -name 12.24@ButcombeOxbows
+point 1780.83 804.25 station -name 12.24
 
-point 1919.88 793.90 station -name 12.25@ButcombeOxbows
+point 1919.88 793.90 station -name 12.25
 
-point 2061.30 761.22 station -name 12.26@ButcombeOxbows
+point 2061.30 761.22 station -name 12.26
 endscrap
 
 scrap ButcombeOxbowsEE2 -projection extended -author 2016.01.17 "Footleg" -copyright 2016 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
@@ -663,13 +663,13 @@ area water
   ButcombeOxbowsEE2-water1
 endarea
 
-point 1000.00 1000.00 station -name 11.18@WetWayOxbows
+point 1000.00 1000.00 station -name 11.18
 
-point 731.50 1021.42 station -name 12.28@ButcombeOxbows
+point 731.50 1021.42 station -name 12.28
 
-point 964.65 995.08 station -name 12.29@ButcombeOxbows
+point 964.65 995.08 station -name 12.29
 
-point 1000.00 1000.00 station -name 12.30@ButcombeOxbows
+point 1000.00 1000.00 station -name 12.30
 endscrap
 
 scrap xs_ButcombeOxbows_12_28 -projection none -author 2016.01.17 "Footleg" -copyright 2016 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
@@ -921,23 +921,23 @@ point 1652.93 762.71 label -text "12.1" -scale xs
 
 point 1795.14 894.76 label -text "12.1" -scale xs
 
-point 1926.77 551.97 station -name 12.6@ButcombeOxbows
+point 1926.77 551.97 station -name 12.6
 
-point 1460.63 341.73 station -name 12.17@ButcombeOxbows
+point 1460.63 341.73 station -name 12.17
 
-point 1675.98 487.80 station -name 12.10@ButcombeOxbows
+point 1675.98 487.80 station -name 12.10
 
-point 1429.92 830.31 station -name 12.23@ButcombeOxbows
+point 1429.92 830.31 station -name 12.23
 
-point 1000.00 1000.00 station -name 12.28@ButcombeOxbows
+point 1000.00 1000.00 station -name 12.28
 
-point 1796.06 387.40 station -name 12.12@ButcombeOxbows
+point 1796.06 387.40 station -name 12.12
 
-point 1505.51 757.87 station -name 12.22@ButcombeOxbows
+point 1505.51 757.87 station -name 12.22
 
-point 1745.67 777.56 station -name 12.1@ButcombeOxbows
+point 1745.67 777.56 station -name 12.1
 
-point 1296.85 845.28 station -name 12.24@ButcombeOxbows
+point 1296.85 845.28 station -name 12.24
 
-point 1395.67 328.35 station -name 12.19@ButcombeOxbows
+point 1395.67 328.35 station -name 12.19
 endscrap

@@ -131,45 +131,45 @@ area water
   LowerOxbowEE1-water1
 endarea
 
-point 1000.00 1000.00 station -name 16.1@LowerOxbow
+point 1000.00 1000.00 station -name 16.1
 
-point 1055.59 958.11 station -name 16.2@LowerOxbow
+point 1055.59 958.11 station -name 16.2
 
-point 1108.98 939.57 station -name 16.3@LowerOxbow
+point 1108.98 939.57 station -name 16.3
 
-point 1191.46 924.61 station -name 16.4@LowerOxbow
+point 1191.46 924.61 station -name 16.4
 
-point 1267.28 899.80 station -name 16.5@LowerOxbow
+point 1267.28 899.80 station -name 16.5
 
-point 1318.58 878.03 station -name 16.6@LowerOxbow
+point 1318.58 878.03 station -name 16.6
 
-point 1384.84 857.09 station -name 16.7@LowerOxbow
+point 1384.84 857.09 station -name 16.7
 
-point 1419.21 842.72 station -name 16.8@LowerOxbow
+point 1419.21 842.72 station -name 16.8
 
-point 1509.69 842.91 station -name 16.9@LowerOxbow
+point 1509.69 842.91 station -name 16.9
 
-point 1600.04 818.23 station -name 16.10@LowerOxbow
+point 1600.04 818.23 station -name 16.10
 
-point 1692.09 799.41 station -name 16.11@LowerOxbow
+point 1692.09 799.41 station -name 16.11
 
-point 1834.45 752.48 station -name 16.12@LowerOxbow
+point 1834.45 752.48 station -name 16.12
 
-point 1939.33 737.28 station -name 16.13@LowerOxbow
+point 1939.33 737.28 station -name 16.13
 
-point 1988.43 700.24 station -name 16.14@LowerOxbow
+point 1988.43 700.24 station -name 16.14
 
-point 2194.96 670.24 station -name 16.15@LowerOxbow
+point 2194.96 670.24 station -name 16.15
 
-point 2367.17 658.58 station -name 16.16@LowerOxbow
+point 2367.17 658.58 station -name 16.16
 
-point 2053.46 701.57 station -name 16.17@LowerOxbow
+point 2053.46 701.57 station -name 16.17
 
-point 2198.58 687.28 station -name 16.18@LowerOxbow
+point 2198.58 687.28 station -name 16.18
 
-point 2282.09 685.71 station -name 16.19@LowerOxbow
+point 2282.09 685.71 station -name 16.19
 
-point 2285.71 706.34 station -name 16.20@LowerOxbow
+point 2285.71 706.34 station -name 16.20
 endscrap
 
 scrap xs_LowerOxbow_16_18 -projection none -author 2016.07.10 "Footleg" -copyright 2016 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
@@ -403,23 +403,23 @@ point 1814.95 963.42 label -text "16.2" -scale xs
 
 point 2009.70 315.63 label -text "16.2" -scale xs
 
-point 1429.13 977.17 station -name 16.9@LowerOxbow
+point 1429.13 977.17 station -name 16.9
 
-point 1609.84 921.26 station -name 16.6@LowerOxbow
+point 1609.84 921.26 station -name 16.6
 
-point 1301.97 1102.36 station -name 16.11@LowerOxbow
+point 1301.97 1102.36 station -name 16.11
 
-point 1000.00 1000.00 station -name 16.18@LowerOxbow
+point 1000.00 1000.00 station -name 16.18
 
-point 1661.42 927.17 station -name 16.5@LowerOxbow
+point 1661.42 927.17 station -name 16.5
 
-point 1070.08 1185.43 station -name 16.13@LowerOxbow
+point 1070.08 1185.43 station -name 16.13
 
-point 1163.39 1136.22 station -name 16.12@LowerOxbow
+point 1163.39 1136.22 station -name 16.12
 
-point 887.80 1360.63 station -name 16.15@LowerOxbow
+point 887.80 1360.63 station -name 16.15
 
-point 1842.52 866.14 station -name 16.2@LowerOxbow
+point 1842.52 866.14 station -name 16.2
 
-point 1509.84 935.04 station -name 16.8@LowerOxbow
+point 1509.84 935.04 station -name 16.8
 endscrap

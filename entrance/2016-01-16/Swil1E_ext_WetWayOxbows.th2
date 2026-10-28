@@ -573,41 +573,41 @@ area water
   WetWayOxbowsEE1-water1
 endarea
 
-point 1000.00 1000.00 station -name 11.12@WetWayOxbows
+point 1000.00 1000.00 station -name 11.12
 
-point 1056.30 999.06 station -name 11.13@WetWayOxbows
+point 1056.30 999.06 station -name 11.13
 
-point 1138.78 979.41 station -name 11.14@WetWayOxbows
+point 1138.78 979.41 station -name 11.14
 
-point 1283.66 935.55 station -name 11.15@WetWayOxbows
+point 1283.66 935.55 station -name 11.15
 
-point 1426.54 854.53 station -name 11.30@WetWayOxbows
+point 1426.54 854.53 station -name 11.30
 
-point 1579.33 843.31 station -name 11.31@WetWayOxbows
+point 1579.33 843.31 station -name 11.31
 
-point 1728.07 809.96 station -name 11.32@WetWayOxbows
+point 1728.07 809.96 station -name 11.32
 
-point 1947.48 882.64 station -name 11.34@WetWayOxbows
+point 1947.48 882.64 station -name 11.34
 
-point 2103.39 876.30 station -name 11.35@WetWayOxbows
+point 2103.39 876.30 station -name 11.35
 
-point 2239.84 837.76 station -name 11.36@WetWayOxbows
+point 2239.84 837.76 station -name 11.36
 
-point 2329.02 818.11 station -name 11.37@WetWayOxbows
+point 2329.02 818.11 station -name 11.37
 
-point 2387.17 808.39 station -name 11.38@WetWayOxbows
+point 2387.17 808.39 station -name 11.38
 
-point 2467.91 595.28 station -name 11.39@WetWayOxbows
+point 2467.91 595.28 station -name 11.39
 
-point 2556.73 587.64 station -name 11.40@WetWayOxbows
+point 2556.73 587.64 station -name 11.40
 
-point 2810.98 568.70 station -name 11.41@WetWayOxbows
+point 2810.98 568.70 station -name 11.41
 
-point 2973.98 518.90 station -name 11.42@WetWayOxbows
+point 2973.98 518.90 station -name 11.42
 
-point 3149.25 485.43 station -name 11.43@WetWayOxbows
+point 3149.25 485.43 station -name 11.43
 
-point 3436.65 455.00 station -name 11.44@WetWayOxbows
+point 3436.65 455.00 station -name 11.44
 endscrap
 
 scrap WetWayOxbowsEE2 -projection extended -author 2016.01.16 "Footleg" -copyright 2016 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
@@ -982,33 +982,33 @@ line wall -outline none
   309.26 965.53 297.23 957.63 278.21 951.31
 endline
 
-point 1000.00 1000.00 station -name 11.0@WetWayOxbows
+point 1000.00 1000.00 station -name 11.0
 
-point -667.87 669.76 station -name 11.17@WetWayOxbows
+point -667.87 669.76 station -name 11.17
 
-point -605.83 722.20 station -name 11.18@WetWayOxbows
+point -605.83 722.20 station -name 11.18
 
-point -510.83 736.10 station -name 11.19@WetWayOxbows
+point -510.83 736.10 station -name 11.19
 
-point -346.50 796.26 station -name 11.20@WetWayOxbows
+point -346.50 796.26 station -name 11.20
 
-point -126.22 848.86 station -name 11.21@WetWayOxbows
+point -126.22 848.86 station -name 11.21
 
-point 75.04 873.19 station -name 11.22@WetWayOxbows
+point 75.04 873.19 station -name 11.22
 
-point 277.20 933.78 station -name 11.23@WetWayOxbows
+point 277.20 933.78 station -name 11.23
 
-point 363.82 982.32 station -name 11.24@WetWayOxbows
+point 363.82 982.32 station -name 11.24
 
-point 494.37 1006.26 station -name 11.25@WetWayOxbows
+point 494.37 1006.26 station -name 11.25
 
-point 547.05 988.39 station -name 11.26@WetWayOxbows
+point 547.05 988.39 station -name 11.26
 
-point 735.75 1000.63 station -name 11.27@WetWayOxbows
+point 735.75 1000.63 station -name 11.27
 
-point 935.43 1019.84 station -name 11.28@WetWayOxbows
+point 935.43 1019.84 station -name 11.28
 
-point 1000.00 1000.00 station -name 11.29@WetWayOxbows
+point 1000.00 1000.00 station -name 11.29
 endscrap
 
 scrap WetWayOxbowsEE3 -projection extended -author 2016.01.16 "Footleg" -copyright 2016 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
@@ -1128,25 +1128,25 @@ endline
 
 
 
-point 1000.00 1000.00 station -name 11.1@WetWayOxbows
+point 1000.00 1000.00 station -name 11.1
 
-point 1098.54 1005.00 station -name 11.2@WetWayOxbows
+point 1098.54 1005.00 station -name 11.2
 
-point 1241.61 972.28 station -name 11.3@WetWayOxbows
+point 1241.61 972.28 station -name 11.3
 
-point 1366.65 915.00 station -name 11.4@WetWayOxbows
+point 1366.65 915.00 station -name 11.4
 
-point 1417.20 886.38 station -name 11.5@WetWayOxbows
+point 1417.20 886.38 station -name 11.5
 
-point 1446.18 832.13 station -name 11.6@WetWayOxbows
+point 1446.18 832.13 station -name 11.6
 
-point 1513.07 833.66 station -name 11.7@WetWayOxbows
+point 1513.07 833.66 station -name 11.7
 
-point 1652.80 849.61 station -name 11.8@WetWayOxbows
+point 1652.80 849.61 station -name 11.8
 
-point 1910.39 917.01 station -name 11.9@WetWayOxbows
+point 1910.39 917.01 station -name 11.9
 
-point 1588.58 797.48 station -name 11.10@WetWayOxbows
+point 1588.58 797.48 station -name 11.10
 endscrap
 
 scrap xs_WetWayOxbows_11_43 -projection none -author 2016.01.16 "Footleg" -copyright 2016 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
@@ -1694,39 +1694,39 @@ point 2819.36 619.99 label -text "11.3" -scale xs
 
 point 2279.87 703.43 label -text "11.3" -scale xs
 
-point 1000.00 1000.00 station -name 11.43@WetWayOxbows
+point 1000.00 1000.00 station -name 11.43
 
-point 2737.01 767.72 station -name 11.3@WetWayOxbows
+point 2737.01 767.72 station -name 11.3
 
-point 2571.26 717.72 station -name 11.6@WetWayOxbows
+point 2571.26 717.72 station -name 11.6
 
-point 3050.79 448.43 station -name 11.27@WetWayOxbows
+point 3050.79 448.43 station -name 11.27
 
-point 2521.65 899.61 station -name 11.8@WetWayOxbows
+point 2521.65 899.61 station -name 11.8
 
-point 2207.09 594.88 station -name 11.19@WetWayOxbows
+point 2207.09 594.88 station -name 11.19
 
-point 2334.65 851.18 station -name 11.12@WetWayOxbows
+point 2334.65 851.18 station -name 11.12
 
-point 2368.50 562.60 station -name 11.20@WetWayOxbows
+point 2368.50 562.60 station -name 11.20
 
-point 1954.72 1007.87 station -name 11.31@WetWayOxbows
+point 1954.72 1007.87 station -name 11.31
 
-point 1759.06 1248.82 station -name 11.35@WetWayOxbows
+point 1759.06 1248.82 station -name 11.35
 
-point 2438.58 770.87 station -name 11.10@WetWayOxbows
+point 2438.58 770.87 station -name 11.10
 
-point 3097.24 265.35 station -name 11.26@WetWayOxbows
+point 3097.24 265.35 station -name 11.26
 
-point 1335.43 1050.79 station -name 11.41@WetWayOxbows
+point 1335.43 1050.79 station -name 11.41
 
-point 2712.20 317.32 station -name 11.22@WetWayOxbows
+point 2712.20 317.32 station -name 11.22
 
-point 2984.25 240.55 station -name 11.24@WetWayOxbows
+point 2984.25 240.55 station -name 11.24
 
-point 2111.81 596.46 station -name 11.18@WetWayOxbows
+point 2111.81 596.46 station -name 11.18
 
-point 2009.45 818.90 station -name 11.16@WetWayOxbows
+point 2009.45 818.90 station -name 11.16
 
-point 2073.23 874.41 station -name 11.15@WetWayOxbows
+point 2073.23 874.41 station -name 11.15
 endscrap
