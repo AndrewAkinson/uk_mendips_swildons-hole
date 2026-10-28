@@ -44,7 +44,7 @@ ORIENTED = {'water-flow', 'gradient', 'air-draught'}
 
 # Survey names as written, made readable where splitting the CamelCase isn't enough
 SURVEY_NAMES = {
-    'Old40to20': 'Old 40 to the 20 ft Pot',
+    'Old40To20': 'Old 40 to the 20 ft Pot',
     '20ftToBarnesLoop': '20 ft Pot to Barnes Loop',
     'DblPotsDownstream': 'Double Pots downstream',
     'Old40Route': 'The Old 40 route',

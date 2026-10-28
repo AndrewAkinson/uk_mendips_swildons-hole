@@ -1,8 +1,8 @@
 encoding  utf-8
-survey Old40to20
+survey Old40To20
 
   input Swil1P_Old40To20.th2
-  input Swil1E_Old40to20.th2
+  input Swil1E_Old40To20.th2
 
   centreline
     copyright 2017 "Paul 'Footleg' Fretwell"

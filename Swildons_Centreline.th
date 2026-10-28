@@ -9,33 +9,33 @@ survey Swildons
   
   #Data files which share a .th2 file (imported here too)
   
-  input entrance/ZigZags/ZigZags.th
-  input entrance/LongDryWay/LongDryWay.th
-  input entrance/2013-02-24/Swildons_NewGrottoes.th
-  input entrance/2013-02-24/Swildons_OldGrottoToWaterChamber.th
-  input entrance/2016-07-10/Swildons_InletOffOldGrottoToWaterChamber.th
+  input entrance/EntToWaterChamber/ZigZags.th
+  input entrance/EntToWaterChamber/LongDryWay.th
+  input entrance/EntToWaterChamber/NewGrottoes.th
+  input entrance/EntToWaterChamber/OldGrottoToWaterChamber.th
+  input entrance/EntToWaterChamber/InletOffOldGrottoToWaterChamber.th
   #Combined sketch for all 5 of the above
-  input entrance/LongDryWay/Swil1P_Ent-OldGrotto-WaterChamber.th2
+  input entrance/EntToWaterChamber/Swil1P_Ent-OldGrotto-WaterChamber.th2
   input entrance/Swil1P_EntranceLevels.th2
   
   input entrance/WetWayOxbows/WetWayOxbows.th
-  input entrance/2016-07-09/Swildons_WetWayKeyhole.th
+  input entrance/WetWayOxbows/WetWayKeyhole.th
   #Combined sketch for all 2 of the above
   input entrance/WetWayOxbows/Swil1P_WetWayOxbows.th2
   
   #The following data files import their respective sketches
   #directly inside their sub-survey data blocks.
-  input entrance/2013-02-24/Swildons_ShortDryWay.th
-  input entrance/2013-06-30/Swildons_KenneysDigToShowerbath.th
-  input entrance/2013-06-30/Swildons_LowerEntAreaViaShowerbathToBaptism.th
-  input entrance/2013-06-29/Swildons_Old40Route.th
-  input entrance/2013-06-29/Swildons_WaterRiftToFoldedStrataCorner.th
+  input entrance/ShortDryWay/ShortDryWay.th
+  input entrance/KenneysDigToShowerbath/KenneysDigToShowerbath.th
+  input entrance/ShowerbathArea/ShowerbathArea.th
+  input entrance/Old40Route/Old40Route.th
+  input entrance/WaterRift/WaterRift.th
   input entrance/ButcombeOxbows/ButcombeOxbows.th
-  input entrance/2016-07-09/Swildons_WaterChamber.th
-  input entrance/2016-07-09/Swildons_OxbowJunction.th
-  input entrance/2016-07-10/Swildons_LowerOxbow.th
+  input entrance/WaterChamber/WaterChamber.th
+  input entrance/OxbowJunction/OxbowJunction.th
+  input entrance/LowerOxbow/LowerOxbow.th
   input entrance/CisternDig/CisternDig.th
-  input streamway/Old40to20/Old40to20.th
+  input streamway/Old40To20/Old40To20.th
   input entrance/RollingThunder/RollingThunder.th
   input streamway/20ftToBarnesLoop/20ftToBarnesLoop.th
   input streamway/DblPotsDownstream/DblPotsDownstream.th
@@ -43,7 +43,7 @@ survey Swildons
   input streamway/TratmansToSump1/TratmansToSump1.th
 
   #Entrance Series extended elevation and cross-sections, from the PocketTopo sketches
-  input entrance/LongDryWay/Swil1E_ext_EntToWaterChamber.th2
+  input entrance/EntToWaterChamber/Swil1E_ext_EntToWaterChamber.th2
 
   centreline
     copyright 2019 "Paul 'Footleg' Fretwell"
@@ -79,8 +79,8 @@ survey Swildons
     equate 13.27@WaterChamber 11.33@WetWayOxbows
     equate 8.4@WaterRift 9.0@Old40Route
     equate 8.12@WaterRift 9.11@Old40Route
-    equate 8.12@WaterRift 17.0@Old40to20
-    equate 8.16@WaterRift 17.6@Old40to20
+    equate 8.12@WaterRift 17.0@Old40To20
+    equate 8.16@WaterRift 17.6@Old40To20
     equate 11.24@WetWayOxbows 12.0@ButcombeOxbows 
     equate 11.33@WetWayOxbows 14.0@WetWayKeyhole 
     equate 11.11@WetWayOxbows 14.6@WetWayKeyhole 
@@ -90,7 +90,7 @@ survey Swildons
     equate 12.30@ButcombeOxbows 11.18@WetWayOxbows
     equate 13.20@WaterChamber 16.16@LowerOxbow
     equate 9.11@Old40Route 25.0@RollingThunder
-    equate 17.24@Old40to20 21.0@20ftToBarnesLoop
+    equate 17.24@Old40To20 21.0@20ftToBarnesLoop
     equate 21.25@20ftToBarnesLoop 22.0@DblPotsDownstream
     equate 22.10@DblPotsDownstream 23.0@BarnesLoopToTratmans
     equate 22.20@DblPotsDownstream 23.12@BarnesLoopToTratmans #Barnes Loop rejoins the streamway

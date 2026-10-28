@@ -1,8 +1,8 @@
 encoding  utf-8
 survey 20ftToBarnesLoop
 
-  input Swil1P_20toBarnesLoop.th2
-  input Swil1E_20toBarnesLoop.th2
+  input Swil1P_20ftToBarnesLoop.th2
+  input Swil1E_20ftToBarnesLoop.th2
 
 centreline
   copyright 2017 "Paul 'Footleg' Fretwell"

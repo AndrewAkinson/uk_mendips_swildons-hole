@@ -9,7 +9,7 @@ survey swil1c
 
 centreline
 cs OSGB:ST 
-#Resurveyed by Footleg's 20ftToBarnesLoop, Old40to20 and WaterRift surveys, so these legs are kept
+#Resurveyed by Footleg's 20ftToBarnesLoop, Old40To20 and WaterRift surveys, so these legs are kept
 #only to connect the rest of the Stanton survey and are not counted in the length.
 flags duplicate
 date 1953.02.08
