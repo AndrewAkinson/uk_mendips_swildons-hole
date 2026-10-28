@@ -217,10 +217,15 @@ def collect(survey, sheet):
             objs = parse_scrap(m.group(3))
             FILES[path][1][name] = objs
             labels = [o for o in objs if o.kind == 'point' and ' label ' in o.head]
+            # -station-names <prefix> <suffix> qualifies the scrap's bare station names
+            names = re.search(r'-station-names\s+("[^"]*"|\S+)\s+("[^"]*"|\S+)', m.group(1))
+            pre, suf = (n.strip('"') for n in names.groups()) if names else ('', '')
             pairs = []
             for o in objs:
                 if o.kind == 'point' and re.match(r'point \S+ \S+ station\b', o.head):
                     st = re.search(r'-name (\S+)', o.head).group(1)
+                    if '@' not in st:
+                        st = pre + st + suf
                     full = st if '@' in st else f'{st}@{sv}'
                     if full in survey.lookup:
                         v = o.head.split()
