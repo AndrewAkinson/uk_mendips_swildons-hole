@@ -13,13 +13,13 @@ survey SwildonsHole
   endcentreline
 
   #import maps for plan drawings
-  input entrance/Swildons_MAP_EntranceSeries.th
-  input streamway/Swildons_MAP_Streamway1.th
+  input Entrance/Swildons_MAP_EntranceSeries.th
+  input Streamway/Swildons_MAP_Streamway1.th
 
   #import maps for elevation drawings
-  input entrance/Swildons_MAP-elev_EntranceSeries.th
-  input streamway/Swildons_MAP-elev_Streamway.th
-  input entrance/Swildons_MAP-ext_EntranceSeries.th
+  input Entrance/Swildons_MAP-elev_EntranceSeries.th
+  input Streamway/Swildons_MAP-elev_Streamway.th
+  input Entrance/Swildons_MAP-ext_EntranceSeries.th
   
   #Master Map
   map MasterPlan -title "Swildons Hole"

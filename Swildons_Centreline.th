@@ -5,45 +5,45 @@ encoding  utf-8
 survey Swildons
 
   #Centreline data from Willie Stanton original survey 
-  input stanton/Swildons_WIS_notdup.th
+  input Stanton/Swildons_WIS_notdup.th
   
   #Data files which share a .th2 file (imported here too)
   
-  input entrance/EntToWaterChamber/ZigZags.th
-  input entrance/EntToWaterChamber/LongDryWay.th
-  input entrance/EntToWaterChamber/NewGrottoes.th
-  input entrance/EntToWaterChamber/OldGrottoToWaterChamber.th
-  input entrance/EntToWaterChamber/InletOffOldGrottoToWaterChamber.th
+  input Entrance/EntToWaterChamber/ZigZags.th
+  input Entrance/EntToWaterChamber/LongDryWay.th
+  input Entrance/EntToWaterChamber/NewGrottoes.th
+  input Entrance/EntToWaterChamber/OldGrottoToWaterChamber.th
+  input Entrance/EntToWaterChamber/InletOffOldGrottoToWaterChamber.th
   #Combined sketch for all 5 of the above
-  input entrance/EntToWaterChamber/Swil1P_Ent-OldGrotto-WaterChamber.th2
-  input entrance/Swil1P_EntranceLevels.th2
+  input Entrance/EntToWaterChamber/Swil1P_Ent-OldGrotto-WaterChamber.th2
+  input Entrance/Swil1P_EntranceLevels.th2
   
-  input entrance/WetWayOxbows/WetWayOxbows.th
-  input entrance/WetWayOxbows/WetWayKeyhole.th
+  input Entrance/WetWayOxbows/WetWayOxbows.th
+  input Entrance/WetWayOxbows/WetWayKeyhole.th
   #Combined sketch for all 2 of the above
-  input entrance/WetWayOxbows/Swil1P_WetWayOxbows.th2
+  input Entrance/WetWayOxbows/Swil1P_WetWayOxbows.th2
   
   #The following data files import their respective sketches
   #directly inside their sub-survey data blocks.
-  input entrance/ShortDryWay/ShortDryWay.th
-  input entrance/KenneysDigToShowerbath/KenneysDigToShowerbath.th
-  input entrance/ShowerbathArea/ShowerbathArea.th
-  input entrance/Old40Route/Old40Route.th
-  input entrance/WaterRift/WaterRift.th
-  input entrance/ButcombeOxbows/ButcombeOxbows.th
-  input entrance/WaterChamber/WaterChamber.th
-  input entrance/OxbowJunction/OxbowJunction.th
-  input entrance/LowerOxbow/LowerOxbow.th
-  input entrance/CisternDig/CisternDig.th
-  input streamway/Old40To20/Old40To20.th
-  input entrance/RollingThunder/RollingThunder.th
-  input streamway/20ftToBarnesLoop/20ftToBarnesLoop.th
-  input streamway/DblPotsDownstream/DblPotsDownstream.th
-  input streamway/BarnesLoopToTratmans/BarnesLoopToTratmans.th
-  input streamway/TratmansToSump1/TratmansToSump1.th
+  input Entrance/ShortDryWay/ShortDryWay.th
+  input Entrance/KenneysDigToShowerbath/KenneysDigToShowerbath.th
+  input Entrance/ShowerbathArea/ShowerbathArea.th
+  input Entrance/Old40Route/Old40Route.th
+  input Entrance/WaterRift/WaterRift.th
+  input Entrance/ButcombeOxbows/ButcombeOxbows.th
+  input Entrance/WaterChamber/WaterChamber.th
+  input Entrance/OxbowJunction/OxbowJunction.th
+  input Entrance/LowerOxbow/LowerOxbow.th
+  input Entrance/CisternDig/CisternDig.th
+  input Streamway/Old40To20/Old40To20.th
+  input Entrance/RollingThunder/RollingThunder.th
+  input Streamway/20ftToBarnesLoop/20ftToBarnesLoop.th
+  input Streamway/DblPotsDownstream/DblPotsDownstream.th
+  input Streamway/BarnesLoopToTratmans/BarnesLoopToTratmans.th
+  input Streamway/TratmansToSump1/TratmansToSump1.th
 
   #Entrance Series extended elevation and cross-sections, from the PocketTopo sketches
-  input entrance/EntToWaterChamber/Swil1E_ext_EntToWaterChamber.th2
+  input Entrance/EntToWaterChamber/Swil1E_ext_EntToWaterChamber.th2
 
   centreline
     copyright 2019 "Paul 'Footleg' Fretwell"

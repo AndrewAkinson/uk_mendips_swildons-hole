@@ -127,25 +127,25 @@ PocketTopo workflow.
 The survey is filed by area, then by sketch:
 
 ```
-entrance/                 the Entrance Series, down to the Old 40 and Rolling Thunder
+Entrance/                 the Entrance Series, down to the Old 40 and Rolling Thunder
   Swildons_MAP*.th        its maps: which drawings make up each sheet
   WetWayOxbows/           one folder per sketch file (PocketTopo or SexyTopo),
                           named after its survey
     *.th                  each survey's data and team, inputting its drawings
-    Swil1P_*.th2          plan drawings
-    Swil1E_*.th2          elevation drawings, which also hold the cross-sections
+    *P.th2                plan drawings
+    *Ee.th2               extended elevations, which also hold the cross-sections
     pockettopo/           the original PocketTopo files and their exports
-streamway/                the Old 40 to Sump 1, laid out the same way
-stanton/                  W. I. Stanton's survey, one folder per trip (1951-62)
+Streamway/                the Old 40 to Sump 1, laid out the same way
+Stanton/                  W. I. Stanton's survey, one folder per trip (1951-62)
   Swildons_WIS*.th        joins his trips together
   logbooks/               scans and a transcription of his logbooks
 ```
 
 A new trip's sketch goes in a new folder in its area, named after its survey,
 with its .th named the same (for example
-`streamway/Sump1ToSwildons2/Sump1ToSwildons2.th`) and SexyTopo's files
+`Streamway/Sump1ToSwildons2/Sump1ToSwildons2.th`) and SexyTopo's files
 in a `sexytopo/` folder inside it. Where one sketch file holds several
-surveys, as in `entrance/EntToWaterChamber/`, they share its folder and
+surveys, as in `Entrance/EntToWaterChamber/`, they share its folder and
 drawings.
 
 | Path | What it is |
