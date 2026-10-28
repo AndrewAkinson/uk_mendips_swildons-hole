@@ -170,14 +170,10 @@ map EntranceSeriesTopLevel -title "Upper level: the entrances and Zig Zags"
   EntranceSP1@Swildons
   EntranceSP2@Swildons
   EntranceLevelTop@Swildons
-  EntToWaterChamberXSTop@Swildons
 endmap
 
 map EntranceSeriesSections -title "Swildons Hole - Entrance Series cross-sections"
-  EntToWaterChamberXS@Swildons
-  ShortDryWayXS@Swildons
   WaterRiftXS@Swildons
-  Old40RouteXS@Swildons
   KenneysDigXS@Swildons
   ShowerbathAreaXS@Swildons
   WetWayOxbowsXS@Swildons
@@ -185,7 +181,6 @@ map EntranceSeriesSections -title "Swildons Hole - Entrance Series cross-section
   OxbowJunctionXS@Swildons
   WaterChamberXS@Swildons
   LowerOxbowXS@Swildons
-  CisternDigXS@Swildons
   RollingThunderXS@Swildons
   WetWayKeyholeXS@Swildons
 endmap

@@ -753,154 +753,6 @@ line wall -close on
 endline
 endscrap
 
-scrap xs_ShowerbathArea_20_16 -projection none -author 2013.06.30 "Footleg" -copyright 2013 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
-
-# Cross-section at station 20.16.
-
-line wall -close on
-  881.82 985.91
-  878.38 987.70 880.58 986.93 881.13 987.56
-  881.68 988.19 883.02 988.90 885.13 989.69
-  887.24 990.49 888.30 991.28 893.81 992.31
-  899.32 993.35 908.85 994.10 918.20 995.90
-  927.55 997.69 943.58 1000.05 949.89 1003.06
-  956.20 1006.07 955.75 1009.21 956.05 1013.94
-  956.35 1018.66 953.09 1026.92 951.70 1031.42
-  950.32 1035.91 949.35 1038.80 947.76 1040.90
-  946.16 1042.99 943.18 1043.18 942.15 1044.00
-  941.11 1044.81 939.78 1043.55 941.56 1045.77
-  943.33 1047.98 949.38 1054.33 952.78 1057.28
-  956.17 1060.24 959.59 1063.09 961.93 1063.48
-  964.27 1063.88 964.96 1061.86 966.80 1059.65
-  968.65 1057.43 970.97 1052.47 973.00 1050.20
-  975.04 1047.92 977.04 1046.53 979.01 1046.01
-  980.97 1045.50 982.09 1047.03 984.81 1047.10
-  987.54 1047.16 992.93 1046.73 995.36 1046.40
-  997.80 1046.06 997.96 1045.86 999.43 1045.09
-  1000.90 1044.32 1003.32 1042.54 1004.18 1041.78
-  1005.04 1041.02 1007.19 1040.16 1004.60 1040.54
-  1002.00 1040.93 993.32 1043.44 988.59 1044.08
-  983.87 1044.73 980.62 1044.72 976.25 1044.44
-  971.88 1044.15 965.52 1044.33 962.37 1042.37
-  959.23 1040.42 957.56 1037.20 957.37 1032.72
-  957.19 1028.23 959.96 1019.86 961.25 1015.47
-  962.54 1011.08 963.83 1008.05 965.12 1006.37
-  966.41 1004.69 967.95 1005.87 968.98 1005.40
-  970.00 1004.93 970.76 1004.31 971.25 1003.54
-  971.74 1002.77 972.00 1001.77 971.94 1000.79
-  971.88 999.80 971.54 998.74 970.91 997.62
-  970.27 996.49 972.52 996.96 968.15 994.04
-  963.77 991.11 951.01 983.14 944.66 980.05
-  938.31 976.96 934.90 976.42 930.05 975.50
-  925.20 974.58 920.29 974.32 915.58 974.54
-  910.87 974.76 907.43 974.92 901.80 976.81
-  896.17 978.71 885.27 984.11 881.82 985.91
-endline
-endscrap
-
-scrap xs_ShowerbathArea_20_7 -projection none -author 2013.06.30 "Footleg" -copyright 2013 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
-
-# Cross-section at station 20.7.
-
-line wall -close on
-  966.76 989.20
-  970.06 1013.57 1020.01 997.27 1040.19 994.04
-  1104.16 983.81 1094.50 1040.15 1119.81 957.85
-  1122.40 949.43 1125.34 941.86 1128.13 933.86
-  1125.28 934.12 1120.75 934.31 1117.75 934.79
-  1082.51 1023.53 1041.09 964.45 966.76 989.20
-endline
-
-line border
-  1106.26 991.14
-  1104.04 990.89 1095.14 989.86 1092.91 989.61
-endline
-endscrap
-
-scrap xs_ShowerbathArea_20_4 -projection none -author 2013.06.30 "Footleg" -copyright 2013 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
-
-# Cross-section at station 20.4.
-
-line wall -close on
-  971.02 974.89
-  957.73 1003.40
-  955.67 1012.00
-  956.00 1021.80
-  958.35 1027.12
-  963.59 1031.61
-  973.29 1035.40
-  989.44 1038.54
-  1016.27 1041.60
-  1031.60 1042.05
-  1033.03 1041.43
-  1033.27 1040.49
-  1030.74 1035.16
-  1032.47 1032.69
-  1036.54 1029.38
-  1052.04 1019.82
-  1094.65 995.77
-  1098.19 993.11
-  1128.06 992.91
-  1150.16 994.29
-  1165.74 997.69
-  1171.18 999.99
-  1176.57 1003.38
-  1164.92 992.42
-  1152.98 983.12
-  1135.79 972.56
-  1124.23 968.51
-  1114.18 967.30
-  1103.11 967.98
-  1064.39 974.82
-  1063.89 973.28
-  1055.16 960.35
-  1040.20 934.42
-  1035.21 923.88
-  1031.47 912.48
-  1030.49 903.38
-  1035.05 892.50
-  1037.39 881.37
-  1040.50 857.50
-  1041.01 841.68
-  1040.27 836.11
-  1038.14 831.34
-  1033.99 827.19
-  1028.09 823.52
-  1027.16 823.83
-  1025.12 827.30
-  1022.38 839.41
-  1021.32 847.08
-  1021.76 868.58
-  1024.61 896.81
-  1023.96 904.07
-  1021.50 913.98
-  1017.46 922.93
-  1011.37 930.95
-  985.04 953.19
-  983.22 954.46
-  981.87 954.03
-  981.14 954.56
-  972.53 971.50
-  971.02 974.89
-endline
-
-line border
-  1033.62 896.46
-  1031.01 902.95 1022.42 922.97 1017.95 935.43
-  1013.48 947.90 1008.98 963.31 1006.80 971.24
-  1004.62 979.16 1005.13 979.79 1004.88 982.97
-  1004.64 986.16 1004.88 988.48 1005.32 990.35
-  1005.77 992.22 1006.43 993.31 1007.54 994.19
-  1008.65 995.08 1011.23 995.42 1011.97 995.67
-endline
-
-line border
-  1039.53 970.47
-  1037.69 971.54 1033.45 972.37 1028.53 976.89
-  1023.61 981.42 1013.09 994.18 1010.00 997.64
-endline
-endscrap
-
 scrap ShowerbathAreaXS -projection plan -author 2013.06.30 "Footleg" -copyright 2013 "Paul 'Footleg' Fretwell" -scale [0 0 393.7 393.7 0.0 0.0 10 10 m]
 
 # Where each cross-section is cut (line section) and drawn (point section).
@@ -910,33 +762,33 @@ line section -direction both
   1017.31 1027.04
 endline
 
-point 677.71 496.80 section -scrap xs_ShowerbathArea_20_27
+point 1043.21 746.07 section -scrap xs_ShowerbathArea_20_27
 
 point 967.50 949.25 label -text "20.27" -scale xs
 
-point 677.71 548.32 label -text "20.27" -scale xs
+point 1043.21 797.59 label -text "20.27" -scale xs
 
 line section -direction both
   986.75 970.33
   1083.68 923.62
 endline
 
-point 1120.67 878.86 section -scrap xs_ShowerbathArea_20_26
+point 1143.49 759.45 section -scrap xs_ShowerbathArea_20_26
 
-point 1113.49 882.32 label -text "20.26" -scale xs
+point 1136.31 762.91 label -text "20.26" -scale xs
 
 point 1103.16 920.44 label -text "20.26" -scale xs
 
 line section -direction both
   1122.97 907.88
-  1141.00 984.65
+  1143.19 993.96
 endline
 
-point 1132.68 772.05 section -scrap xs_ShowerbathArea_20_25
+point 1133.08 517.85 section -scrap xs_ShowerbathArea_20_25
 
-point 1166.09 1007.64 label -text "20.25" -scale xs
+point 1178.12 1016.95 label -text "20.25" -scale xs
 
-point 1141.20 1138.69 label -text "20.25" -scale xs
+point 1127.28 1152.61 label -text "20.25" -scale xs
 
 line section -direction both
   1266.17 887.43
@@ -947,43 +799,43 @@ point 1290.72 970.44 section -scrap xs_ShowerbathArea_20_23
 
 point 1310.30 921.49 label -text "20.23" -scale xs
 
-point 1196.27 763.20 label -text "20.23" -scale xs
+point 1184.97 735.92 label -text "20.23" -scale xs
 
 line section -direction both
   1271.79 868.97
-  1325.60 904.36
+  1325.60 904.37
 endline
 
-point 1377.38 938.42 section -scrap xs_ShowerbathArea_20_22
+point 1349.84 916.20 section -scrap xs_ShowerbathArea_20_22
 
-point 1345.52 917.46 label -text "20.22" -scale xs
+point 1345.82 867.41 label -text "20.22" -scale xs
 
-point 1377.38 992.30 label -text "20.22" -scale xs
+point 1377.38 952.93 label -text "20.22" -scale xs
 
 line section -direction both
-  1311.10 536.70
-  1324.52 864.43
+  1309.56 498.98
+  1324.52 864.44
 endline
 
 point 1313.38 395.67 section -scrap xs_ShowerbathArea_20_11
 
 point 1311.52 350.34 label -text "20.11" -scale xs
 
-point 1226.50 784.17 label -text "20.11" -scale xs
+point 1162.85 810.54 label -text "20.11" -scale xs
 
 line section -direction both
-  1717.54 457.46
+  1717.55 457.46
   1353.29 505.33
 endline
 
 point 2035.18 415.72 section -scrap xs_ShowerbathArea_20_9
 
-point 1740.96 454.38 label -text "20.9" -scale xs
+point 1740.97 454.38 label -text "20.9" -scale xs
 
 point 2035.18 521.43 label -text "20.9" -scale xs
 
 line section -direction both
-  1423.24 617.11
+  1282.75 877.05
   1568.04 349.20
 endline
 
@@ -994,48 +846,15 @@ point 1579.27 328.42 label -text "20.8" -scale xs
 point 1765.76 60.52 label -text "20.8" -scale xs
 
 line section -direction both
-  1357.17 564.98
-  1090.52 316.17
+  1495.68 694.22
+  1293.81 505.86
 endline
 
-point 1579.86 750.09 section -scrap xs_ShowerbathArea_20_2
+point 1217.60 388.93 section -scrap xs_ShowerbathArea_20_2
 
-point 1653.24 818.56 label -text "20.2" -scale xs
+point 1290.98 457.40 label -text "20.2" -scale xs
 
 point 1197.25 531.86 label -text "20.2" -scale xs
-
-line section -direction both
-  1417.94 745.92
-  1589.94 698.17
-endline
-
-point 1914.97 607.94 section -scrap xs_ShowerbathArea_20_16
-
-point 1612.70 691.85 label -text "20.16" -scale xs
-
-point 1914.97 683.91 label -text "20.16" -scale xs
-
-line section -direction both
-  1166.74 622.37
-  1390.26 266.38
-endline
-
-point 1577.30 -31.52 section -scrap xs_ShowerbathArea_20_7
-
-point 1744.47 716.71 label -text "20.7" -scale xs
-
-point 1577.30 35.04 label -text "20.7" -scale xs
-
-line section -direction both
-  1591.91 544.80
-  1441.62 322.48
-endline
-
-point 1776.27 634.11 section -scrap xs_ShowerbathArea_20_4
-
-point 1428.39 302.91 label -text "20.4" -scale xs
-
-point 1386.33 381.43 label -text "20.4" -scale xs
 
 point 1489.76 393.70 station -name 20.4@ShowerbathArea
 
