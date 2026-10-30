@@ -2,7 +2,7 @@
 
 How to get a new SexyTopo trip (or an old PocketTopo one) into the
 survey, with drawings. The converter and the drawing rules are shared
-with other caves: `sketch2therion/` is a git submodule of
+with other caves: `sketch2therion/` is a link to a clone of
 [CaveSurveying/Therion-Sketching](https://github.com/CaveSurveying/Therion-Sketching),
 and its `Style.md` is the one place the drawing conventions are kept.
 
@@ -25,10 +25,19 @@ xTherion.
 
 ## Setting up
 
-Clone with `git clone --recurse-submodules`, or run
-`git submodule update --init` in a clone made without it. You need
-Python 3.11 or later with the libraries in `requirements.txt`, and
-Therion (Docker is easiest, as in the main
+`sketch2therion` links to `../../Therion-Sketching`. Clone that
+repository in the same folder as this one, so the link finds it:
+
+```bash
+git clone https://github.com/CaveSurveying/Therion-Sketching.git
+```
+
+Every cave uses whatever is checked out there, so keep it up to date
+with `git pull`. The first note in each drawing gives the converter
+commit that made it.
+
+You need Python 3.11 or later with the libraries in `requirements.txt`,
+and Therion (Docker is easiest, as in the main
 [README](../README.md#building-it-yourself)):
 
 ```bash
@@ -178,4 +187,4 @@ the way the sketch was drawn, so convert from that instead.
 
 The shared tools are described in `sketch2therion/README.md`, and the
 rules they follow in `sketch2therion/Style.md`. A change to either is
-made in Therion-Sketching, then this repository moves its submodule on.
+made in Therion-Sketching.
