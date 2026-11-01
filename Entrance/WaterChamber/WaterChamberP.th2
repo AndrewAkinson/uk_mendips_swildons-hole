@@ -541,22 +541,22 @@ point 910.1213385826768 278.5076377952756 station -name 13.17
 
 
 line section -direction both
-  770.86 421.21
-  881.18 498.62
+  773.03 422.73
+  876.87 495.60
 endline
 
 point 904.62 634.01 section -scrap xs_WaterChamber_13_1
 
 line section -direction both
-  805.79 19.92
-  933.72 483.53
+  806.83 23.69
+  933.07 481.18
 endline
 
 point 883.84 46.75 section -scrap xs_WaterChamber_13_8
 
 line section -direction both
-  1298.62 180.83
-  1321.99 88.63
+  1299.57 177.08
+  1321.02 92.45
 endline
 
 point 1238.75 438.63 section -scrap xs_WaterChamber_13_21
@@ -715,8 +715,8 @@ point 180.86133858267704 289.87763779527563 station -name 13.14
 
 
 line section -direction both
-  161.54 236.14
-  191.05 318.34
+  162.85 239.80
+  189.81 314.87
 endline
 
 point 234.38 438.92 section -scrap xs_WaterChamber_13_14
@@ -839,22 +839,22 @@ point 760.3113385826769 550.9476377952756 station -name 13.2
 
 
 line section -direction both
-  688.52 651.08
-  752.34 694.33
+  691.73 653.26
+  749.36 692.31
 endline
 
 point 875.19 777.61 section -scrap xs_WaterChamber_13_3
 
 line section -direction both
-  591.70 752.50
-  652.53 788.97
+  595.00 754.48
+  649.17 786.95
 endline
 
 point 873.48 921.42 section -scrap xs_WaterChamber_13_4
 
 line section -direction both
-  569.24 833.26
-  625.12 870.35
+  573.62 836.17
+  622.30 868.48
 endline
 
 point 878.68 1038.69 section -scrap xs_WaterChamber_13_5
@@ -1010,8 +1010,8 @@ point 1749.251338582677 216.09763779527566 station -name 13.23
 
 
 line section -direction both
-  1815.74 294.07
-  1849.33 232.26
+  1821.44 283.59
+  1847.22 236.14
 endline
 
 point 1617.58 658.80 section -scrap xs_WaterChamber_13_24
@@ -1101,15 +1101,15 @@ point 1938.3113385826769 316.4176377952756 station -name 13.25
 
 
 line section -direction both
-  1912.48 369.34
-  2037.57 113.06
+  1912.44 369.42
+  2036.02 116.24
 endline
 
 point 2509.83 290.09 section -scrap xs_WaterChamber_13_25
 
 line section -direction both
-  2070.77 379.46
-  2034.39 307.31
+  2069.09 376.12
+  2037.54 313.56
 endline
 
 point 2226.25 687.67 section -scrap xs_WaterChamber_13_26

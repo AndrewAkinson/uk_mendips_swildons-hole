@@ -1488,43 +1488,43 @@ point 1059.6 858.7 flowstone -orientation 285.456
 point 1083.2 798.4 flowstone -orientation 297.826
 
 line section -direction both
-  1464.92 -131.90
-  1326.71 4.06
+  1436.84 -104.28
+  1354.93 -23.70
 endline
 
 point 1646.34 -314.21 section -scrap xs23_8
 
-line section -direction both
-  1050.75 -131.20
-  994.72 86.69
+line section -direction begin
+  1040.87 -92.78
+  1009.37 29.72
 endline
 
 point 918.14 183.62 section -scrap xs23_11
 
 line section -direction both
-  593.23 221.92
-  709.41 328.99
+  622.13 248.55
+  680.35 302.21
 endline
 
 point 982.05 567.71 section -scrap xs23_17
 
 line section -direction both
-  288.30 -288.64
-  135.77 -433.66
+  259.47 -316.05
+  164.10 -406.72
 endline
 
 point 12.79 -545.35 section -scrap xs23_25
 
 line section -direction both
-  484.17 -813.52
-  307.69 -861.77
+  446.18 -823.91
+  345.69 -851.38
 endline
 
 point 665.29 -768.12 section -scrap xs23_27
 
 line section -direction both
-  218.06 -1080.23
-  240.44 -913.95
+  223.34 -1040.98
+  235.19 -952.92
 endline
 
 point 169.09 -1403.31 section -scrap xs23_30

@@ -129,22 +129,22 @@ point 2660.3 244.2 gradient -orientation 201.843
 point 2610.6 255.8 gradient -orientation 208.553
 
 line section -direction both
-  2377.35 189.58
-  2717.65 262.15
+  2415.51 197.72
+  2690.80 256.42
 endline
 
 point 2261.42 -57.46 section -scrap xs21_4
 
 line section -direction both
-  2294.27 124.38
-  2267.15 293.94
+  2288.08 163.09
+  2274.02 250.96
 endline
 
 point 2248.02 435.40 section -scrap xs21_6
 
 line section -direction both
-  2039.66 117.27
-  1988.82 246.55
+  2025.33 153.70
+  2003.19 210.00
 endline
 
 point 2075.05 19.23 section -scrap xs21_8
@@ -749,29 +749,29 @@ line rock-border -close on
 endline
 
 line section -direction both
-  1376.48 371.58
-  1480.05 518.78
+  1399.08 403.70
+  1457.46 486.67
 endline
 
 point 1248.86 197.53 section -scrap xs21_16
 
 line section -direction both
-  1095.62 694.19
-  1205.48 830.03
+  1120.36 724.78
+  1180.74 799.44
 endline
 
 point 958.01 531.02 section -scrap xs21_18
 
 line section -direction both
-  707.29 997.51
-  819.13 1112.43
+  734.66 1025.63
+  791.69 1084.23
 endline
 
 point 964.31 1255.50 section -scrap xs21_21
 
 line section -direction both
-  835.79 1034.78
-  442.36 1253.37
+  800.77 1054.24
+  476.69 1234.30
 endline
 
 point 528.87 946.02 section -scrap xs21_22
