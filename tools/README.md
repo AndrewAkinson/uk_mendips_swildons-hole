@@ -11,7 +11,7 @@ and its `Style.md` is the one place the drawing conventions are kept.
 | `sketch2therion/` | The shared tools. Converts SexyTopo and PocketTopo sketches into Therion drawings (`.th2`) and checks them (`review`, `fillcheck`, `th2lint`). |
 | `sketch2therion/Style.md`, `sketch2therion/rules.toml` | The shared drawing rules. |
 | `project.toml` | Swildons' settings for the shared tools: the master file, the plan map, file and scrap names. A `[convert]` table there changes a shared rule for Swildons only, with the reason. |
-| `layout.thconfig`, `layout.th` | Export where Therion puts every station, and the centreline with its splays, for the converter. |
+| `layout.thconfig`, `layout.th` | Export where Therion puts every station (for `check`, `joins`, `sections`, `review`), and the centreline with its splays for the converter. |
 | `sections/` | Swildons only: points the cross section lines the way each section looks, and moves section drawings clear of the passages on the Swildons sheets. |
 | `new-trip-template.th` | A starting point for a new trip's survey file. |
 | `requirements.txt` | Python libraries (the shared tools' own list). |
@@ -88,10 +88,10 @@ Tratman's Temple is the example here: the survey `Tratmans`, in
    python3 -m tools.sketch2therion check Tratmans/Notes/TratmansP.xvi --survey Tratmans
    ```
 
-   Stations Therion doesn't know mean the trip isn't input, the layout
-   is stale or `--survey` is wrong. Tratmans fits to 0.3 m, more than
-   the few centimetres usual elsewhere, probably because Therion turns
-   the survey to the OS grid here.
+   It lists the sketch's stations, legs and lines. Stations Therion
+   doesn't know mean the trip isn't input, the layout is stale or
+   `--survey` is wrong. The drawing keeps the sketch's own station
+   positions, so they are not compared with Therion's.
 
 5. **Convert the plan:**
 
