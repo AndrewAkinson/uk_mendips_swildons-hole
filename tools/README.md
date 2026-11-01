@@ -8,7 +8,7 @@ and its `Style.md` is the one place the drawing conventions are kept.
 
 | Path | What it is |
 |---|---|
-| `sketch2therion/` | The shared tools. Converts SexyTopo and PocketTopo sketches into Therion drawings (`.th2`) and checks them (`review`, `fillcheck`, `th2lint`). |
+| `sketch2therion/` | The shared tools. Converts SexyTopo and PocketTopo sketches into Therion drawings (`.th2`) and checks them (`review`, `fillcheck`, `th2lint`). How to use them is in [`sketch2therion/README.md`](sketch2therion/README.md). |
 | `sketch2therion/Style.md`, `sketch2therion/rules.toml` | The shared drawing rules. |
 | `project.toml` | Swildons' settings for the shared tools: the master file, the plan map, file and scrap names. A `[convert]` table there changes a shared rule for Swildons only, with the reason. |
 | `layout.thconfig`, `layout.th` | Export where Therion puts every station (for `check`, `joins`, `sections`, `review`), and the centreline with its splays for the converter. |
@@ -48,92 +48,25 @@ therion() { docker run --rm -v "$PWD:/project" \
 
 Run everything from the top of the repository.
 
-## Underground, in SexyTopo
+## A new trip
 
-Sketch as `sketch2therion/Style.md` says ("Sketching in SexyTopo"):
-the colours the converter reads, cross sections, and drawing both the
-plan and the extended elevation. Note in the book which existing
-station the trip starts from.
+Follow "A new trip" in [`sketch2therion/README.md`](sketch2therion/README.md),
+with Swildons' names. Tratman's Temple (the survey `Tratmans`, in
+`Tratmans/`) is the example.
 
-## After the trip
+| | |
+|---|---|
+| Survey folder | the survey's own folder, named after it, sketches in its `Notes/` (see "Working on the survey" in the main [README](../README.md)) |
+| Master file | `swildonsmaster.th`, e.g. `equate 1@Tratmans 23.33@BarnesLoopToTratmans.Swildons` |
+| Plan map | `MasterPlan`, in the master file |
+| Layout | `tools/layout.thconfig` |
+| Build | `therion -l output/therion.log swildons.thconfig` |
+| Check build (`fillcheck`) | `swildons-check.thconfig`: the plan with the fill and legs |
+| Drawings | `--copyright 2026 "Andrew Atkinson, GPLv3.0+"` |
 
-Tratman's Temple is the example here: the survey `Tratmans`, in
-`Tratmans/`.
-
-1. **Export** from SexyTopo into the survey's own folder: `X.th`, and
-   the sketches in `X/Notes/` (`XP.xvi` for the plan, `XEE.xvi` for the
-   extended elevation).
-
-2. **Tie it in** in `swildonsmaster.th`: `input X/X.th`, and an
-   `equate` from the trip's first station to the one it started from,
-   e.g. `equate 1@Tratmans 23.33@BarnesLoopToTratmans.Swildons`. Add
-   the survey to the `ResurveyCentreline` map there, so its legs appear
-   on the centreline sheets. Build
-   (`therion -l output/therion.log swildons.thconfig`) and check the log
-   for loop errors.
-
-3. **Therion's layout:**
-
-   ```bash
-   therion -l output/therion-layout.log tools/layout.thconfig
-   ```
-
-   writes `output/layout-plan.xvi`, `output/layout-extended.xvi` and
-   `output/layout.sql`. Rerun it whenever the survey data change.
-
-4. **Check the sketch:**
-
-   ```bash
-   python3 -m tools.sketch2therion check Tratmans/Notes/TratmansP.xvi --survey Tratmans
-   ```
-
-   It lists the sketch's stations, legs and lines. Stations Therion
-   doesn't know mean the trip isn't input, the layout is stale or
-   `--survey` is wrong. The drawing keeps the sketch's own station
-   positions, so they are not compared with Therion's.
-
-5. **Convert the plan:**
-
-   ```bash
-   python3 -m tools.sketch2therion plan Tratmans/Notes/TratmansP.xvi --survey Tratmans \
-     --author 2026.10.20 "Andrew Atkinson" --copyright 2026 "Andrew Atkinson, GPLv3.0+" \
-     -o Tratmans/TratmansP.th2
-   python3 -m tools.sketch2therion roofs Tratmans/TratmansP.th2
-   python3 -m tools.sketch2therion details Tratmans/TratmansP.th2
-   python3 -m tools.sketch2therion smooth Tratmans/TratmansP.th2
-   python3 -m tools.sketch2therion place Tratmans
-   ```
-
-   Scraps are named `XSP1`, `XSP2`, … and cross sections `XPX<station>`.
-   `place` inputs the drawing in `X.th` with a `map XMP` of its scraps,
-   adds `XMP@X` to `MasterPlan` in `swildonsmaster.th`, and removes
-   SexyTopo's own plan `.th2`.
-
-6. **Check:**
-
-   ```bash
-   python3 -m tools.sketch2therion review check Tratmans/TratmansP.th2
-   python3 -m tools.sketch2therion review gaps Tratmans/TratmansP.th2 TratmansSP1
-   python3 -m tools.sketch2therion.th2lint Tratmans/TratmansP.th2
-   python3 -m tools.sketch2therion fillcheck --build --projection plan --survey Tratmans
-   ```
-
-   `fillcheck --build` builds `swildons-check.thconfig` and lists legs
-   outside the fill and splay ends more than 0.5 m outside it.
-   `review show` puts the sketch beside the drawing at given stations.
-   Go through `Style.md` ("Checking") as well, then finish by hand in
-   xTherion (the sketch is linked as a backdrop).
-
-7. **Cross sections.** With Therion's layout up to date (step 3):
-
-   ```bash
-   python3 -m tools.sketch2therion sections --write
-   ```
-
-   turns each cross section line to look along the survey, carries it
-   evenly across its passage, and moves section drawings clear of the
-   passages and each other (by their `point section`), for every plan
-   drawing the master file inputs. Without `--write` it only reports.
+When tying the trip in, also add the survey to the `ResurveyCentreline`
+map in `swildonsmaster.th`, so its legs appear on the centreline
+sheets.
 
 ## Joining up with Stanton's survey
 
@@ -164,22 +97,10 @@ one of them:
 
 ## PocketTopo
 
-The same commands take PocketTopo files: a `.top`, or the Therion
-export `_th.txt`. Two more commands help:
-
-```bash
-# a PocketTopo sketch as an XVI backdrop for xTherion
-python3 -m tools.sketch2therion xvi Entrance/Trip/pockettopo/Trip.top --view elevation \
-  -o Entrance/Trip/pockettopo/Trip_th_e.xvi
-# copy PocketTopo's left/right leg directions into the trip's .th
-python3 -m tools.sketch2therion extend Entrance/Trip/pockettopo/Trip_th.txt \
-  Entrance/Trip/Trip.th
-```
-
-PocketTopo's Therion export sometimes lists a side view's stations
-somewhere other than where its sketch put them; `check` shows that as
-a large distance from stations to walls. The `.top` file is laid out
-the way the sketch was drawn, so convert from that instead.
+Footleg's older surveys were sketched in PocketTopo. The commands for
+PocketTopo files are in "PocketTopo" in
+[`sketch2therion/README.md`](sketch2therion/README.md); their files
+are in each trip's `pockettopo/` folder.
 
 ## How it works
 

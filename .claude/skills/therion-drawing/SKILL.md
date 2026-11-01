@@ -10,7 +10,7 @@ The conventions live in one place, `tools/sketch2therion/Style.md`
 a `.th2`, and add to it what the work teaches. Do not copy its rules
 here.
 
-- Workflow (SexyTopo to a finished plan, and `review`): `tools/README.md`.
+- Workflow (SexyTopo to a finished plan, and `review`): `tools/sketch2therion/README.md`, with this cave's names in `tools/README.md`.
 - Cave settings (names, scale, licence): `tools/project.toml`.
 - Checks: `python3 -m tools.sketch2therion.th2lint FILE.th2`,
   `python3 -m tools.sketch2therion review check FILE.th2`, and
@@ -139,13 +139,13 @@ placed by `python3 -m tools.sketch2therion sections --write`.
 - A section drawing must not overlap a passage or another section,
   including those of other surveys on the same sheet.
 - `python3 -m tools.sketch2therion sections --write` does all of this
-  (see `tools/README.md`).
+  (see `tools/sketch2therion/README.md`).
 
 ## Fill where nothing was drawn
 
 Use the splay shots, not a guess: in elevation the steep splays give
 the roof and floor at each station, in plan the splay ends give the
-walls (`python3 -m tools.sketch2therion roofs`, see `tools/README.md`).
+walls (`python3 -m tools.sketch2therion roofs`, see `tools/sketch2therion/README.md`).
 
 ## .thconfig layouts
 
