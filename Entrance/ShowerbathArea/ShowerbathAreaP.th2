@@ -111,36 +111,36 @@ point 20.191889763779386 879.1317322834645 station -name 20.27
 
 
 line section -direction both
-  286.60 739.96
-  340.13 775.16
+  289.95 742.16
+  336.95 773.07
 endline
 
 point 364.89 787.44 section -scrap xs_ShowerbathArea_20_22
 
 line section -direction both
-  263.36 762.69
-  279.21 861.35
+  267.58 788.96
+  278.95 859.74
 endline
 
 point 358.16 697.38 section -scrap xs_ShowerbathArea_20_23
 
-line section -direction both
-  140.75 783.62
-  160.85 869.23
+line section -direction begin
+  141.68 787.56
+  157.81 856.26
 endline
 
 point 150.51 391.77 section -scrap xs_ShowerbathArea_20_25
 
 line section -direction both
-  49.26 788.07
-  79.76 857.67
+  50.64 791.22
+  78.13 853.94
 endline
 
 point 171.78 632.79 section -scrap xs_ShowerbathArea_20_26
 
 line section -direction both
-  -8.58 856.68
-  45.73 899.16
+  -5.21 859.32
+  39.36 894.18
 endline
 
 point 64.63 627.11 section -scrap xs_ShowerbathArea_20_27
@@ -285,8 +285,8 @@ point 338.23188976377946 415.08173228346453 station -name 20.2
 
 
 line section -direction both
-  577.00 413.79
-  440.67 180.14
+  575.06 410.47
+  442.85 183.88
 endline
 
 point 672.53 565.96 section -scrap xs_ShowerbathArea_20_4
@@ -298,9 +298,9 @@ endline
 
 point 389.01 90.04 section -scrap xs_ShowerbathArea_20_7
 
-line section -direction both
-  505.89 571.43
-  293.67 373.38
+line section -direction begin
+  501.95 567.75
+  384.34 457.99
 endline
 
 point 161.09 203.97 section -scrap xs_ShowerbathArea_20_2
@@ -438,23 +438,23 @@ point 627.5618897637794 330.4717322834645 station -name 20.9
 point 530.3118897637794 278.6617322834645 station -name 20.8
 
 
-line section -direction both
-  260.82 756.22
-  567.75 214.04
+line section -direction begin
+  387.08 533.19
+  432.66 452.67
 endline
 
 point 870.68 -351.05 section -scrap xs_ShowerbathArea_20_8
 
-line section -direction both
-  381.22 271.25
-  720.36 352.18
+line section -direction end
+  413.74 279.01
+  716.86 351.35
 endline
 
 point 1127.32 264.80 section -scrap xs_ShowerbathArea_20_9
 
-line section -direction both
-  286.32 392.39
-  440.77 729.21
+line section -direction end
+  296.87 415.41
+  435.42 717.55
 endline
 
 point 314.76 176.16 section -scrap xs_ShowerbathArea_20_11
@@ -575,9 +575,9 @@ point 330.98188976377946 578.4617322834645 station -name 20.13
 point 306.7718897637794 463.6617322834645 station -name 20.12
 
 
-line section -direction both
-  405.09 591.14
-  620.97 583.58
+line section -direction end
+  223.44 597.50
+  532.60 586.67
 endline
 
 point 900.43 391.89 section -scrap xs_ShowerbathArea_20_16

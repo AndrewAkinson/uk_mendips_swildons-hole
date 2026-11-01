@@ -711,64 +711,64 @@ point 2966.0 721.0 water-flow -orientation 308.1
 
 
 line section -direction both
-  2848.15 1140.90
-  2697.82 1278.74
+  2846.01 1142.86
+  2695.65 1280.73
 endline
 
 point 2687.05 989.37 section -scrap xs_ZigZags_1_19
 
 line section -direction both
-  2809.78 1105.88
-  2764.11 1358.41
+  2793.37 1196.61
+  2768.54 1333.94
 endline
 
 point 2751.14 1466.04 section -scrap xs_ZigZags_1_18
 
 line section -direction both
-  2889.39 1121.03
-  3042.92 1203.96
+  2892.51 1122.72
+  3039.46 1202.09
 endline
 
 point 3121.81 1247.72 section -scrap xs_ZigZags_1_15
 
 line section -direction both
-  3298.50 1084.24
-  3244.93 1199.99
+  3256.66 1174.65
+  3292.85 1096.45
 endline
 
 point 3240.10 1235.50 section -scrap xs_ZigZags_1_14
 
-line section -direction both
-  3297.23 1196.00
-  3019.47 1053.48
+line section -direction end
+  3264.92 1179.42
+  3022.58 1055.07
 endline
 
 point 3327.53 1317.32 section -scrap xs_ZigZags_1_10
 
 line section -direction both
-  3339.51 913.26
-  3377.78 1041.89
+  3376.73 1038.35
+  3340.00 914.90
 endline
 
 point 3436.73 1066.46 section -scrap xs_ZigZags_1_12
 
 line section -direction both
-  3189.85 1034.18
-  3195.47 960.90
+  3190.23 1029.26
+  3195.24 963.95
 endline
 
 point 3204.59 919.58 section -scrap xs_ZigZags_1_11
 
 line section -direction both
-  2824.95 1036.51
-  3218.10 656.84
+  2828.09 1033.48
+  3207.12 667.45
 endline
 
 point 3214.72 779.32 section -scrap xs_ZigZags_1_6
 
 line section -direction both
-  3113.06 710.96
-  3158.12 779.60
+  3115.65 714.90
+  3156.43 777.02
 endline
 
 point 3328.17 576.11 section -scrap xs_ZigZags_1_4
@@ -890,16 +890,16 @@ point 2826.57188977 777.124173229 station -name 2.1
 point 2971.53188977 775.314173229 station -name 2.0
 
 
-line section -direction both
-  2714.07 1031.03
-  2789.02 1062.98
+line section -direction begin
+  2717.74 1032.60
+  2785.65 1061.54
 endline
 
 point 2620.79 1003.56 section -scrap xs_LongDryWay_2_3
 
 line section -direction both
-  2764.86 892.39
-  3133.38 989.55
+  2817.47 906.26
+  3041.02 965.20
 endline
 
 point 2464.21 679.01 section -scrap xs_LongDryWay_2_2
@@ -1083,15 +1083,15 @@ endline
 
 
 line section -direction both
-  2420.00 1790.58
-  2514.99 1795.16
+  2423.00 1790.72
+  2510.11 1794.92
 endline
 
 point 2369.30 1795.23 section -scrap xs_LongDryWay_2_15
 
 line section -direction both
-  2428.25 1686.75
-  2510.09 1700.74
+  2432.31 1687.44
+  2506.10 1700.06
 endline
 
 point 2599.48 1737.67 section -scrap xs_LongDryWay_2_13
@@ -1104,36 +1104,36 @@ endline
 point 2566.61 1673.54 section -scrap xs_LongDryWay_2_12
 
 line section -direction both
-  2518.83 1466.97
-  2561.00 1542.56
+  2524.64 1477.39
+  2559.84 1540.48
 endline
 
 point 2591.85 1563.73 section -scrap xs_LongDryWay_2_10
 
 line section -direction both
-  2540.67 1397.10
-  2622.58 1459.88
+  2544.59 1400.10
+  2619.57 1457.57
 endline
 
 point 2765.79 1575.64 section -scrap xs_LongDryWay_2_9
 
 line section -direction both
-  2590.56 1297.60
-  2679.82 1333.86
+  2594.49 1299.20
+  2676.20 1332.39
 endline
 
 point 2382.70 1277.43 section -scrap xs_LongDryWay_2_6
 
 line section -direction both
-  2588.15 1217.96
-  2711.89 1267.77
+  2591.72 1219.40
+  2708.56 1266.43
 endline
 
 point 2977.65 1421.68 section -scrap xs_LongDryWay_2_5
 
 line section -direction both
-  2669.82 1133.74
-  2748.18 1161.16
+  2671.34 1134.27
+  2743.87 1159.65
 endline
 
 point 2527.21 941.07 section -scrap xs_LongDryWay_2_4
@@ -1364,29 +1364,29 @@ point 2603.19188977 1911.064173229 station -name 2.16
 
 
 line section -direction both
-  3135.92 1777.65
-  2904.70 1720.72
+  3132.57 1776.83
+  2908.44 1721.64
 endline
 
 point 3447.32 1810.70 section -scrap xs_LongDryWay_2_24
 
 line section -direction both
-  2940.50 1861.61
-  2842.46 1792.17
+  2937.03 1859.15
+  2845.84 1794.56
 endline
 
 point 2774.57 1805.58 section -scrap xs_LongDryWay_2_23
 
 line section -direction both
-  2708.25 2031.83
-  2651.03 1921.10
+  2706.35 2028.15
+  2653.32 1925.53
 endline
 
 point 2647.01 2075.43 section -scrap xs_LongDryWay_2_19
 
 line section -direction both
-  2519.02 1923.29
-  2644.19 1905.27
+  2523.01 1922.71
+  2640.88 1905.75
 endline
 
 point 2466.43 1938.35 section -scrap xs_LongDryWay_2_16
@@ -1583,8 +1583,8 @@ point 2976.85188977 1832.444173229 station -name 2.28
 
 
 line section -direction both
-  2816.34 1963.09
-  2862.47 2095.36
+  2818.79 1970.12
+  2862.67 2095.93
 endline
 
 point 3052.37 1986.84 section -scrap xs_LongDryWay_2_31
@@ -1837,30 +1837,30 @@ line floor-step -id dup4 -reverse on -outline out
 endline
 
 
-line section -direction both
-  1594.54 2474.69
-  1513.97 2552.62
+line section -direction end
+  1627.73 2442.58
+  1516.66 2550.02
 endline
 
 point 1600.20 2805.23 section -scrap xs_LongDryWay_2_56
 
 line section -direction both
-  1902.48 2398.79
-  1902.08 2486.39
+  1902.46 2402.65
+  1902.00 2503.95
 endline
 
 point 2007.28 2743.22 section -scrap xs_LongDryWay_2_54
 
 line section -direction both
-  2000.27 2319.68
-  2097.01 2384.62
+  2005.00 2322.86
+  2098.89 2385.88
 endline
 
 point 1909.82 2241.45 section -scrap xs_LongDryWay_2_51
 
-line section -direction both
-  2167.90 2186.74
-  2193.69 2315.56
+line section -direction end
+  2174.98 2222.10
+  2193.00 2312.12
 endline
 
 point 2141.70 2057.78 section -scrap xs_LongDryWay_2_49
@@ -2237,36 +2237,36 @@ point 3482.0 2328.0 label -text "New Grottoes" -scale xl
 
 
 line section -direction both
-  3831.08 2271.36
-  3839.01 2182.21
+  3831.37 2268.11
+  3838.65 2186.22
 endline
 
 point 3841.10 2157.12 section -scrap xs_NewGrottoes_5_8
 
 line section -direction both
-  3432.60 2268.96
-  3550.68 2045.80
+  3434.32 2265.71
+  3548.98 2049.01
 endline
 
 point 3708.74 1876.02 section -scrap xs_NewGrottoes_5_5
 
 line section -direction both
-  3313.03 2217.78
-  3410.38 2054.92
+  3314.93 2214.59
+  3408.34 2058.33
 endline
 
 point 3241.42 2513.22 section -scrap xs_NewGrottoes_5_4
 
 line section -direction both
-  3204.10 2067.72
-  3328.96 2024.60
+  3207.65 2066.49
+  3325.04 2025.96
 endline
 
 point 3376.34 2002.73 section -scrap xs_NewGrottoes_5_3
 
 line section -direction both
-  3267.59 1892.41
-  3325.61 1893.40
+  3275.65 1892.55
+  3321.91 1893.34
 endline
 
 point 3355.62 1891.28 section -scrap xs_NewGrottoes_5_2
@@ -2455,23 +2455,23 @@ line border -subtype invisible -outline out
 endline
 
 
-line section -direction both
-  3247.27 1969.03
-  3247.27 1683.68
+line section -direction begin
+  3247.27 1965.12
+  3247.27 1771.55
 endline
 
 point 3501.22 1926.84 section -scrap xs_LongDryWay_2_39
 
 line section -direction both
-  3238.61 2013.94
-  3116.11 1965.76
+  3234.99 2012.52
+  3119.89 1967.25
 endline
 
 point 3307.45 2319.52 section -scrap xs_LongDryWay_2_38
 
 line section -direction both
-  3176.19 2172.80
-  3048.87 2048.37
+  3173.67 2170.34
+  3052.32 2051.74
 endline
 
 point 3163.03 2335.51 section -scrap xs_LongDryWay_2_37
@@ -2848,15 +2848,15 @@ endline
 
 
 line section -direction both
-  1217.63 2189.77
-  1217.63 2438.91
+  1217.63 2195.06
+  1217.63 2435.32
 endline
 
 point 972.05 2698.34 section -scrap xs_LongDryWay_2_59
 
 line section -direction both
-  1388.75 2319.35
-  1316.06 2467.12
+  1385.59 2325.77
+  1317.79 2463.60
 endline
 
 point 1331.30 2703.26 section -scrap xs_LongDryWay_2_58
@@ -2934,8 +2934,8 @@ endline
 
 
 line section -direction both
-  1375.28 2224.65
-  1406.27 2294.67
+  1375.68 2225.56
+  1404.67 2291.06
 endline
 
 point 1380.04 2067.87 section -scrap xs_ShortDryWay_4_2
@@ -3048,8 +3048,8 @@ point 1271.9714173228335 2392.9962992125984 station -name 6.1
 
 
 line section -direction both
-  1085.64 1942.10
-  1029.11 2038.28
+  1083.61 1945.55
+  1030.91 2035.21
 endline
 
 point 700.83 2401.57 section -scrap xs_OldGrottoToWaterChamber_6_5
@@ -3234,29 +3234,29 @@ point 511.0 1920.0 curtain
 point 320.71 1321.21 station -name 6.11
 
 line section -direction both
-  466.38 1253.64
-  163.35 1393.91
+  461.90 1255.71
+  166.48 1392.46
 endline
 
 point 303.73 949.05 section -scrap xs_OldGrottoToWaterChamber_6_11
 
 line section -direction both
-  445.13 1656.75
-  348.66 1616.24
+  441.47 1655.21
+  352.31 1617.77
 endline
 
 point 514.04 1653.58 section -scrap xs_OldGrottoToWaterChamber_6_9
 
 line section -direction both
-  509.18 1850.25
-  422.52 1911.03
+  505.40 1852.90
+  425.60 1908.87
 endline
 
 point 227.53 1975.48 section -scrap xs_OldGrottoToWaterChamber_6_8
 
 line section -direction both
-  852.25 1832.36
-  837.60 1934.84
+  851.60 1836.92
+  838.04 1931.73
 endline
 
 point 819.72 2139.56 section -scrap xs_OldGrottoToWaterChamber_6_6

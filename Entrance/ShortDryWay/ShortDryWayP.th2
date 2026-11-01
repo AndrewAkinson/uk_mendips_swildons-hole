@@ -152,8 +152,8 @@ endline
 
 
 line section -direction both
-  1017.40 366.60
-  1060.82 437.46
+  1019.48 369.99
+  1058.78 434.13
 endline
 
 point 1220.16 451.30 section -scrap xs_ShortDryWay_3_5
@@ -292,15 +292,15 @@ point 791.8093700787399 618.5451181102363 station -name 3.7
 
 
 line section -direction both
-  690.84 653.28
-  726.41 716.42
+  692.86 656.87
+  724.52 713.06
 endline
 
 point 625.96 550.54 section -scrap xs_ShortDryWay_3_8
 
 line section -direction both
-  853.78 423.83
-  900.06 483.37
+  856.20 426.94
+  890.33 470.85
 endline
 
 point 1038.66 584.77 section -scrap xs_ShortDryWay_3_6
@@ -399,15 +399,15 @@ endline
 
 
 line section -direction both
-  30.16 998.22
-  63.51 1060.96
+  32.06 1001.79
+  61.93 1057.98
 endline
 
 point -15.12 928.97 section -scrap xs_ShortDryWay_3_13
 
 line section -direction both
-  304.08 881.27
-  338.77 942.31
+  306.03 884.70
+  336.82 938.87
 endline
 
 point 398.78 1039.26 section -scrap xs_ShortDryWay_3_11

@@ -24,7 +24,7 @@ Therion expert's review of the drawings (Andrew Atkinson). It still
 describes those drawings and how to edit them. For new drawings,
 `Style.md` wins where the two differ (brown, for example, is the floor
 there, not another level). Cross sections on the Swildons sheets are
-placed by `python3 -m tools.sections`.
+placed by `python3 -m tools.sketch2therion sections --write`.
 
 
 ## Walls and the outline
@@ -138,8 +138,8 @@ placed by `python3 -m tools.sections`.
   its left.
 - A section drawing must not overlap a passage or another section,
   including those of other surveys on the same sheet.
-- `python3 -m tools.sections` does all of this, and
-  moves section labels off passages (see `tools/README.md`).
+- `python3 -m tools.sketch2therion sections --write` does all of this
+  (see `tools/README.md`).
 
 ## Fill where nothing was drawn
 

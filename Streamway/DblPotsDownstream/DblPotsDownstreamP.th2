@@ -546,64 +546,64 @@ line floor-step -reverse on
 endline
 
 line section -direction both
-  938.47 916.43
-  973.72 1125.83
+  944.99 955.16
+  967.22 1087.24
 endline
 
 point 1016.01 1357.12 section -scrap xs22_1
 
 line section -direction both
-  705.07 812.91
-  687.87 961.51
+  700.50 852.37
+  692.41 922.27
 endline
 
 point 720.58 643.47 section -scrap xs22_5
 
 line section -direction both
-  488.80 835.58
-  562.21 1012.96
+  503.91 872.09
+  547.19 976.67
 endline
 
 point 607.75 1115.39 section -scrap xs22_6
 
 line section -direction both
-  140.14 1090.33
-  208.08 1302.32
+  152.35 1128.42
+  196.83 1267.21
 endline
 
 point 282.81 1519.52 section -scrap xs22_8
 
 line section -direction both
-  71.95 899.72
-  -82.38 863.60
+  26.23 889.02
+  -43.63 872.67
 endline
 
 point -664.83 735.85 section -scrap xs22_12
 
 line section -direction both
-  86.06 856.06
-  -64.08 813.71
+  48.52 845.47
+  -25.81 824.51
 endline
 
 point -166.97 787.58 section -scrap xs22_13
 
 line section -direction both
-  144.73 549.89
-  -21.12 515.43
+  106.48 541.94
+  17.81 523.52
 endline
 
 point 573.86 631.97 section -scrap xs22_15
 
 line section -direction both
-  136.46 271.02
-  -2.21 293.25
+  97.78 277.22
+  36.94 286.97
 endline
 
 point 284.64 244.05 section -scrap xs22_17
 
 line section -direction both
-  -24.32 -75.36
-  -329.30 302.19
+  -49.47 -44.23
+  -304.86 271.94
 endline
 
 point 312.43 -505.15 section -scrap xs22_20

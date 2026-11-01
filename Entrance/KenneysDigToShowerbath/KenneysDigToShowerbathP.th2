@@ -137,29 +137,29 @@ point 610.7117322834646 1293.5088976377954 station -name 10.0
 
 
 line section -direction both
-  618.06 1197.34
-  550.97 1235.43
+  614.75 1199.22
+  554.37 1233.50
 endline
 
 point 62.36 1513.04 section -scrap xs_KenneysDigToShowerbath_10_1
 
 line section -direction both
-  631.32 1170.79
-  533.80 1195.41
+  627.88 1171.66
+  537.94 1194.37
 endline
 
 point 483.94 1301.69 section -scrap xs_KenneysDigToShowerbath_10_2
 
 line section -direction both
-  645.66 1042.02
-  569.48 1092.65
+  573.28 1090.13
+  634.00 1049.77
 endline
 
 point 259.94 1016.91 section -scrap xs_KenneysDigToShowerbath_10_3
 
 line section -direction both
-  322.06 1102.55
-  328.74 1015.82
+  328.46 1019.43
+  322.38 1098.38
 endline
 
 point -149.69 1035.83 section -scrap xs_KenneysDigToShowerbath_10_4
@@ -287,29 +287,29 @@ point 588.4217322834645 1029.8788976377953 station -name 10.5
 
 
 line section -direction both
-  824.34 745.32
-  1169.01 310.57
+  977.65 551.94
+  1167.45 312.54
 endline
 
 point 1205.61 266.17 section -scrap xs_KenneysDigToShowerbath_10_12
 
 line section -direction both
-  575.10 727.32
-  553.55 630.95
+  574.27 723.60
+  554.19 633.83
 endline
 
 point 252.36 570.87 section -scrap xs_KenneysDigToShowerbath_10_9
 
 line section -direction both
-  485.22 871.12
-  400.79 850.73
+  481.63 870.25
+  427.32 857.14
 endline
 
 point 330.08 675.95 section -scrap xs_KenneysDigToShowerbath_10_7
 
 line section -direction both
-  597.33 1008.21
-  572.99 1073.21
+  595.91 1012.01
+  578.47 1058.56
 endline
 
 point 582.71 945.79 section -scrap xs_KenneysDigToShowerbath_10_5
@@ -388,15 +388,15 @@ point 1050.2017322834645 844.1288976377953 station -name 10.15
 
 
 line section -direction both
-  1023.50 910.25
-  1228.59 402.74
+  1025.21 906.01
+  1227.53 405.36
 endline
 
 point 1836.22 1021.65 section -scrap xs_KenneysDigToShowerbath_10_15
 
 line section -direction both
-  1419.32 973.12
-  1389.81 1114.96
+  1390.58 1111.28
+  1418.50 977.07
 endline
 
 point 1517.61 1148.43 section -scrap xs_KenneysDigToShowerbath_10_17

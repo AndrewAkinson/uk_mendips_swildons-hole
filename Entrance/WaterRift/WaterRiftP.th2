@@ -88,16 +88,16 @@ point 1773.4688188976374 608.7804724409449 station -name 8.4
 point 1820.7488188976376 575.6304724409449 station -name 8.3
 
 
-line section -direction both
-  1561.34 745.85
-  1615.97 781.13
+line section -direction begin
+  1564.95 748.18
+  1613.24 779.37
 endline
 
 point 1273.39 915.39 section -scrap xs_WaterRift_8_6
 
 line section -direction both
-  1797.49 503.05
-  1839.57 634.84
+  1799.58 509.61
+  1831.63 609.96
 endline
 
 point 1876.11 715.51 section -scrap xs_WaterRift_8_3
@@ -329,9 +329,9 @@ point 1156.1788188976375 850.670472440945 station -name 8.13
 point 1163.9788188976377 1175.4704724409448 station -name 8.12
 
 
-line section -direction both
-  1181.08 678.82
-  1055.94 674.49
+line section -direction begin
+  1182.88 678.88
+  1077.77 675.25
 endline
 
 point 27.56 1161.22 section -scrap xs_WaterRift_8_14

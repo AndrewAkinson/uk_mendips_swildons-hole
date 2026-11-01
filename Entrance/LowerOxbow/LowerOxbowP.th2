@@ -128,36 +128,36 @@ point 901.5363779527556 127.1694488188976 station -name 16.7
 
 
 line section -direction both
-  1218.78 -25.71
-  1175.47 127.12
+  1210.42 3.80
+  1184.27 96.06
 endline
 
 point 1362.55 -533.45 section -scrap xs_LowerOxbow_16_2
 
 line section -direction both
-  1053.85 35.85
-  1105.84 116.06
+  1055.76 38.79
+  1103.80 112.91
 endline
 
 point 1138.78 166.86 section -scrap xs_LowerOxbow_16_4
 
 line section -direction both
-  1002.95 68.89
-  1026.21 146.37
+  1003.80 71.72
+  1025.28 143.29
 endline
 
 point 884.97 -322.90 section -scrap xs_LowerOxbow_16_5
 
 line section -direction both
-  964.78 83.88
-  967.65 145.08
+  964.96 87.63
+  967.47 141.26
 endline
 
 point 955.86 -106.74 section -scrap xs_LowerOxbow_16_6
 
 line section -direction both
-  898.71 101.36
-  904.45 156.39
+  899.14 105.45
+  904.04 152.44
 endline
 
 point 889.29 9.70 section -scrap xs_LowerOxbow_16_7
@@ -286,29 +286,29 @@ point 867.1663779527557 127.7594488188976 station -name 16.8
 
 
 line section -direction both
-  860.89 101.77
-  877.18 168.21
+  861.82 105.56
+  876.16 164.05
 endline
 
 point 828.69 -29.12 section -scrap xs_LowerOxbow_16_8
 
 line section -direction both
-  759.08 139.95
-  819.95 206.55
+  761.36 142.45
+  817.40 203.76
 endline
 
 point 937.22 334.60 section -scrap xs_LowerOxbow_16_9
 
 line section -direction both
-  646.33 258.86
-  675.39 327.54
+  647.89 262.54
+  674.03 324.33
 endline
 
 point 606.68 164.87 section -scrap xs_LowerOxbow_16_11
 
 line section -direction both
-  513.48 302.85
-  543.41 381.77
+  514.80 306.32
+  542.06 378.22
 endline
 
 point 363.53 -92.35 section -scrap xs_LowerOxbow_16_12
@@ -484,22 +484,22 @@ point 187.75 687.0 gradient -orientation 242.2
 
 
 line section -direction both
-  404.91 325.54
-  450.54 419.28
+  406.79 329.40
+  448.83 415.77
 endline
 
 point 540.79 603.32 section -scrap xs_LowerOxbow_16_13
 
 line section -direction both
-  188.33 500.76
-  282.62 589.07
+  191.29 503.53
+  279.70 586.34
 endline
 
 point 117.42 433.95 section -scrap xs_LowerOxbow_16_15
 
 line section -direction both
-  416.52 222.10
-  333.21 190.40
+  412.85 220.70
+  336.50 191.65
 endline
 
 point 208.01 142.70 section -scrap xs_LowerOxbow_16_18

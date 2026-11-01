@@ -171,15 +171,15 @@ point 125.3502362204722 458.4606299212599 station -name 18.0
 
 
 line section -direction both
-  221.60 445.19
-  -158.81 320.84
+  -155.25 322.00
+  216.29 443.46
 endline
 
 point 9.10 267.02 section -scrap xs_CisternDig_18_3
 
 line section -direction both
-  187.24 312.01
-  118.18 317.98
+  183.01 312.38
+  121.77 317.67
 endline
 
 point 211.54 313.90 section -scrap xs_CisternDig_18_5

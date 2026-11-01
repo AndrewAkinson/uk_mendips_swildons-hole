@@ -464,50 +464,50 @@ endline
 
 
 line section -direction both
-  90.76 -1094.67
-  -187.02 -1266.23
+  102.12 -1087.66
+  -172.85 -1257.48
 endline
 
-point 263.35 -977.57 section -scrap TratmansPX5
+point 245.23 -1054.20 section -scrap TratmansPX5
 
 line section -direction both
-  873.59 -1734.15
-  780.73 -1915.87
+  857.50 -1765.65
+  783.53 -1910.38
 endline
 
 point 684.99 -2083.02 section -scrap TratmansPX9
 
 line section -direction both
-  1798.45 -2371.66
-  1524.85 -2473.14
+  1760.93 -2385.58
+  1562.05 -2459.34
 endline
 
 point 1359.34 -2564.15 section -scrap TratmansPX14
 
 line section -direction both
-  1785.98 -2874.52
-  1579.8 -2905.82
+  1773.92 -2876.35
+  1622.43 -2899.35
 endline
 
 point 2024.19 -2464.65 section -scrap TratmansPX15
 
 line section -direction both
-  1870.16 -3467.86
-  1582.92 -3504.48
+  1872.07 -3467.62
+  1660.91 -3494.54
 endline
 
 point 1456.01 -3110.70 section -scrap TratmansPX18
 
 line section -direction both
-  1755.73 -4336.77
-  1462.45 -4289.79
+  1731.83 -4332.94
+  1447.64 -4287.42
 endline
 
 point 1277.01 -3904.90 section -scrap TratmansPX21
 
 line section -direction both
-  1783.47 -4776.69
-  1552.95 -4809.09
+  1778.04 -4777.45
+  1539.67 -4810.96
 endline
 
 point 1271.84 -4904.87 section -scrap TratmansPX23

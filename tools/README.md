@@ -12,7 +12,6 @@ and its `Style.md` is the one place the drawing conventions are kept.
 | `sketch2therion/Style.md`, `sketch2therion/rules.toml` | The shared drawing rules. |
 | `project.toml` | Swildons' settings for the shared tools: the master file, the plan map, file and scrap names. A `[convert]` table there changes a shared rule for Swildons only, with the reason. |
 | `layout.thconfig`, `layout.th` | Export where Therion puts every station, and the centreline with its splays, for the converter. |
-| `sections/` | Swildons only: points the cross section lines the way each section looks, and moves section drawings clear of the passages on the Swildons sheets. |
 | `new-trip-template.th` | A starting point for a new trip's survey file. |
 | `requirements.txt` | Python libraries (the shared tools' own list). |
 
@@ -125,17 +124,16 @@ Tratman's Temple is the example here: the survey `Tratmans`, in
    Go through `Style.md` ("Checking") as well, then finish by hand in
    xTherion (the sketch is linked as a backdrop).
 
-7. **Cross sections on the Swildons sheets.** After a build:
+7. **Cross sections.** With Therion's layout up to date (step 3):
 
    ```bash
-   therion -l output/therion-sections.log tools/sections/sections.thconfig
-   python3 -m tools.sections
+   python3 -m tools.sketch2therion sections --write
    ```
 
-   gives the cross section lines arrows the way each section is seen,
-   and moves section drawings clear of the passages and each other. A
-   new sheet, or a map drawn displaced, needs adding to `SHEETS` in
-   `sections/sections.py`.
+   turns each cross section line to look along the survey, carries it
+   evenly across its passage, and moves section drawings clear of the
+   passages and each other (by their `point section`), for every plan
+   drawing the master file inputs. Without `--write` it only reports.
 
 ## Joining up with Stanton's survey
 
